@@ -11,7 +11,7 @@ namespace CalValEX.Items.LightPets
     {
         public override void SetStaticDefaults()
         {
-            Main.RegisterItemAnimation(Item.type, new DrawAnimationVertical(9, 8));
+            Main.RegisterItemAnimation(Item.type, new DrawAnimationVertical(9, 11));
         }
 
         public override void SetDefaults()

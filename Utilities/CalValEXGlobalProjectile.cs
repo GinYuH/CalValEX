@@ -93,20 +93,6 @@ namespace CalValEX
                         break;
                 }
             }
-            // Exodygen plush drop
-            if (CalValEX.CalamityActive)
-            {
-                if (CalValEX.instance.sloome != null)
-                {
-                    if (proj.type == CalValEX.instance.sloome.Find<ModProjectile>("OMEGA").Type && proj.timeLeft == 3 && Main.rand.NextBool(4))
-                    {
-                        if (Main.masterMode || (bool)CalValEX.Calamity.Call("GetDifficultyActive", "revengeance"))
-                        {
-                            Item.NewItem(null, proj.getRect(), PlushManager.PlushItems["Exodygen"]);
-                        }
-                    }
-                }
-            }
 		}
 
 		public void PureConvert(int i, int j, int size = 4)

@@ -233,7 +233,6 @@ namespace CalValEX
 				demonshade.OnSuccess(ItemDropRule.Common(ModContent.ItemType<DemonshadePants>()));
 
 				itemLoot.Add(rule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<Termipebbles>(), 1, 5, 8)));
-				itemLoot.Add(rule.OnSuccess(new CommonDrop(ModContent.ItemType<JunglePhoenixWings>(), 10, chanceNumerator: 3)));
 				itemLoot.Add(rule6.OnSuccess(new CommonDrop(ModContent.ItemType<YharonsAnklet>(), 10, chanceNumerator: 3)));
 				itemLoot.Add(rule.OnSuccess(new CommonDrop(ModContent.ItemType<NuggetinaBiscuit>(), 10, chanceNumerator: 3)));
 				itemLoot.Add(rule.OnSuccess(new CommonDrop(ModContent.ItemType<YharonShackle>(), 10, chanceNumerator: 3)));

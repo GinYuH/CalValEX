@@ -4,6 +4,7 @@ using Terraria.ID;
 
 namespace CalValEX.Items.Equips.Wings
 {
+    [LegacyName("JunglePhoenixWings")]
     [AutoloadEquip(EquipType.Wings)]
     public class FollyWings : ModItem
     {
