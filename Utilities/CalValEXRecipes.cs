@@ -1269,6 +1269,17 @@ namespace CalValEX
                 recipe.AddTile(TileID.Furnaces);
                 recipe.Register();
             }
+            {
+                Recipe recipe = Recipe.Create(ItemType<BunkerPlatform>(), 2);
+                recipe.AddRecipeGroup(RecipeGroupID.Wood);
+                recipe.Register();
+            }
+            {
+                Recipe recipe = Recipe.Create(ItemType<WulfrumBeam>(), 2);
+                recipe.AddIngredient(CalamityID.CalItemID.DullPlating);
+                recipe.AddTile(CalamityID.CalTileID.WulfrumBunkerWorkshop);
+                recipe.Register();
+            }
             #endregion
 
             #region //Override Auric Toilet recipe

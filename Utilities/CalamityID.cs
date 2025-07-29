@@ -71,6 +71,18 @@ namespace CalValEX.CalamityID
             }
             return vanilla;
         }
+        public static int TileRelation(string calamity, string fables, int vanilla)
+        {
+            if (CalValEX.FablesActive && CalValEXConfig.Instance.UseFables)
+            {
+                return CalValEX.Fables.Find<ModTile>(fables).Type;
+            }
+            else if (CalValEX.CalamityActive)
+            {
+                return CalValEX.Calamity.Find<ModTile>(calamity).Type;
+            }
+            return vanilla;
+        }
         public static int TileRelation(string calamity, int vanilla)
         {
             if (CalValEX.CalamityActive)
@@ -233,6 +245,7 @@ namespace CalValEX.CalamityID
         public static int CeremonialUrn;
         public static int MeldConstruct;
         public static int DormantBrimseeker;
+        public static int DullPlating;
 
         public override void PostSetupContent()
         {
@@ -273,6 +286,7 @@ namespace CalValEX.CalamityID
             MeldConstruct = CalamityID.ItemRelation("MeldConstruct", ItemID.FragmentNebula);
             CeremonialUrn = CalamityID.ItemRelation("CeremonialUrn", ItemID.NebulaPickaxe);
             DormantBrimseeker = CalamityID.ItemRelation("DormantBrimseeker", ItemID.Milkshake);
+            CrabulonBag = CalamityID.ItemRelation("WulfrumMetalScrap", "DullPlatingItem", ItemID.TungstenBrick);
         }
     }
 
@@ -342,6 +356,7 @@ namespace CalValEX.CalamityID
         public static int AstralDirt;
         public static int AstralClay;
         public static int AstralSnow;
+        public static int WulfrumBunkerWorkshop;
         public override void PostSetupContent()
         {
             AstralMonolith = CalamityID.TileRelation("AstralMonolith", -1);
@@ -349,6 +364,7 @@ namespace CalValEX.CalamityID
             AstralDirt = CalamityID.TileRelation("AstralDirt", -1);
             AstralClay = CalamityID.TileRelation("AstralClay", -1);
             AstralSnow = CalamityID.TileRelation("AstralSnow", -1);
+            WulfrumBunkerWorkshop = CalamityID.TileRelation("WulfrumLabstation", "BunkerWorkshop", TileID.Anvils);
         }
     }
     public class CalWallID : ModSystem

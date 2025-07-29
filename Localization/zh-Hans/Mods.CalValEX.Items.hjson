@@ -4690,3 +4690,13 @@ SpiderPalm: {
 	// DisplayName: Potted Spider Palm
 	// Tooltip: ""
 }
+
+WulfrumBeam: {
+	// DisplayName: Wulfrum Beam
+	// Tooltip: ""
+}
+
+BunkerPlatform: {
+	// DisplayName: Bunker Platform
+	// Tooltip: ""
+}
