@@ -457,6 +457,23 @@ namespace CalValEX
                 return null;
             }
     }
+    public class IsNightDrop : IItemDropRuleCondition
+    {
+        public bool CanDrop(DropAttemptInfo info)
+        {
+            return !Main.dayTime;
+        }
+
+        public bool CanShowItemDropInUI()
+        {
+            return true;
+        }
+
+        public string GetConditionDescription()
+        {
+            return null;
+        }
+    }
     public class DropsEnabled : IItemDropRuleCondition
     {
         public bool CanDrop(DropAttemptInfo info)

@@ -4706,3 +4706,12 @@ MoldyWood: {
 	DisplayName: Moldy Wood
 	Tooltip: ""
 }
+
+NautilusShell: {
+	DisplayName: Nautilus Shell
+	Tooltip:
+		'''
+		Summons Nautilus Jr.
+		'Maybe you and I aren't so different after all'
+		'''
+}

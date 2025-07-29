@@ -4705,3 +4705,8 @@ MoldyWood: {
 	// DisplayName: Moldy Wood
 	// Tooltip: ""
 }
+
+NautilusShell: {
+	// DisplayName: Nautilus Shell
+	// Tooltip: ""
+}

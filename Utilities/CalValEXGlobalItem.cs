@@ -270,10 +270,16 @@ namespace CalValEX
 			{
 				if (item.type == ModLoader.GetMod("CatalystMod").Find<ModItem>("AstrageldonBag").Type)
 					itemLoot.Add(rule.OnSuccess(new CommonDrop(ModContent.ItemType<SpaceJunk>(), 10, chanceNumerator: 3)));
-			}
-			#endregion
+            }
 
-			#region crates
+            if (CalValEX.FablesActive)
+            {
+                if (item.type == CalValEX.Fables.Find<ModItem>("SirNautilusTreasureBag").Type)
+                    itemLoot.Add(rule.OnSuccess(new CommonDrop(ModContent.ItemType<NautilusShell>(), 3)));
+            }
+            #endregion
+
+            #region crates
             if (item.type == CalItemID.SulphurousCrate || item.type == CalItemID.HydrothermalCrate)
 			{
                 itemLoot.Add(rule.OnSuccess(ItemDropRule.NotScalingWithLuck(ModContent.ItemType<AcidGun>(), 100)));

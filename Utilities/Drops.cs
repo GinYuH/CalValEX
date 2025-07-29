@@ -42,6 +42,7 @@ using CalValEX.Items.Plushies;
 using CalValEX.Items.Equips;
 using CalValEX.Tiles.Paintings;
 using CalValEX.Tiles.Plants;
+using CalamityFables.Core;
 
 namespace CalValEX
 {
@@ -655,6 +656,7 @@ namespace CalValEX
                         npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotExpert(), ModContent.ItemType<ProviCrystal>(), 4));
                         npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotExpert(), ModContent.ItemType<ProfanedHeart>(), 3));
                         npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotExpert(), ModContent.ItemType<ProvidenceAltar>(), 3));
+                        npcLoot.Add(ItemDropRule.ByCondition(new IsNightDrop(), ModContent.ItemType<FlareRune>()));
                         AddPlushDrop(npcLoot, PlushManager.PlushItems["Providence"]);
                     }
                     //Storm Weaver
@@ -933,8 +935,9 @@ namespace CalValEX
                 {
                     if (npc.type == CalValEX.instance.fables.Find<ModNPC>("SirNautilus").Type)
                     {
-                        npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<SeaguardShield>(), 3));
-                        npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<DustyGuitar>(), 3));
+                        npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotExpert(), ModContent.ItemType<SeaguardShield>(), 3));
+                        npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotExpert(), ModContent.ItemType<DustyGuitar>(), 3));
+                        npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotExpert(), ModContent.ItemType<NautilusShell>(), 3));
                         AddPlushDrop(npcLoot, PlushManager.PlushItems["Signathion"]);
                     }
                     if (npc.type == CalValEX.instance.fables.Find<ModNPC>("WulfrumNexus").Type)
@@ -965,21 +968,6 @@ namespace CalValEX
                     {
                         npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<WulfrumController>(), 100));
                         npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<WulfrumGrappler>(), 20));
-                    }
-                    //Scourge
-                    if (npc.type == CalValEX.instance.fables.Find<ModNPC>("DesertScourge").Type)
-                    {
-                        npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotExpert(), ModContent.ItemType<DesertMedallion>(), 5));
-                        npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotExpert(), ModContent.ItemType<SlightlyMoistbutalsoSlightlyDryLocket>(), 7));
-                        npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotExpert(), ModContent.ItemType<DriedLocket>(), 3));
-                        AddPlushDrop(npcLoot, PlushManager.PlushItems["DesertScourge"]);
-                    }
-                    //Crabulon
-                    if (npc.type == CalValEX.instance.fables.Find<ModNPC>("Crabulon").Type)
-                    {
-                        AddBlockDrop(npcLoot, ModContent.ItemType<MushroomCap>());
-                        npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotExpert(), ModContent.ItemType<ClawShroom>(), 3));
-                        AddPlushDrop(npcLoot, PlushManager.PlushItems["Crabulon"]);
                     }
                 }
             }

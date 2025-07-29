@@ -783,3 +783,8 @@ DebrisMount: {
 	DisplayName: Debris Mount
 	Description: They used to ride these back in the days
 }
+
+NautilusJrBuff: {
+	DisplayName: Nautilus Jr.
+	Description: Likes bubbles
+}

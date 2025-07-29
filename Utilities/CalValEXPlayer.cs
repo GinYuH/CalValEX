@@ -186,6 +186,7 @@ namespace CalValEX
         public bool yharcar;
         public bool sepneo;
         public bool ogscule;
+        public bool nautilus;
         //Signus Transformation bools
         public bool signutHide;
         public bool signutForce;
@@ -940,6 +941,7 @@ namespace CalValEX
             CalValPat = false;
             bikeShred = false;
             ogscule = false;
+            nautilus = false;
         }
 
         public override void OnHurt(Player.HurtInfo info) {
