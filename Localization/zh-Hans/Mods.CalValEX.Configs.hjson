@@ -93,8 +93,13 @@ CalValEXConfig: {
 	}
 
 	UseFables: {
-		// Label: Use Fables
-		// Tooltip: ""
+		// Label: Use Calamity Fables Content
+		/* Tooltip:
+			'''
+			While the Calamity Fables mod is enabled, equivalents from it will be prioritized.
+			For example, Calamity's Vanities' Desert Scourge drops will drop from Calamity Fables' Desert Scourge instead of Calamity's.
+			Disable this to have Calamity's equivalents prioritized.
+			''' */
 	}
 }
 

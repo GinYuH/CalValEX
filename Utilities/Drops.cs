@@ -41,6 +41,7 @@ using ReLogic.Content;
 using CalValEX.Items.Plushies;
 using CalValEX.Items.Equips;
 using CalValEX.Tiles.Paintings;
+using CalValEX.Tiles.Plants;
 
 namespace CalValEX
 {
@@ -132,6 +133,16 @@ namespace CalValEX
             if (type == NPCID.Dryad)
             {
                 shop.Add(ModContent.ItemType<AstralGrass>(), Condition.Hardmode);
+                shop.Add(ModContent.ItemType<CrepuscularMallow>(), Condition.BloodMoon, Condition.CorruptWorld);
+                shop.Add(ModContent.ItemType<PaleblotBane>(), Condition.BloodMoon, Condition.CorruptWorld);
+                shop.Add(ModContent.ItemType<SpiderPalm>(), Condition.BloodMoon, Condition.CrimsonWorld);
+                shop.Add(ModContent.ItemType<MarrowWillow>(), Condition.BloodMoon, Condition.CrimsonWorld);
+                shop.Add(ModContent.ItemType<CrepuscularMallow>(), Condition.BloodMoon, Condition.CrimsonWorld, Condition.InGraveyard);
+                shop.Add(ModContent.ItemType<PaleblotBane>(), Condition.BloodMoon, Condition.CrimsonWorld, Condition.InGraveyard);
+                shop.Add(ModContent.ItemType<SpiderPalm>(), Condition.BloodMoon, Condition.CorruptWorld, Condition.InGraveyard);
+                shop.Add(ModContent.ItemType<MarrowWillow>(), Condition.BloodMoon, Condition.CorruptWorld, Condition.InGraveyard);
+                shop.Add(ModContent.ItemType<ArcticWisteria>(), Condition.InSnow);
+                shop.Add(ModContent.ItemType<EverfrostPine>(), Condition.InSnow);
             }
             if (type == NPCID.Truffle)
             {

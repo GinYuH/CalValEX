@@ -118,9 +118,13 @@ namespace CalValEX
             TileID.Sets.DisableSmartCursor[tile.Type] = true;
             if (wall)
             {
+                TileObjectData.newTile.CopyFrom(TileObjectData.Style3x3Wall);
                 TileID.Sets.FramesOnKillWall[tile.Type] = true;
             }
-            TileObjectData.newTile.CopyFrom(TileObjectData.Style2x1);
+            else
+            {
+                TileObjectData.newTile.CopyFrom(TileObjectData.Style2x1);
+            }
             TileObjectData.newTile.Width = width;
             TileObjectData.newTile.Height = height;
             List<int> heightList = new List<int>();

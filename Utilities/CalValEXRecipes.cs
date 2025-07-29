@@ -1241,6 +1241,34 @@ namespace CalValEX
                 recipe.AddTile(TileID.DemonAltar);
                 recipe.Register();
             }
+            {
+                Recipe recipe = Recipe.Create(ItemType<FamiliarPot>());
+                recipe.AddIngredient(ItemID.ClayBlock, 5);
+                recipe.AddIngredient(ItemID.SandBlock, 5);
+                recipe.AddTile(TileID.Furnaces);
+                recipe.Register();
+            }
+            {
+                Recipe recipe = Recipe.Create(ItemType<FamiliarUrnPot>());
+                recipe.AddIngredient(ItemID.ClayBlock, 5);
+                recipe.AddIngredient(ItemID.SandBlock, 5);
+                recipe.AddTile(TileID.Furnaces);
+                recipe.Register();
+            }
+            {
+                Recipe recipe = Recipe.Create(ItemType<FamiliarSkinnyPot>());
+                recipe.AddIngredient(ItemID.ClayBlock, 5);
+                recipe.AddIngredient(ItemID.SandBlock, 5);
+                recipe.AddTile(TileID.Furnaces);
+                recipe.Register();
+            }
+            {
+                Recipe recipe = Recipe.Create(ItemType<FamiliarTallPot>());
+                recipe.AddIngredient(ItemID.ClayBlock, 5);
+                recipe.AddIngredient(ItemID.SandBlock, 5);
+                recipe.AddTile(TileID.Furnaces);
+                recipe.Register();
+            }
             #endregion
 
             #region //Override Auric Toilet recipe

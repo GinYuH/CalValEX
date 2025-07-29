@@ -4641,3 +4641,53 @@ SundayAfternoonCal: {
 	DisplayName: A Sunday Afternoon in the World of Calamity
 	Tooltip: "'Maple'"
 }
+
+FamiliarPot: {
+	DisplayName: Familiar Pot
+	Tooltip: ""
+}
+
+FamiliarSkinnyPot: {
+	DisplayName: Familiar Skinny Pot
+	Tooltip: ""
+}
+
+FamiliarTallPot: {
+	DisplayName: Familiar Tall Pot
+	Tooltip: ""
+}
+
+FamiliarUrnPot: {
+	DisplayName: Familiar Urn Pot
+	Tooltip: ""
+}
+
+ArcticWisteria: {
+	DisplayName: Potted Arctic Wisteria
+	Tooltip: ""
+}
+
+CrepuscularMallow: {
+	DisplayName: Potted Crepuscular Mallow
+	Tooltip: ""
+}
+
+EverfrostPine: {
+	DisplayName: Potted Everfrost Pine
+	Tooltip: ""
+}
+
+MarrowWillow: {
+	DisplayName: Potted Marrow Willow
+	Tooltip: ""
+}
+
+PaleblotBane: {
+	DisplayName: Potted Paleblot Bane
+	Tooltip: ""
+}
+
+SpiderPalm: {
+	DisplayName: Potted Spider Palm
+	Tooltip: ""
+}
