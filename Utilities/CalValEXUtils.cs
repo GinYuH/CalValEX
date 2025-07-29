@@ -1,12 +1,14 @@
 ﻿using CalValEX.CalamityID;
+using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
 namespace CalValEX
 {
-    public class CVUtils
+    public static class CVUtils
     {
         public const string AstrageldonRarity = "SuperbossRarity";
         public const string AvatarRarity = "AvatarRarity";
@@ -104,6 +106,41 @@ namespace CalValEX
             if (WorldGen.IsBelowANonHammeredPlatform(topLeftX, topLeftY))
             {
                 offsetY -= 8;
+            }
+        }
+
+        public static void SetupFurniture(this ModTile tile, int width, int height, bool wall = false, Color map = default, bool frame18 = false, bool lighted = false)
+        {
+            Main.tileFrameImportant[tile.Type] = true;
+            if (lighted)
+                Main.tileLighted[tile.Type] = true;
+            Main.tileLavaDeath[tile.Type] = true;
+            TileID.Sets.DisableSmartCursor[tile.Type] = true;
+            if (wall)
+            {
+                TileID.Sets.FramesOnKillWall[tile.Type] = true;
+            }
+            TileObjectData.newTile.CopyFrom(TileObjectData.Style2x1);
+            TileObjectData.newTile.Width = width;
+            TileObjectData.newTile.Height = height;
+            List<int> heightList = new List<int>();
+            for (int i = 0; i < height; i++)
+            {
+                if (i == 0 && frame18)
+                {
+                    heightList.Add(18);
+                }
+                else
+                {
+                    heightList.Add(16);
+                }
+            }
+            TileObjectData.newTile.CoordinateHeights = heightList.ToArray();
+            TileObjectData.addTile(tile.Type);
+            if (map != default)
+            {
+                LocalizedText name = tile.CreateMapEntryName();
+                tile.AddMapEntry(map, name);
             }
         }
     }

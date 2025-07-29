@@ -303,23 +303,6 @@ namespace CalValEX
             }
             #endregion
 
-            # region fables
-            if (CalValEX.FablesActive)
-            {
-                if (item.type == CalValEX.Fables.Find<ModItem>("DesertScourgeTreasureBag").Type)
-                {
-                    itemLoot.Add(rule.OnSuccess(new CommonDrop(ModContent.ItemType<DesertMedallion>(), 10, chanceNumerator: 3)));
-                    itemLoot.Add(rule.OnSuccess(ItemDropRule.NotScalingWithLuck(ModContent.ItemType<DriedLocket>(), 5)));
-                    itemLoot.Add(rule.OnSuccess(new CommonDrop(ModContent.ItemType<SlightlyMoistbutalsoSlightlyDryLocket>(), 100, chanceNumerator: 7)));
-                }
-                else if (item.type == CalValEX.Fables.Find<ModItem>("CrabulonTreasureBag").Type)
-                {
-                    itemLoot.Add(rule2.OnSuccess(new CommonDrop(ModContent.ItemType<MushroomCap>(), 1, 205, 335)));
-                    itemLoot.Add(rule.OnSuccess(new CommonDrop(ModContent.ItemType<ClawShroom>(), 10, chanceNumerator: 3)));
-                }
-            }
-            #endregion
-
             #region spaghetti starter
             /*if (item.type != ModContent.ItemType<StarterBag>())
                 return;

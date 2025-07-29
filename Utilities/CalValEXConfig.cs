@@ -63,6 +63,11 @@ namespace CalValEX
         [DefaultValue(false)]
         public bool GroundMountLol { get; set; }
 
+        [BackgroundColor(192, 54, 64, 192)]
+        [DefaultValue(true)]
+        [ReloadRequired()]
+        public bool UseFables { get; set; }
+
         [Header("$Mods.CalValEx.Configs.OtherHeader")]
 
         [BackgroundColor(192, 54, 64, 192)]

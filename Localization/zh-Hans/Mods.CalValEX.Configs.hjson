@@ -91,6 +91,11 @@ CalValEXConfig: {
 		// Label: April Fools Content
 		// Tooltip: Disables April Fools content when disabled
 	}
+
+	UseFables: {
+		// Label: Use Fables
+		// Tooltip: ""
+	}
 }
 
 // ChangeGood: Your changes have been accepted.

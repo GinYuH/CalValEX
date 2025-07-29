@@ -6,12 +6,36 @@ using Terraria.ModLoader;
 namespace CalValEX.CalamityID
 {
     public class CalamityID
-	{
+    {
+        public static int NPCRelation(string calamity, string fables, int vanilla)
+        {
+            if (CalValEX.FablesActive && CalValEXConfig.Instance.UseFables)
+            {
+                return CalValEX.Fables.Find<ModNPC>(fables).Type;
+            }
+            else if (CalValEX.CalamityActive)
+            {
+                return CalValEX.Calamity.Find<ModNPC>(calamity).Type;
+            }
+            return vanilla;
+        }
         public static int NPCRelation(string calamity, int vanilla)
         {
             if (CalValEX.CalamityActive)
             {
                 return CalValEX.Calamity.Find<ModNPC>(calamity).Type;
+            }
+            return vanilla;
+        }
+        public static int ItemRelation(string calamity, string fables, int vanilla)
+        {
+            if (CalValEX.FablesActive && CalValEXConfig.Instance.UseFables)
+            {
+                return CalValEX.Fables.Find<ModItem>(fables).Type;
+            }
+            else if (CalValEX.CalamityActive)
+            {
+                return CalValEX.Calamity.Find<ModItem>(calamity).Type;
             }
             return vanilla;
         }
@@ -122,8 +146,8 @@ namespace CalValEX.CalamityID
         public override void PostSetupContent()
         {
             GiantClam = CalamityID.NPCRelation("GiantClam", NPCID.EyeofCthulhu);
-            DesertScourge = CalamityID.NPCRelation("DesertScourgeHead", NPCID.EyeofCthulhu);
-            Crabulon = CalamityID.NPCRelation("Crabulon", NPCID.BrainofCthulhu);
+            DesertScourge = CalamityID.NPCRelation("DesertScourgeHead", "DesertScourge", NPCID.EyeofCthulhu);
+            Crabulon = CalamityID.NPCRelation("Crabulon", "Crabulon", NPCID.BrainofCthulhu);
             HiveMind = CalamityID.NPCRelation("HiveMind", NPCID.EaterofWorldsHead);
             Perforators = CalamityID.NPCRelation("PerforatorHive", NPCID.BrainofCthulhu);
             SlimeGod = CalamityID.NPCRelation("SlimeGodCore", NPCID.SkeletronHead);
@@ -213,8 +237,8 @@ namespace CalValEX.CalamityID
         public override void PostSetupContent()
         {
             StarterBag = CalamityID.ItemRelation("StarterBag", ItemID.KingSlimeBossBag);
-            DesertScourgeBag = CalamityID.ItemRelation("DesertScourgeBag", ItemID.EyeOfCthulhuBossBag);
-            CrabulonBag = CalamityID.ItemRelation("CrabulonBag", ItemID.BrainOfCthulhuBossBag);
+            DesertScourgeBag = CalamityID.ItemRelation("DesertScourgeBag", "DesertScourgeTreasureBag", ItemID.EyeOfCthulhuBossBag);
+            CrabulonBag = CalamityID.ItemRelation("CrabulonBag", "CrabulonTreasureBag", ItemID.BrainOfCthulhuBossBag);
             HiveMindBag = CalamityID.ItemRelation("HiveMindBag", ItemID.EaterOfWorldsBossBag);
             PerforatorBag = CalamityID.ItemRelation("PerforatorBag", ItemID.BrainOfCthulhuBossBag);
             SlimeGodBag = CalamityID.ItemRelation("SlimeGodBag", ItemID.SkeletronBossBag);
