@@ -1979,15 +1979,6 @@ GodSlayerDoll: {
 		'''
 }
 
-HauntedPebble: {
-	DisplayName: 闹鬼卵石
-	Tooltip:
-		'''
-		召唤幻骸幼虫
-		"怪喔~"
-		'''
-}
-
 HeartoftheSharks: {
 	DisplayName: 鲨鱼之心
 	Tooltip:
@@ -4703,7 +4694,11 @@ BunkerPlatform: {
 
 PhantoSprout: {
 	// DisplayName: Phanto Sprout
-	// Tooltip: ""
+	/* Tooltip:
+		'''
+		Summons a Phantom Debris stag mount which can briefly fly
+		'Spookay~'
+		''' */
 }
 
 MoldyWood: {

@@ -1360,6 +1360,7 @@ namespace CalValEX
             blacklist.Add((ci("CosmiliteBrick"), ci("CosmiliteBar")));
             blacklist.Add((ci("OtherworldlyStone"), ci("DarkPlasma")));
             blacklist.Add((ci("SilvaCrystal"), ci("EffulgentFeather")));
+            blacklist.Add((ci("StatigelBlock"), ci("PurifiedGel")));
             blacklist.Add((ItemType<AuricBrick>(), ci("AuricOre")));
             blacklist.Add((ci("HazardChevronPanels"), ci("LaboratoryPanels")));
             blacklist.Add((ci("LaboratoryPipePlating"), ci("RustedPipes")));
