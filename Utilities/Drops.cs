@@ -378,7 +378,6 @@ namespace CalValEX
                     if (npc.type == CalValEX.CalamityNPC("OverloadedSoldier"))
                     {
                         npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<UnloadedHelm>(), 10));
-                        npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<HauntedPebble>(), 10));
                     }
                     if (npc.type == CalValEX.CalamityNPC("DevilFish"))
                     {

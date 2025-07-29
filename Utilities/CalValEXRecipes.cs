@@ -1280,9 +1280,17 @@ namespace CalValEX
                 recipe.AddTile(CalamityID.CalTileID.WulfrumBunkerWorkshop);
                 recipe.Register();
             }
+            {
+                Recipe recipe = Recipe.Create(ItemType<MoldyWood>(), 100);
+                recipe.AddRecipeGroup(RecipeGroupID.Wood, 100);
+                recipe.AddIngredient(ItemID.GlowingMushroom);
+                recipe.AddTile(TileID.WorkBenches);
+                recipe.Register();
+            }
             #endregion
 
             #region //Override Auric Toilet recipe
+            // TODO: Make this not the worst fucking thing possible jesus christ
             {
                 List<Recipe> rec = Main.recipe.ToList();
                 rec.Where(x => x.createItem.type == CalValEX.CalamityItem("AuricToilet")).ToList().ForEach(s =>

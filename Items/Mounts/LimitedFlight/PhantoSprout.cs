@@ -6,14 +6,9 @@ using Terraria.ModLoader;
 
 namespace CalValEX.Items.Mounts.LimitedFlight
 {
-    public class HauntedPebble : ModItem
+    [LegacyName("HauntedPebble")]
+    public class PhantoSprout : ModItem
     {
-        public override void SetStaticDefaults()
-        {
-            Main.RegisterItemAnimation(Item.type, new DrawAnimationVertical(6, 6));
-            Item.ResearchUnlockCount = 1;
-        }
-
         public override void SetDefaults()
         {
             Item.width = 20;

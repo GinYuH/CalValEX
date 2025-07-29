@@ -1,5 +1,8 @@
+using CalValEX.Tiles.Plants;
 using Microsoft.Xna.Framework.Graphics;
+using System;
 using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace CalValEX
@@ -8,6 +11,13 @@ namespace CalValEX
     {
         private int cragCount;
         private int berryCount;
+
+        public static int PhantomSproutID;
+
+        public override void SetStaticDefaults()
+        {
+            PhantomSproutID = ModContent.TileType<PhantoSproutPlaced>();
+        }
 
         /// <summary>This function lets you easily set a tile glowmask. Compatible with both blocks and furniture.</summary>
         /// <param name="i">The x coord of the tile</param>
@@ -81,38 +91,70 @@ namespace CalValEX
             sprit.Draw(glowmask, pos, frame, Color.White, 0f, Vector2.Zero, 1f, SpriteEffects.None, 0f);
         }
 
-        /*public override void RandomUpdate(int i, int j, int type) {
-            Tile tile = Framing.GetTileSafely(i, j);
-
-            // Several tile checks (is it ash, is it unactuated) and other checks to prevent it from spawning too many plants
-            if ((tile.TileType == TileID.Ash || tile.TileType == TileType<CalamityMod.Tiles.Crags.BrimstoneSlag>()) && tile.HasUnactuatedTile) {
-                cragCount = 0;
-                berryCount = 0;
-
-                int r = 80; //bc magic numbers are cring
-                int xRadStart = i - r;
-                int xRadEnd = xRadStart + (r * 2);
-                int yRadStart = j - r;
-                int yRadEnd = yRadStart + (r * 2);
-
-                for (int x = xRadStart; x < xRadEnd && x < Main.maxTilesX; x++) {
-                    for (int y = yRadStart; y < yRadEnd && y < Main.maxTilesY; y++) {
-                        Tile tileCount = Framing.GetTileSafely(x, y);
-
-                        if (tileCount.TileType == TileType<CalamityMod.Tiles.Crags.BrimstoneSlag>())
-                            cragCount++;
-
-                        if (tileCount.TileType == TileType<BrimPlantPlaced>())
-                            berryCount++;
+        public override void RandomUpdate(int i, int j, int type) 
+        {
+            if (NPC.downedBoss3 || Main.hardMode)
+            {
+                Tile tile = Framing.GetTileSafely(i, j);
+                if (tile.TileType == TileID.Tombstones)
+                {
+                    if (Main.rand.NextBool(30))
+                    {
+                        int xTile = Main.rand.Next(Math.Max(10, i - 10), Math.Min(Main.maxTilesX - 10, i + 10));
+                        int yTile = Main.rand.Next(Math.Max(10, j - 10), Math.Min(Main.maxTilesY - 10, j + 10));
+                        if (ValidGroundForFlower(xTile, yTile) && NoNearbyFlower(xTile, yTile) && WorldGen.PlaceTile(xTile, yTile, PhantomSproutID, mute: true))
+                        {
+                            if (Main.dedServ && Main.tile[xTile, yTile] != null && Main.tile[xTile, yTile].HasTile)
+                            {
+                                NetMessage.SendTileSquare(-1, xTile, yTile);
+                            }
+                        }
                     }
                 }
+            }
+        }
 
-                if (cragCount > 30 && berryCount <= 6 && Main.rand.NextBool(48)) {
-                    // Check if the tile above is empty, not hammered and not a slope, then place the brimberry plant!!
-                    if (Main.tile[i, j - 1].TileType == 0 && Main.tile[i, j].Slope == 0 && !Main.tile[i, j].IsHalfBlock)
-                        WorldGen.PlaceObject(i, j - 1, TileType<BrimPlantPlaced>(), false);
+        private static bool NoNearbyFlower(int i, int j)
+        {
+            int xRangeNeg = Utils.Clamp(i - 120, 10, Main.maxTilesX - 1 - 10);
+            int xRangePos = Utils.Clamp(i + 120, 10, Main.maxTilesX - 1 - 10);
+            int yRangeNeg = Utils.Clamp(j - 120, 10, Main.maxTilesY - 1 - 10);
+            int yRangePos = Utils.Clamp(j + 120, 10, Main.maxTilesY - 1 - 10);
+            for (int k = xRangeNeg; k <= xRangePos; k++)
+            {
+                for (int l = yRangeNeg; l <= yRangePos; l++)
+                {
+                    Tile tile = Main.tile[k, l];
+                    if (tile.HasTile && tile.TileType == PhantomSproutID)
+                    {
+                        return false;
+                    }
                 }
             }
-        }*/
+            return true;
+        }
+
+        private static bool ValidGroundForFlower(int x, int y)
+        {
+            if (!WorldGen.InWorld(x, y, 2))
+            {
+                return false;
+            }
+            Tile tile = Main.tile[x, y + 1];
+            if (tile == null || !tile.HasTile)
+            {
+                return false;
+            }
+            ushort type = tile.TileType;
+            if (type < 0)
+            {
+                return false;
+            }
+            if (type != TileID.MushroomGrass && type != TileID.AshGrass && !TileID.Sets.Conversion.Grass[type])
+            {
+                return false;
+            }
+            return WorldGen.SolidTileAllowBottomSlope(x, y + 1);
+        }
     }
 }

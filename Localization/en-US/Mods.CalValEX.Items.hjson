@@ -1979,15 +1979,6 @@ GodSlayerDoll: {
 		'''
 }
 
-HauntedPebble: {
-	DisplayName: Haunted Pebble
-	Tooltip:
-		'''
-		Summons a Phantom Debris larvae
-		'Spookay~'
-		'''
-}
-
 HeartoftheSharks: {
 	DisplayName: Heart of the Sharks
 	Tooltip:
@@ -4699,5 +4690,19 @@ WulfrumBeam: {
 
 BunkerPlatform: {
 	DisplayName: Bunker Platform
+	Tooltip: ""
+}
+
+PhantoSprout: {
+	DisplayName: Phanto Sprout
+	Tooltip:
+		'''
+		Summons a Phantom Debris stag mount which can briefly fly
+		'Spookay~'
+		'''
+}
+
+MoldyWood: {
+	DisplayName: Moldy Wood
 	Tooltip: ""
 }

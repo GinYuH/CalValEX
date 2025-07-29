@@ -4700,3 +4700,13 @@ BunkerPlatform: {
 	// DisplayName: Bunker Platform
 	// Tooltip: ""
 }
+
+PhantoSprout: {
+	// DisplayName: Phanto Sprout
+	// Tooltip: ""
+}
+
+MoldyWood: {
+	// DisplayName: Moldy Wood
+	// Tooltip: ""
+}
