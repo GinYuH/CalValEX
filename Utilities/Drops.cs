@@ -228,7 +228,7 @@ namespace CalValEX
                     {
                         npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<DisrepairUnit>(), 20));
                     }
-                    if (npc.type == CalValEX.CalamityNPC("SuperDummy"))
+                    if (npc.type == CalValEX.CalamityNPC("SuperDummyNPC"))
                     {
                         npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<DummyMask>()));
                     }

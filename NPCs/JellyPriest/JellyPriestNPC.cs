@@ -1,24 +1,24 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
 using CalValEX.Items.Tiles;
 using CalValEX.Items.Tiles.Banners;
+using CalValEX.Items.Tiles.Blocks;
 using CalValEX.Items.Tiles.Blueprints;
+using CalValEX.Items.Tiles.Monoliths;
 using CalValEX.Items.Tiles.Plants;
 using CalValEX.Items.Tiles.Statues;
-using System;
-using Terraria;
-using Terraria.GameContent.Events;
-using Terraria.ID;
-using Terraria.ModLoader;
-using static Terraria.ModLoader.ModContent;
-using System.Collections.Generic;
-using Terraria.GameContent.Bestiary;
-using Terraria.Utilities;
 using CalValEX.Projectiles.NPCs;
-using System.IO;
+using Terraria;
+using Terraria.GameContent.Bestiary;
+using Terraria.GameContent.Events;
 using Terraria.GameContent.Personalities;
-using CalValEX.Items.Tiles.Monoliths;
-using CalValEX.Items.Tiles.Blocks;
-using static CalValEX.CalValEXConditions;
+using Terraria.ID;
 using Terraria.Localization;
+using Terraria.ModLoader;
+using Terraria.Utilities;
+using static CalValEX.CalValEXConditions;
+using static Terraria.ModLoader.ModContent;
 
 namespace CalValEX.NPCs.JellyPriest
 {
@@ -190,7 +190,7 @@ namespace CalValEX.NPCs.JellyPriest
                 {
                     dialogue.Add(Language.GetTextValue("Mods.CalValEX.NPCs.JellyPriestNPC.Chat.leviathan1"));
                     dialogue.Add(Language.GetTextValue("Mods.CalValEX.NPCs.JellyPriestNPC.Chat.leviathan2"));
-                    
+
                 }
                 if ((bool)CalValEX.Calamity.Call("GetBossDowned", "scal"))
                 {
@@ -340,7 +340,7 @@ namespace CalValEX.NPCs.JellyPriest
             shopEntries.Add(("Blocks1", CalValEX.CalamityItem("BrimstoneSlag"), Item.buyPrice(0, 0, 4, 0), brim, ""));
             shopEntries.Add(("Blocks1", CalValEX.CalamityItem("ScorchedRemains"), Item.buyPrice(0, 0, 4, 0), brim, ""));
             shopEntries.Add(("Blocks1", CalValEX.CalamityItem("PyreMantle"), Item.buyPrice(0, 0, 4, 50), Condition.DownedGolem, ""));
-            shopEntries.Add(("Blocks1", CalValEX.CalamityItem("MoltenPyreMantle"), Item.buyPrice(0, 0, 4, 50),Condition.DownedGolem, ""));
+            shopEntries.Add(("Blocks1", CalValEX.CalamityItem("PyreMantleMolten"), Item.buyPrice(0, 0, 4, 50), Condition.DownedGolem, ""));
             shopEntries.Add(("Blocks1", CalValEX.CalamityItem("Voidstone"), Item.buyPrice(0, 0, 5, 0), Condition.DownedGolem, ""));
             shopEntries.Add(("Blocks1", CalValEX.CalamityItem("PlaguedContainmentBrick"), Item.buyPrice(0, 0, 5, 0), pb, ""));
             shopEntries.Add(("Blocks1", ItemType<PlagueHiveWand>(), Item.buyPrice(0, 1, 40, 0), pb, ""));
@@ -471,7 +471,7 @@ namespace CalValEX.NPCs.JellyPriest
                         {
                             item.shopCustomPrice = shopEntries[j].Item3;
                         }
-                    }       
+                    }
                 }
             }
         }
