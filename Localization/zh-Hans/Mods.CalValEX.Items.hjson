@@ -4708,5 +4708,9 @@ MoldyWood: {
 
 NautilusShell: {
 	// DisplayName: Nautilus Shell
-	// Tooltip: ""
+	/* Tooltip:
+		'''
+		Summons Nautilus Jr.
+		'Maybe you and I aren't so different after all'
+		''' */
 }

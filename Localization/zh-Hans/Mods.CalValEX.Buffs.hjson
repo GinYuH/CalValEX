@@ -785,6 +785,6 @@ DebrisMount: {
 }
 
 NautilusJrBuff: {
-	// DisplayName: Nautilus Jr Buff
-	// Description: Mods.CalValEX.Buffs.NautilusJrBuff.Description
+	// DisplayName: Nautilus Jr.
+	// Description: Likes bubbles
 }
