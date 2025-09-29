@@ -468,6 +468,7 @@ namespace CalValEX
                     if (npc.type == CalValEX.CalamityNPC("NuclearTerror"))
                     {
                         npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<NuclearFumes>(), 1, 10, 25));
+                        npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<RadJuice>(), 10));
                         npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<TerrorLegs>(), 10));
                         npcLoot.Add(ItemDropRule.ByCondition(new MasterRevCondition(), PlushManager.PlushItems["NuclearTerror"], 4));
                     }
