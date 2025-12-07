@@ -28,7 +28,7 @@ namespace CalValEX.Items.Plushies
             LoadPlush("MireP2", 13, false, sound: SoundID.NPCHit1); // Has an unorthodox old name, so it must be done separately
             LoadPlush("NuclearTerror", 13, sound: GetCalamitySound("Custom/NuclearTerrorSpawn", SoundID.NPCDeath10));
             LoadPlush("Mauler", 13, sound: GetCalamitySound("Custom/MaulerRoar", SoundID.Zombie7));
-            LoadPlush("DesertScourge", ItemUtils.BossRarity("DesertScourge"), sound: GetCalamitySound("Custom/DesertScourge/DesertScourgeRoar", SoundID.Zombie92));
+            LoadPlush("DesertScourge", ItemUtils.BossRarity("DesertScourge"), sound: GetCalamitySound("Custom/DesertScourgeRoar", SoundID.Zombie92));
             LoadPlush("Crabulon", ItemUtils.BossRarity("Crabulon"), sound: SoundID.NPCHit45);
             LoadPlush("Perforator", ItemUtils.BossRarity("Perforator"), sound: GetCalamitySound("Custom/Perforator/PerfHiveWormSpawn", SoundID.NPCDeath23));
             LoadPlush("HiveMind", ItemUtils.BossRarity("HiveMind"), sound: GetCalamitySound("Custom/HiveMindRoar", SoundID.NPCHit9));
