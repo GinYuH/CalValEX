@@ -4715,3 +4715,17 @@ NautilusShell: {
 		'Maybe you and I aren't so different after all'
 		'''
 }
+
+KiteTestItem: {
+	DisplayName: Kite Test Item
+	Tooltip: ""
+}
+
+ShatteredHeartoftheCommunity: {
+	DisplayName: Shattered Heart of the Community
+	Tooltip:
+		'''
+		[c/C61B40:A great creation defiled yet hauntingly beautiful]
+		[c/C61B40:Is attainment of such beauty worth dark magicks?]
+		'''
+}

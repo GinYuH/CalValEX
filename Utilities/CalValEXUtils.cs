@@ -1,4 +1,5 @@
 ﻿using CalValEX.CalamityID;
+using System;
 using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
@@ -146,6 +147,13 @@ namespace CalValEX
                 LocalizedText name = tile.CreateMapEntryName();
                 tile.AddMapEntry(map, name);
             }
+        }
+
+        public static Color ColorSwap(Color firstColor, Color secondColor, float seconds)
+        {
+            double timeMult = (double)(MathHelper.TwoPi / seconds);
+            float colorMePurple = (float)((Math.Sin(timeMult * Main.GlobalTimeWrappedHourly) + 1) * 0.5f);
+            return Color.Lerp(firstColor, secondColor, colorMePurple);
         }
     }
 }

@@ -14,6 +14,7 @@ using Terraria.ID;
 using ReLogic.Content;
 using CalValEX.Items;
 using CalValEX.Projectiles;
+using CalValEX.Items.Tiles;
 
 namespace CalValEX
 {
@@ -162,6 +163,7 @@ namespace CalValEX
             {
                 Mod cal = ModLoader.GetMod("CalamityMod");
                 cal.Call("MakeItemExhumable", ModContent.ItemType<RottingCalamitousArtifact>(), ModContent.ItemType<CalamitousSoulArtifact>());
+                cal.Call("MakeItemExhumable", ModContent.ItemType<HeartoftheCommunity>(), ModContent.ItemType<ShatteredHeartoftheCommunity>());
                 cal.Call("RegisterNPCShop", ModContent.NPCType<JellyPriestNPC>(), (Player player) => Main.LocalPlayer.GetModPlayer<CalValEXPlayer>().jellyInv, (Player player, bool enabled) => Main.LocalPlayer.GetModPlayer<CalValEXPlayer>().jellyInv = enabled);
                 cal.Call("RegisterNPCShop", ModContent.NPCType<OracleNPC>(), (Player player) => Main.LocalPlayer.GetModPlayer<CalValEXPlayer>().oracleInv, (Player player, bool enabled) => Main.LocalPlayer.GetModPlayer<CalValEXPlayer>().oracleInv = enabled);
                 cal.Call("AddAndrombaSolution", ModContent.ItemType<XenoSolution>(), "CalValEX/ExtraTextures/AndroombaBlight", (NPC npc) => AstralSolutionProj.Convert((int)(npc.position.X + npc.width / 2) / 16, (int)(npc.position.Y + npc.height / 2) / 16, 3));
@@ -169,56 +171,6 @@ namespace CalValEX
 
             //Christmas textures
             ChristmasTextureChange.Load();
-            /*if (ModContent.GetInstance<CalValEXConfig>().DiscordRichPresence)
-            {
-                try
-                {
-                    var drp = ModLoader.GetMod("DiscordRP");
-                    if (drp != null)
-                    {
-                        // This discord rich presence stuff is very wacky.
-                        // Get in contact with (Discord: nalyddd#9372, Github: NalydddNobel) if you want to change any of this.
-                        // (even if you are completely removing this, atleast tell me so I can get rid of my Discord-Developer-Application which hosts these images)
-                        drp.Call("AddClient", "929973580178010152", "mod_calvalex");
-                        drp.Call("AddBiome", (Func<bool>)(() => Main.LocalPlayer.GetModPlayer<CalValEXPlayer>().ZoneAstral), "Astral Blight",
-                            "biome_astralblight", 50f, "mod_calvalex");
-                    }
-                }
-                catch (Exception ex)
-                {
-                    throw new Exception("There was an error when adding Discord Rich Presence support!", ex);
-                }
-            }*/
-            /*if (infernum != null)
-            {
-                Func<bool> isActiveDelegate = () => NPC.AnyNPCs(ModContent.NPCType<Meldosaurus>());
-                LocalizedText title = Terraria.Localization.Language.GetOrRegister("Meldosaurus");
-                Func<float, float, Color> textColorSelectionDelegate = (float horizontalCompletion, float animationCompletion) => { return new Color(2, 48, 24); };
-                object instance = infernum.Call("InitializeIntroScreen", title, 180, true, isActiveDelegate, textColorSelectionDelegate);
-                // Check for optional data and then apply things as needed via optional mod calls.
-
-                // On-completion effects.
-                Action onCompletionDelegate = new Action(LiterallyNothing);
-                infernum.Call("IntroScreenSetupCompletionEffects", instance, onCompletionDelegate);
-
-                // Letter addition sound.
-                Func<SoundStyle> chooseLetterSoundDelegate = ()=>SoundID.Bird;
-                infernum.Call("IntroScreenSetupLetterAdditionSound", instance, chooseLetterSoundDelegate);
-
-                // Main sound.
-                Func<SoundStyle> chooseMainSoundDelegate = ()=> SoundID.Bird;
-                Func<int, int, float, float, bool> why = (_, _2, _3, _4) => true;
-                infernum.Call("IntroScreenSetupMainSound", instance, why, chooseMainSoundDelegate);
-
-                // Text scale.
-                infernum.Call("IntroScreenSetupTextScale", instance, 1f);
-                infernum.Call("RegisterIntroScreen", instance);
-            }*/
-        }
-
-        public static void LiterallyNothing()
-        {
-
         }
 
         public override object Call(params object[] args)
