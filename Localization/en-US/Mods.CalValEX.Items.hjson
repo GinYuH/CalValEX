@@ -341,11 +341,7 @@ DraedonHelmet: {
 	# Hats
 	DisplayName: Arsenal Soldier Helmet
 	# Hats
-	Tooltip:
-		'''
-		Changes appearance depending on held item damage type
-		CURRENTLY UNSTABLE
-		'''
+	Tooltip: Changes appearance depending on held item damage type
 }
 
 Aestheticrown: {
@@ -586,12 +582,7 @@ DraedonLeggings: {
 	# Legs
 	DisplayName: Arsenal Soldier Leggings
 	# Legs
-	Tooltip:
-		'''
-		CURRENTLY UNSTABLE
-		Well, not really, only the other pieces are,
-		but why would you use these without them? 
-		'''
+	Tooltip: ""
 }
 
 AstrachnidTentacles: {
@@ -731,11 +722,7 @@ AresChestplate: {
 
 DraedonChestplate: {
 	DisplayName: Arsenal Soldier Chestplate
-	Tooltip:
-		'''
-		Changes appearance depending on held item damage type
-		CURRENTLY UNSTABLE 
-		'''
+	Tooltip: Changes appearance depending on held item damage type
 }
 
 AstrachnidThorax: {

@@ -406,23 +406,23 @@ namespace CalValEX
                 recipe.AddTile(TileID.LunarCraftingStation);
                 recipe.Register();
             }
-            /*{
+            {
 				Recipe recipe = Recipe.Create(ItemType<Items.Equips.Hats.Draedon.DraedonHelmet>());
 				recipe.AddIngredient(CalValEX.CalamityItem("DubiousPlating"), 6);
 				recipe.AddIngredient(CalValEX.CalamityItem("MysteriousCircuitry"), 6);
 				recipe.AddTile(TileID.Anvils);
 				recipe.Register();
-			}*/
+			}
             #endregion
 
             #region //Legs
-            /*{
+            {
 				Recipe recipe = Recipe.Create(ItemType<Items.Equips.Legs.Draedon.DraedonLeggings>());
 				recipe.AddIngredient(CalValEX.CalamityItem("DubiousPlating"), 8);
 				recipe.AddIngredient(CalValEX.CalamityItem("MysteriousCircuitry"), 8);
 				recipe.AddTile(TileID.Anvils);
 				recipe.Register();
-			}*/
+			}
             {
                 Recipe recipe = Recipe.Create(ItemType<FallenPaladinsGreaves>());
                 recipe.AddIngredient(CalValEX.CalamityItem("AshesofCalamity"));
@@ -458,13 +458,13 @@ namespace CalValEX
                 recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
-            /*{
+            {
 				Recipe recipe = Recipe.Create(ItemType<Items.Equips.Shirts.Draedon.DraedonChestplate>());
 				recipe.AddIngredient(CalValEX.CalamityItem("DubiousPlating"), 12);
 				recipe.AddIngredient(CalValEX.CalamityItem("MysteriousCircuitry"), 12);
 				recipe.AddTile(TileID.Anvils);
 				recipe.Register();
-			}*/
+			}
             #endregion
 
             #region //Transformations

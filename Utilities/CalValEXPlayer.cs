@@ -18,6 +18,8 @@ using CalamityMod.Particles;
 using CalValEX.Projectiles;
 using Terraria.ModLoader.IO;
 using CalValEX.Items.Mounts.InfiniteFlight;
+using CalValEX.Items.Equips.Hats.Draedon;
+using CalValEX.Items.Equips.Shirts.Draedon;
 
 namespace CalValEX
 {
@@ -223,6 +225,9 @@ namespace CalValEX
         public bool maryPrevious;
         public bool maryPower;
         public bool maryTrans;
+        //Arsenal Soldier bools
+        public bool arsenalHelmet;
+        public bool arsenalChestplate;
         public double rotcounter = 0;
         public double rotdeg = 0;
         public double rotsin = 0;
@@ -333,6 +338,8 @@ namespace CalValEX
             profanedCultist = profanedCultistHide = profanedCultistForce = false;
             perennial = perennialHide = perennialForce = false;
             bellaCloak = bellaCloakHide = bellaCloakForce = false;
+            arsenalChestplate = false;
+            arsenalHelmet = false;
             ResetMyStuff();
         }
 
@@ -349,6 +356,14 @@ namespace CalValEX
             }
             if (Player.armor[10].type == ItemType<SpectralstormHat>()) {
                 specan = true;
+            }
+            if (Player.armor[10].type == ItemType<DraedonHelmet>())
+            {
+                arsenalHelmet = true;
+            }
+            if (Player.armor[11].type == ItemType<DraedonChestplate>())
+            {
+                arsenalChestplate = true;
             }
             if (Player.armor[11].type == ItemType<AresChestplate>()) {
                 bool gausspawned = Player.ownedProjectileCounts[ProjectileType<GaussArm>()] <= 0;
@@ -461,6 +476,29 @@ namespace CalValEX
             }
         }
         public override void FrameEffects() {
+
+            string classString = "Typeless";
+            if (Player.HeldItem.DamageType.CountsAsClass(DamageClass.Melee))
+            {
+                classString = "Melee";
+            }
+            else if (Player.HeldItem.DamageType.CountsAsClass(DamageClass.Magic))
+            {
+                classString = "Magic";
+            }
+            else if (Player.HeldItem.DamageType.CountsAsClass(DamageClass.Summon))
+            {
+                classString = "Summoner";
+            }
+            else if (Player.HeldItem.DamageType.CountsAsClass(DamageClass.Throwing))
+            {
+                classString = "Rogue";
+            }
+            else if (Player.HeldItem.DamageType.CountsAsClass(DamageClass.Ranged))
+            {
+                classString = "Ranged";
+            }
+
             if ((maryTrans || maryForce) && !maryHide)
                 Player.legs = EquipLoader.GetEquipSlot(Mod, "BloodyMaryDress", EquipType.Legs);
             if ((profanedCultist || profanedCultistForce) && !profanedCultistHide)
@@ -471,30 +509,33 @@ namespace CalValEX
                 Player.legs = EquipLoader.GetEquipSlot(Mod, "BelladonnaCloak", EquipType.Legs);
 
             if ((signutTrans || signutForce) && !signutHide) {
-                var costume = GetInstance<Signus>();
                 Player.head = EquipLoader.GetEquipSlot(Mod, "Signus", EquipType.Head);
                 Player.body = EquipLoader.GetEquipSlot(Mod, "Signus", EquipType.Body);
                 Player.legs = EquipLoader.GetEquipSlot(Mod, "Signus", EquipType.Legs);
             } else if ((androTrans || androForce) && !androHide) {
-                var costume = GetInstance<ProtoRing>();
                 Player.head = EquipLoader.GetEquipSlot(Mod, "ProtoRing", EquipType.Head);
                 Player.body = EquipLoader.GetEquipSlot(Mod, "ProtoRing", EquipType.Body);
                 Player.legs = EquipLoader.GetEquipSlot(Mod, "ProtoRing", EquipType.Legs);
             } else if ((classicTrans || classicForce) && !classicHide) {
-                var costume = GetInstance<BurningEye>();
                 Player.head = EquipLoader.GetEquipSlot(Mod, "BurningEye", EquipType.Head);
                 Player.body = EquipLoader.GetEquipSlot(Mod, "BurningEye", EquipType.Body);
                 Player.legs = EquipLoader.GetEquipSlot(Mod, "BurningEye", EquipType.Legs);
             } else if ((cloudTrans || cloudForce) && !cloudHide) {
-                var costume = GetInstance<CloudWaistbelt>();
                 Player.head = EquipLoader.GetEquipSlot(Mod, "CloudWaistbelt", EquipType.Head);
                 Player.body = EquipLoader.GetEquipSlot(Mod, "CloudWaistbelt", EquipType.Body);
                 Player.legs = EquipLoader.GetEquipSlot(Mod, "CloudWaistbelt", EquipType.Legs);
             } else if ((sandTrans || sandForce) && !sandHide) {
-                var costume = GetInstance<SandyBangles>();
                 Player.head = EquipLoader.GetEquipSlot(Mod, "SandyBangles", EquipType.Head);
                 Player.body = EquipLoader.GetEquipSlot(Mod, "SandyBangles", EquipType.Body);
                 Player.legs = EquipLoader.GetEquipSlot(Mod, "SandyBangles", EquipType.Legs);
+            }
+            if (arsenalHelmet)
+            {
+                Player.head = EquipLoader.GetEquipSlot(Mod, "DraedonHelmet" + classString, EquipType.Head);
+            }
+            if (arsenalChestplate)
+            {
+                Player.body = EquipLoader.GetEquipSlot(Mod, "DraedonChestplate" + classString, EquipType.Body);
             }
             if (cassette) {
                 Player.armorEffectDrawShadow = true;
