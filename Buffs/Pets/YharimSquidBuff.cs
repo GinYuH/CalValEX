@@ -16,11 +16,11 @@ namespace CalValEX.Buffs.Pets
         {
             player.buffTime[buffIndex] = 18000;
             player.GetModPlayer<CalValEXPlayer>().ySquid = true;
-            bool petProjectileNotSpawned = player.ownedProjectileCounts[ModContent.ProjectileType<YharimSquid>()] <= 0;
+            bool petProjectileNotSpawned = player.ownedProjectileCounts[ModContent.ProjectileType<AbyssalTitan>()] <= 0;
             if (petProjectileNotSpawned && player.whoAmI == Main.myPlayer)
             {
                 Projectile.NewProjectile(player.GetSource_Buff(buffIndex), player.position.X + player.width / 2, player.position.Y + player.height / 2,
-                    0f, 0f, ModContent.ProjectileType<YharimSquid>(), 0, 0f, player.whoAmI);
+                    0f, 0f, ModContent.ProjectileType<AbyssalTitan>(), 0, 0f, player.whoAmI);
             }
         }
     }

@@ -35,7 +35,7 @@ namespace CalValEX.Projectiles.Pets.LightPets
             Texture2D texture = ModContent.Request<Texture2D>(CosmicTexture).Value;
             Rectangle sourceRectangle = new(0, 40 * frame, texture.Width, texture.Height / 6);
             Vector2 origin = new(texture.Width, texture.Height);
-            Vector2 position = player.Center;
+            Vector2 position = player.Center + Vector2.UnitY * player.gfxOffY;
             position.Y += 36f;
             position -= Main.screenPosition;
             Main.EntitySpriteDraw(texture, position, sourceRectangle, lightColor, 0f, origin / 2f, 1f, SpriteEffects.None, 0);
@@ -57,7 +57,7 @@ namespace CalValEX.Projectiles.Pets.LightPets
             }
 
             Vector2 vectorToOwner = player.Center;
-            vectorToOwner.Y -= 64f;
+            vectorToOwner.Y -= 64f - player.gfxOffY;
 
             float value = 8f;
 

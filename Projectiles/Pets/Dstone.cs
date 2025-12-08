@@ -1,4 +1,5 @@
-﻿using Terraria;
+﻿using System;
+using Terraria;
 
 namespace CalValEX.Projectiles.Pets
 {
@@ -45,7 +46,7 @@ namespace CalValEX.Projectiles.Pets
 
         public override void CustomBehaviour(Player player, ref int state, float walkingSpeed, float walkingInertia, float flyingSpeed, float flyingInertia)
         {
-            Projectile.rotation += Projectile.velocity.X * 0.2f * (5.5f + 0.01f + (player.statLifeMax2 - player.statLife) * 0.5f);
+            Projectile.rotation += Projectile.velocity.X * MathHelper.Lerp(0.1f, 0.5f, 1 - (player.statLife / (float)player.statLifeMax2));
         }
 
         public override void PetFunctionality(Player player)
