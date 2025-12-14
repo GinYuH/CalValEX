@@ -4731,5 +4731,9 @@ ShatteredHeartoftheCommunity: {
 
 MoldyHoody: {
 	// DisplayName: Moldy Hoody
-	// Tooltip: ""
+	/* Tooltip:
+		'''
+		Transforms the wearer into a fungus-infested guardian monster
+		'You will take up mush more room'
+		''' */
 }

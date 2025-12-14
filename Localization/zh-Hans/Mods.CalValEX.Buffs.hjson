@@ -790,6 +790,6 @@ NautilusJrBuff: {
 }
 
 MushroomWardenBuff: {
-	// DisplayName: Mushroom Warden Buff
-	// Description: Mods.CalValEX.Buffs.MushroomWardenBuff.Description
+	// DisplayName: Mushroom Warden
+	// Description: Stalwart Defender of the Swearshrooms
 }

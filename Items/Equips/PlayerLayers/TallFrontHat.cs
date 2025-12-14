@@ -63,7 +63,7 @@ namespace CalValEX.Items.Equips.PlayerLayers
                 int drawY = (int)(drawPlayer.position.Y + drawPlayer.height - 20 - Main.screenPosition.Y - secondyoffset);
                 if (drawPlayer.mount.Active)
                     drawY += drawPlayer.mount.HeightBoost;
-                DrawData dat = new(texture, headPosition + new Vector2(drawInfo.drawPlayer.direction * -2, 2), texture.Frame(1, 20, 0, (int)(drawPlayer.bodyFrame.Y / 56f)), drawInfo.colorArmorHead, 0f, new Vector2(texture.Width / 2, texture.Height / 40), 1f, drawPlayer.direction != -1 ? SpriteEffects.None : SpriteEffects.FlipHorizontally, 0);
+                DrawData dat = new(texture, headPosition + new Vector2(0, 1), texture.Frame(1, 20, 0, (int)(drawPlayer.bodyFrame.Y / 56f)), drawInfo.colorArmorHead, 0f, new Vector2(texture.Width / 2, texture.Height / 40), 1f, drawPlayer.direction != -1 ? SpriteEffects.None : SpriteEffects.FlipHorizontally, 0);
                 dat.shader = dyeShader;
                 drawInfo.DrawDataCache.Add(dat);
             }
