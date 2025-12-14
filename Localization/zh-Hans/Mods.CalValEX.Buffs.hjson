@@ -788,3 +788,8 @@ NautilusJrBuff: {
 	// DisplayName: Nautilus Jr.
 	// Description: Likes bubbles
 }
+
+MushroomWardenBuff: {
+	// DisplayName: Mushroom Warden Buff
+	// Description: Mods.CalValEX.Buffs.MushroomWardenBuff.Description
+}

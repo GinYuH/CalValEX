@@ -788,3 +788,8 @@ NautilusJrBuff: {
 	DisplayName: Nautilus Jr.
 	Description: Likes bubbles
 }
+
+MushroomWardenBuff: {
+	DisplayName: Mushroom Warden
+	Description: Stalwart Defender of the Swearshrooms
+}

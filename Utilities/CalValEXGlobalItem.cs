@@ -27,6 +27,7 @@ using Terraria.GameContent.ItemDropRules;
 using System.Linq;
 using CalValEX.CalamityID;
 using CalValEX.Tiles.Paintings;
+using CalValEX.Items.Equips.Transformations;
 
 namespace CalValEX
 {
@@ -96,7 +97,8 @@ namespace CalValEX
             {
                 itemLoot.Add(rule2.OnSuccess(new CommonDrop(ModContent.ItemType<MushroomCap>(), 1, 205, 335)));
                 itemLoot.Add(rule.OnSuccess(new CommonDrop(ModContent.ItemType<ClawShroom>(), 10, chanceNumerator: 3)));
-			}
+                itemLoot.Add(rule.OnSuccess(new CommonDrop(ModContent.ItemType<MoldyHoody>(), 5)));
+            }
 			else if (item.type == CalItemID.HiveMindBag)
 			{
 				itemLoot.Add(rule.OnSuccess(new CommonDrop(ModContent.ItemType<Corruppuccino>(), 10, chanceNumerator: 3)));
@@ -275,7 +277,11 @@ namespace CalValEX
             if (CalValEX.FablesActive)
             {
                 if (item.type == CalValEX.Fables.Find<ModItem>("SirNautilusTreasureBag").Type)
+                {
                     itemLoot.Add(rule.OnSuccess(new CommonDrop(ModContent.ItemType<NautilusShell>(), 3)));
+                    itemLoot.Add(rule.OnSuccess(new CommonDrop(ModContent.ItemType<SeaguardShield>(), 3)));
+                    itemLoot.Add(rule.OnSuccess(new CommonDrop(ModContent.ItemType<DustyGuitar>(), 3)));
+                }
             }
             #endregion
 
@@ -289,7 +295,6 @@ namespace CalValEX
                 itemLoot.Add(rule.OnSuccess(ItemDropRule.NotScalingWithLuck(ModContent.ItemType<SulphurousPlanter>(), 25)));
                 itemLoot.Add(rule10.OnSuccess(ItemDropRule.NotScalingWithLuck(ModContent.ItemType<InkyPollution>(), 50)));
                 itemLoot.Add(rule11.OnSuccess(ItemDropRule.NotScalingWithLuck(ModContent.ItemType<EidolonTree>(), 40)));
-                itemLoot.Add(rule11.OnSuccess(ItemDropRule.NotScalingWithLuck(ModContent.ItemType<NuclearFumes>(), 10, 2, 11)));
                 itemLoot.Add(rule12.OnSuccess(ItemDropRule.NotScalingWithLuck(ModContent.ItemType<BelchingCoral>(), 20)));
             }
             else if (item.type == CalItemID.AstralCrate || item.type == CalItemID.MonolithCrate)

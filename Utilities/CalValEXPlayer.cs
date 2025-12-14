@@ -228,6 +228,12 @@ namespace CalValEX
         //Arsenal Soldier bools
         public bool arsenalHelmet;
         public bool arsenalChestplate;
+        //Mold transformation bools
+        public bool moldHide;
+        public bool moldForce;
+        public bool moldPrevious;
+        public bool moldPower;
+        public bool moldTrans;
         public double rotcounter = 0;
         public double rotdeg = 0;
         public double rotsin = 0;
@@ -333,6 +339,8 @@ namespace CalValEX
             cloudTrans = cloudHide = cloudForce = cloudPower = false;
             sandPrevious = sandTrans;
             sandTrans = sandHide = sandForce = sandPower = false;
+            moldPrevious = moldTrans;
+            moldTrans = moldHide = moldForce = moldPower = false;
             maryPrevious = maryTrans;
             maryTrans = maryHide = maryForce = maryPower = false;
             profanedCultist = profanedCultistHide = profanedCultistForce = false;
@@ -428,6 +436,11 @@ namespace CalValEX
                 } else if (item.type == ItemType<SandyBangles>()) {
                     sandHide = false;
                     sandForce = true;
+                }
+                else if (item.type == ItemType<MoldyHoody>())
+                {
+                    moldHide = false;
+                    moldForce = true;
                 }
                 //Update vanity is fucking broken so they are detected here
                 else if (item.type == ItemType<Items.Equips.Backs.PrismShell>()) {
@@ -529,6 +542,12 @@ namespace CalValEX
                 Player.body = EquipLoader.GetEquipSlot(Mod, "SandyBangles", EquipType.Body);
                 Player.legs = EquipLoader.GetEquipSlot(Mod, "SandyBangles", EquipType.Legs);
             }
+            else if ((moldTrans || moldForce) && !moldHide)
+            {
+                Player.head = EquipLoader.GetEquipSlot(Mod, "MoldyHoody", EquipType.Head);
+                Player.body = EquipLoader.GetEquipSlot(Mod, "MoldyHoody", EquipType.Body);
+                Player.legs = EquipLoader.GetEquipSlot(Mod, "MoldyHoody", EquipType.Legs);
+            }
             if (arsenalHelmet)
             {
                 Player.head = EquipLoader.GetEquipSlot(Mod, "DraedonHelmet" + classString, EquipType.Head);
@@ -553,6 +572,8 @@ namespace CalValEX
                 Player.AddBuff(BuffType<CloudTransformationBuff>(), 60, true);
             else if (sandTrans)
                 Player.AddBuff(BuffType<SandTransformationBuff>(), 60, true);
+            else if (moldTrans)
+                Player.AddBuff(BuffType<MushroomWardenBuff>(), 60, true);
         }
 
         public override void PreUpdateMovement() {

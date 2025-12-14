@@ -4716,3 +4716,12 @@ ShatteredHeartoftheCommunity: {
 		[c/C61B40:Is attainment of such beauty worth dark magicks?]
 		'''
 }
+
+MoldyHoody: {
+	DisplayName: Moldy Hoody
+	Tooltip:
+		'''
+		Transforms the wearer into a fungus-infested guardian monster
+		'You will take up mush more room'
+		'''
+}

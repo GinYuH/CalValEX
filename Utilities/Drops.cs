@@ -518,6 +518,7 @@ namespace CalValEX
                     {
                         AddBlockDrop(npcLoot, ModContent.ItemType<MushroomCap>());
                         npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotExpert(), ModContent.ItemType<ClawShroom>(), 3));
+                        npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotExpert(), ModContent.ItemType<MoldyHoody>(), 5));
                         AddPlushDrop(npcLoot, PlushManager.PlushItems["Crabulon"]);
                     }
                     //Perfs

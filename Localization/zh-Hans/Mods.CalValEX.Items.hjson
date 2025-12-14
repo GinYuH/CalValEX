@@ -4728,3 +4728,8 @@ ShatteredHeartoftheCommunity: {
 		[c/C61B40:Is attainment of such beauty worth dark magicks?]
 		''' */
 }
+
+MoldyHoody: {
+	// DisplayName: Moldy Hoody
+	// Tooltip: ""
+}
