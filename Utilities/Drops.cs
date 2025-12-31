@@ -447,7 +447,7 @@ namespace CalValEX
                         npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<EarthenBreastplate>(), 20));
                         npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<EarthenLeggings>(), 20));
                     }
-                    if (npc.type == CalValEX.CalamityNPC("ArmoredDiggerHead"))
+                    if (npc.type == CalValEX.CalamityNPC("Burrower"))
                     {
                         npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<AncientAuricTeslaHelm>(), 10000));
                         npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<ConstructionRemote>(), 4));
@@ -478,7 +478,7 @@ namespace CalValEX
                         npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<ClamMask>(), 10));
                         npcLoot.Add(ItemDropRule.ByCondition(new MasterRevCondition(), PlushManager.PlushItems["GiantClam"], 4));
                     }
-                    if (npc.type == CalValEX.CalamityNPC("ThiccWaifu"))
+                    if (npc.type == CalValEX.CalamityNPC("CloudElemental"))
                     {
                         npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<CloudCandy>(), 10));
                         npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<CloudWaistbelt>(), 10));
@@ -1252,7 +1252,7 @@ namespace CalValEX
         {
             if (npc.type == boss && !downed && additionalCondition)
             {
-                CalamityMod.NPCs.CalamityGlobalNPC.SetNewShopVariable(types, downed);
+                CalamityMod.NPCs.CalamityGlobalTownNPC.SetNewShopVariable(types, downed);
             }
         }
 
@@ -1559,7 +1559,7 @@ namespace CalValEX
                     }
                 }
 
-                if (npc.type == CalValEX.CalamityNPC("Bumblefuck2") && npc.TypeName == "Draconic Swarmer")
+                if (npc.type == CalValEX.CalamityNPC("DraconicSwarmer") && npc.TypeName == "Draconic Swarmer")
                 {
                     if (Main.rand.NextFloat() < 0.01f)
                     {

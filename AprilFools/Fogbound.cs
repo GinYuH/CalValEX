@@ -244,7 +244,7 @@ namespace CalValEX.AprilFools
 		[JITWhenModsEnabled("CalamityMod")]
 		public void CalamityText(string text, Color color)
 		{
-			CalamityMod.CalamityUtils.DisplayLocalizedText(text, color);
+			CalamityMod.CalamityUtils.BroadcastLocalizedText(text, color);
 		}
 
 		[JITWhenModsEnabled("CalamityMod")]

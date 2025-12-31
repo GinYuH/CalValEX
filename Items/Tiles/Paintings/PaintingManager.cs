@@ -23,7 +23,7 @@ namespace CalValEX.Tiles.Paintings
             LoadPainting("SwearingShroom", 2, 3, ItemUtils.BossRarity("Crabulon"), fables: true);
             LoadPainting("DivineGore", 2, 3, ItemUtils.BossRarity("Perf"));
             LoadPainting("RottingLands", 2, 3, ItemUtils.BossRarity("Hive"));
-            LoadPainting("TheYu", 3, 3, ItemUtils.BossRarity("Hive"));
+            LoadPainting("TheYu", 4, 4, ItemUtils.BossRarity("Hive"));
             LoadPainting("Duality", 2, 2, ItemUtils.BossRarity("SG"));
 
             LoadPainting("Frozen2", 3, 2, ItemUtils.BossRarity("Cryogen"), true);

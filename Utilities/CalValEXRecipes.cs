@@ -131,7 +131,7 @@ namespace CalValEX
                 recipe.AddIngredient(ItemType<DriedLocket>());
                 recipe.AddIngredient(ItemType<MoistLocket>());
                 recipe.AddIngredient(ItemType<NuclearFumes>(), 20);
-                recipe.AddTile(TileID.LunarCraftingStation);
+                recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
             {
@@ -148,7 +148,7 @@ namespace CalValEX
                 recipe.AddIngredient(ItemType<CloudCandy>());
                 recipe.AddIngredient(ItemType<SmallSandPail>());
                 recipe.AddIngredient(ItemType<SmallSandPlushie>());
-                recipe.AddTile(TileID.LunarCraftingStation);
+                recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
             {
@@ -251,7 +251,7 @@ namespace CalValEX
             {
                 Recipe recipe = Recipe.Create(ItemType<XerocodileItem>());
                 recipe.AddIngredient(CalValEX.CalamityItem("Gorecodile"), 10);
-                recipe.AddTile(TileID.LunarCraftingStation);
+                recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
             #endregion
@@ -365,7 +365,7 @@ namespace CalValEX
                 Recipe recipe = Recipe.Create(ItemType<BloodyMaryHat>());
                 recipe.AddIngredient(CalValEX.CalamityItem("BloodstoneCore"), 3);
                 recipe.AddIngredient((ItemID.TheBrideHat), 1);
-                recipe.AddTile(TileID.LunarCraftingStation);
+                recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
             {
@@ -380,7 +380,7 @@ namespace CalValEX
                 Recipe recipe = Recipe.Create(ItemType<FallenPaladinsHelmet>());
                 recipe.AddIngredient(CalValEX.CalamityItem("AshesofCalamity"));
                 recipe.AddIngredient(CalValEX.CalamityItem("ScoriaBar"));
-                recipe.AddIngredient(CalValEX.CalamityItem("CoreofHavoc"));
+                recipe.AddIngredient(CalValEX.CalamityItem("EssenceofHavoc"));
                 recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
@@ -427,7 +427,7 @@ namespace CalValEX
                 Recipe recipe = Recipe.Create(ItemType<FallenPaladinsGreaves>());
                 recipe.AddIngredient(CalValEX.CalamityItem("AshesofCalamity"));
                 recipe.AddIngredient(CalValEX.CalamityItem("ScoriaBar"), 2);
-                recipe.AddIngredient(CalValEX.CalamityItem("CoreofHavoc"));
+                recipe.AddIngredient(CalValEX.CalamityItem("EssenceofHavoc"));
                 recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
@@ -447,14 +447,14 @@ namespace CalValEX
                 Recipe recipe = Recipe.Create(ItemType<BloodyMaryDress>());
                 recipe.AddIngredient(CalValEX.CalamityItem("BloodstoneCore"), 8);
                 recipe.AddIngredient((ItemID.TheBrideDress), 1);
-                recipe.AddTile(TileID.LunarCraftingStation);
+                recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
             {
                 Recipe recipe = Recipe.Create(ItemType<FallenPaladinsPlateMail>());
                 recipe.AddIngredient(CalValEX.CalamityItem("AshesofCalamity"), 2);
                 recipe.AddIngredient(CalValEX.CalamityItem("ScoriaBar"), 2);
-                recipe.AddIngredient(CalValEX.CalamityItem("CoreofHavoc"));
+                recipe.AddIngredient(CalValEX.CalamityItem("EssenceofHavoc"));
                 recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
@@ -483,7 +483,7 @@ namespace CalValEX
                 recipe.AddIngredient(ItemType<SignusEmblem>());
                 recipe.AddIngredient(ItemType<SignusNether>());
                 recipe.AddIngredient(CalValEX.CalamityItem("TwistingNether"), 5);
-                recipe.AddTile(TileID.LunarCraftingStation);
+                recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
             {
@@ -536,7 +536,7 @@ namespace CalValEX
                 recipe.AddIngredient(ItemType<FROM>());
                 recipe.AddIngredient(ItemType<VaporoflyItem>());
                 recipe.AddIngredient(ItemType<NuclearFumes>(), 10);
-                recipe.AddTile(TileID.LunarCraftingStation);
+                recipe.AddTile(TileID.MythrilAnvil);
                 ArsenalTG(recipe);
                 recipe.Register();
             }
@@ -544,7 +544,7 @@ namespace CalValEX
                 Recipe recipe = Recipe.Create(ItemType<PhantominaJar>());
                 recipe.AddIngredient(ItemID.WispinaBottle);
                 recipe.AddIngredient(CalValEX.CalamityItem("RuinousSoul"), 5);
-                recipe.AddTile(TileID.LunarCraftingStation);
+                recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
             {
@@ -583,7 +583,7 @@ namespace CalValEX
                 Recipe recipe = Recipe.Create(ItemType<BloodstoneCarriageItem>());
                 recipe.AddIngredient(ItemType<ChiseledBloodstone>(), 50);
                 recipe.AddIngredient(CalValEX.CalamityItem("BloodstoneCore"), 10);
-                recipe.AddTile(TileID.LunarCraftingStation);
+                recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
             {
@@ -598,7 +598,7 @@ namespace CalValEX
                 recipe.AddIngredient(ItemType<ProfanedBattery>());
                 recipe.AddIngredient(ItemType<ProfanedWheels>());
                 recipe.AddIngredient(CalValEX.CalamityItem("DivineGeode"), 5);
-                recipe.AddTile(TileID.LunarCraftingStation);
+                recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
             {
@@ -620,7 +620,7 @@ namespace CalValEX
             {
                 Recipe recipe = Recipe.Create(ItemType<ShadowShedding>());
                 recipe.AddIngredient(CalValEX.CalamityItem("CorruptionEffigy"), 1);
-                recipe.AddIngredient(CalValEX.CalamityItem("RottenMatter"), 20);
+                recipe.AddIngredient(ItemID.ShadowScale, 20);
                 recipe.AddIngredient(ItemID.SoulofFlight, 20);
                 recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
@@ -679,14 +679,14 @@ namespace CalValEX
                 recipe.AddIngredient(CalValEX.CalamityItem("Valediction"));
                 recipe.AddIngredient(CalValEX.CalamityItem("Lumenyl"), 3996);
                 recipe.AddIngredient(CalValEX.CalamityItem("DepthCells"), 3996);
-                recipe.AddTile(TileID.LunarCraftingStation);
+                recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
             {
                 Recipe recipe = Recipe.Create(ItemType<RottingCalamitousArtifact>());
                 recipe.AddIngredient(CalValEX.CalamityItem("AshesofCalamity"), 15);
                 recipe.AddIngredient(CalValEX.CalamityItem("Cinderplate"), 20);
-                recipe.AddTile(TileID.LunarCraftingStation);
+                recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
             {
@@ -702,7 +702,7 @@ namespace CalValEX
                 recipe.AddIngredient(ItemType<SlimeDeitysSoul>());
                 recipe.AddIngredient(CalValEX.CalamityItem("TwistingNether"), 20);
                 recipe.AddIngredient(CalValEX.CalamityItem("PurifiedGel"), 20);
-                recipe.AddTile(TileID.LunarCraftingStation);
+                recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
             {
@@ -735,7 +735,7 @@ namespace CalValEX
                 recipe.AddIngredient(CalValEX.CalamityItem("GrandScale"), 1);
                 recipe.AddIngredient(ItemType<NuclearFumes>(), 15);
                 recipe.AddIngredient(CalValEX.CalamityItem("ReaperTooth"), 15);
-                recipe.AddTile(TileID.LunarCraftingStation);
+                recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
             {
@@ -974,6 +974,13 @@ namespace CalValEX
 
             #region //Blocks
             {
+                Recipe recipe = Recipe.Create(ItemType<AstralPlating>(), 200);
+                recipe.AddIngredient(CalValEX.CalamityItem("AureusCell"));
+                recipe.AddIngredient(ItemID.StoneBlock, 200);
+                recipe.AddTile(TileID.AdamantiteForge);
+                recipe.Register();
+            }
+            {
                 Recipe recipe = Recipe.Create(ItemType<AuricBrick>(), 50);
                 recipe.AddIngredient(CalValEX.CalamityItem("AuricOre"));
                 recipe.AddIngredient(ItemID.StoneBlock, 50);
@@ -991,14 +998,14 @@ namespace CalValEX
                 Recipe recipe = Recipe.Create(ItemType<BloodstoneBrick>(), 200);
                 recipe.AddIngredient(CalValEX.CalamityItem("BloodstoneCore"));
                 recipe.AddIngredient(ItemID.StoneBlock, 200);
-                recipe.AddTile(TileID.LunarCraftingStation);
+                recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
             {
                 Recipe recipe = Recipe.Create(ItemType<ChiseledBloodstone>(), 200);
                 recipe.AddIngredient(CalValEX.CalamityItem("BloodstoneCore"));
                 recipe.AddIngredient(ItemID.StoneBlock, 200);
-                recipe.AddTile(TileID.LunarCraftingStation);
+                recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
             {
@@ -1006,7 +1013,7 @@ namespace CalValEX
                 recipe.AddIngredient(CalValEX.CalamityItem("SmoothVoidstone"), 200);
                 recipe.AddIngredient(CalValEX.CalamityItem("ReaperTooth"));
                 recipe.AddIngredient(CalValEX.CalamityItem("Lumenyl"), 5);
-                recipe.AddTile(TileID.LunarCraftingStation);
+                recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
             {
@@ -1027,14 +1034,14 @@ namespace CalValEX
                 Recipe recipe = Recipe.Create(ItemType<MeldBlock>(), 50);
                 recipe.AddIngredient(CalValEX.CalamityItem("MeldBlob"));
                 recipe.AddIngredient(ItemID.StoneBlock, 50);
-                recipe.AddTile(TileID.LunarCraftingStation);
+                recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
             {
                 Recipe recipe = Recipe.Create(ItemType<PhantowaxBlock>(), 50);
                 recipe.AddIngredient(ItemID.ClayBlock, 50);
                 recipe.AddIngredient(CalValEX.CalamityItem("Phantoplasm"));
-                recipe.AddTile(TileID.LunarCraftingStation);
+                recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
             {
@@ -1103,7 +1110,7 @@ namespace CalValEX
             //MonolithRecipe(ItemType <InfectedArmorPlating>(), ItemType<PlagueMonolith>(), TileID.MythrilAnvil);
             //MonolithRecipe(ItemType <AshesofCalamity>(), ItemType<CalamitousMonolith>(), TileID.MythrilAnvil);
             //MonolithRecipe(ItemType<CryonicBar>(), ItemType<AuroraMonolith>(), TileID.MythrilAnvil);
-            MonolithRecipe(ItemType<Termipebbles>(), ItemType<TerminusShrine>(), TileID.LunarCraftingStation);
+            MonolithRecipe(ItemType<Termipebbles>(), ItemType<TerminusShrine>(), TileID.MythrilAnvil);
             #endregion
 
             #region //Block to Block conversions
@@ -1189,7 +1196,7 @@ namespace CalValEX
                 Recipe recipe = Recipe.Create(ItemType<MoulderingAltarItem>());
                 recipe.AddIngredient(ItemID.DemoniteBar, 20);
                 recipe.AddIngredient(ItemID.SoulofNight, 15);
-                recipe.AddIngredient(CalValEX.CalamityItem("RottenMatter"), 6);
+                recipe.AddIngredient(ItemID.ShadowScale, 6);
                 recipe.AddTile(TileID.DemonAltar);
                 recipe.Register();
             }
@@ -1237,7 +1244,7 @@ namespace CalValEX
                 Recipe recipe = Recipe.Create(ItemType<VisceralAltarItem>());
                 recipe.AddIngredient(ItemID.CrimtaneBar, 20);
                 recipe.AddIngredient(ItemID.SoulofNight, 15);
-                recipe.AddIngredient(CalValEX.CalamityItem("BloodSample"), 6);
+                recipe.AddIngredient(ItemID.TissueSample, 6);
                 recipe.AddTile(TileID.DemonAltar);
                 recipe.Register();
             }
@@ -1616,7 +1623,7 @@ namespace CalValEX
             {
                 Recipe recipe = Recipe.Create(ItemType<AuricManufacturer>());
                 recipe.AddIngredient(ItemType<AuricBrick>(), 20);
-                recipe.AddTile(TileID.LunarCraftingStation);
+                recipe.AddTile(CalValEX.CalamityTile("CosmicAnvil"));
                 recipe.Register();
             }
             {
@@ -1749,48 +1756,48 @@ namespace CalValEX
             {
                 Recipe recipe = Recipe.Create(ItemType<PhantowaxBathtubItem>());
                 recipe.AddIngredient(ItemType<PhantowaxBlock>(), 14);
-                recipe.AddTile(TileID.LunarCraftingStation);
+                recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
             {
                 Recipe recipe = Recipe.Create(ItemType<PhantowaxBedItem>());
                 recipe.AddIngredient(ItemType<PhantowaxBlock>(), 15);
                 recipe.AddIngredient(plasm, 5);
-                recipe.AddTile(TileID.LunarCraftingStation);
+                recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
             {
                 Recipe recipe = Recipe.Create(ItemType<PhantowaxSofaItem>());
                 recipe.AddIngredient(ItemType<PhantowaxBlock>(), 5);
                 recipe.AddIngredient(plasm, 2);
-                recipe.AddTile(TileID.LunarCraftingStation);
+                recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
             {
                 Recipe recipe = Recipe.Create(ItemType<PhantowaxBookshelfItem>());
                 recipe.AddIngredient(ItemType<PhantowaxBlock>(), 20);
                 recipe.AddIngredient(ItemID.Book, 10);
-                recipe.AddTile(TileID.LunarCraftingStation);
+                recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
             {
                 Recipe recipe = Recipe.Create(ItemType<PhantowaxCandelabraItem>());
                 recipe.AddIngredient(ItemType<PhantowaxBlock>(), 5);
                 recipe.AddIngredient(plasm, 3);
-                recipe.AddTile(TileID.LunarCraftingStation);
+                recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
             {
                 Recipe recipe = Recipe.Create(ItemType<PhantowaxCandleItem>());
                 recipe.AddIngredient(ItemType<PhantowaxBlock>(), 4);
                 recipe.AddIngredient(plasm, 1);
-                recipe.AddTile(TileID.LunarCraftingStation);
+                recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
             {
                 Recipe recipe = Recipe.Create(ItemType<PhantowaxChairItem>());
                 recipe.AddIngredient(ItemType<PhantowaxBlock>(), 5);
-                recipe.AddTile(TileID.LunarCraftingStation);
+                recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
             {
@@ -1798,47 +1805,47 @@ namespace CalValEX
                 recipe.AddIngredient(ItemType<PhantowaxBlock>(), 4);
                 recipe.AddIngredient(plasm, 4);
                 recipe.AddIngredient(ItemID.Chain, 1);
-                recipe.AddTile(TileID.LunarCraftingStation);
+                recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
             {
                 Recipe recipe = Recipe.Create(ItemType<PhantowaxChestItem>());
                 recipe.AddIngredient(ItemType<PhantowaxBlock>(), 8);
                 recipe.AddIngredient(plasm, 2);
-                recipe.AddTile(TileID.LunarCraftingStation);
+                recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
             {
                 Recipe recipe = Recipe.Create(ItemType<PhantowaxClockItem>());
                 recipe.AddIngredient(ItemType<PhantowaxBlock>(), 10);
                 recipe.AddRecipeGroup(RecipeGroupID.IronBar, 3);
-                recipe.AddTile(TileID.LunarCraftingStation);
+                recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
             {
                 Recipe recipe = Recipe.Create(ItemType<PhantowaxDoorItem>());
                 recipe.AddIngredient(ItemType<PhantowaxBlock>(), 6);
-                recipe.AddTile(TileID.LunarCraftingStation);
+                recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
             {
                 Recipe recipe = Recipe.Create(ItemType<PhantowaxDresserItem>());
                 recipe.AddIngredient(ItemType<PhantowaxBlock>(), 16);
-                recipe.AddTile(TileID.LunarCraftingStation);
+                recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
             {
                 Recipe recipe = Recipe.Create(ItemType<PhantowaxLampItem>());
                 recipe.AddIngredient(ItemType<PhantowaxBlock>(), 3);
                 recipe.AddIngredient(plasm, 1);
-                recipe.AddTile(TileID.LunarCraftingStation);
+                recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
             {
                 Recipe recipe = Recipe.Create(ItemType<PhantowaxLanternItem>());
                 recipe.AddIngredient(ItemType<PhantowaxBlock>(), 6);
                 recipe.AddIngredient(plasm, 1);
-                recipe.AddTile(TileID.LunarCraftingStation);
+                recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
             {
@@ -1846,7 +1853,7 @@ namespace CalValEX
                 recipe.AddIngredient(ItemType<PhantowaxBlock>(), 15);
                 recipe.AddIngredient(ItemID.Bone, 4);
                 recipe.AddIngredient(ItemID.Book, 1);
-                recipe.AddTile(TileID.LunarCraftingStation);
+                recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
             {
@@ -1854,13 +1861,13 @@ namespace CalValEX
                 recipe.AddIngredient(ItemType<PhantowaxBlock>(), 6);
                 recipe.AddIngredient(plasm, 1);
                 recipe.AddIngredient(ItemID.EmptyBucket, 1);
-                recipe.AddTile(TileID.LunarCraftingStation);
+                recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
             {
                 Recipe recipe = Recipe.Create(ItemType<PhantowaxTableItem>());
                 recipe.AddIngredient(ItemType<PhantowaxBlock>(), 8);
-                recipe.AddTile(TileID.LunarCraftingStation);
+                recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
             {
@@ -1886,48 +1893,48 @@ namespace CalValEX
             {
                 Recipe recipe = Recipe.Create(ItemType<BloodstoneBathtubItem>());
                 recipe.AddIngredient(ItemType<ChiseledBloodstone>(), 14);
-                recipe.AddTile(TileID.LunarCraftingStation);
+                recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
             {
                 Recipe recipe = Recipe.Create(ItemType<BloodstoneBedItem>());
                 recipe.AddIngredient(ItemType<ChiseledBloodstone>(), 15);
                 recipe.AddIngredient(blorb, 5);
-                recipe.AddTile(TileID.LunarCraftingStation);
+                recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
             {
                 Recipe recipe = Recipe.Create(ItemType<BloodstoneSofaItem>());
                 recipe.AddIngredient(ItemType<ChiseledBloodstone>(), 5);
                 recipe.AddIngredient(blorb, 2);
-                recipe.AddTile(TileID.LunarCraftingStation);
+                recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
             {
                 Recipe recipe = Recipe.Create(ItemType<BloodstoneBookshelfItem>());
                 recipe.AddIngredient(ItemType<ChiseledBloodstone>(), 20);
                 recipe.AddIngredient(ItemID.Book, 10);
-                recipe.AddTile(TileID.LunarCraftingStation);
+                recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
             {
                 Recipe recipe = Recipe.Create(ItemType<BloodstoneCandelabraItem>());
                 recipe.AddIngredient(ItemType<ChiseledBloodstone>(), 5);
                 recipe.AddIngredient(blorb, 3);
-                recipe.AddTile(TileID.LunarCraftingStation);
+                recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
             {
                 Recipe recipe = Recipe.Create(ItemType<BloodstoneCandleItem>());
                 recipe.AddIngredient(ItemType<ChiseledBloodstone>(), 4);
                 recipe.AddIngredient(blorb, 1);
-                recipe.AddTile(TileID.LunarCraftingStation);
+                recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
             {
                 Recipe recipe = Recipe.Create(ItemType<BloodstoneChairItem>());
                 recipe.AddIngredient(ItemType<ChiseledBloodstone>(), 5);
-                recipe.AddTile(TileID.LunarCraftingStation);
+                recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
             {
@@ -1935,47 +1942,47 @@ namespace CalValEX
                 recipe.AddIngredient(ItemType<ChiseledBloodstone>(), 4);
                 recipe.AddIngredient(blorb, 4);
                 recipe.AddIngredient(ItemID.Chain, 1);
-                recipe.AddTile(TileID.LunarCraftingStation);
+                recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
             {
                 Recipe recipe = Recipe.Create(ItemType<BloodstoneChestItem>());
                 recipe.AddIngredient(ItemType<ChiseledBloodstone>(), 8);
                 recipe.AddIngredient(blorb, 2);
-                recipe.AddTile(TileID.LunarCraftingStation);
+                recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
             {
                 Recipe recipe = Recipe.Create(ItemType<BloodstoneClockItem>());
                 recipe.AddIngredient(ItemType<ChiseledBloodstone>(), 10);
                 recipe.AddRecipeGroup(RecipeGroupID.IronBar, 3);
-                recipe.AddTile(TileID.LunarCraftingStation);
+                recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
             {
                 Recipe recipe = Recipe.Create(ItemType<BloodstoneDoorItem>());
                 recipe.AddIngredient(ItemType<ChiseledBloodstone>(), 6);
-                recipe.AddTile(TileID.LunarCraftingStation);
+                recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
             {
                 Recipe recipe = Recipe.Create(ItemType<BloodstoneDresserItem>());
                 recipe.AddIngredient(ItemType<ChiseledBloodstone>(), 16);
-                recipe.AddTile(TileID.LunarCraftingStation);
+                recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
             {
                 Recipe recipe = Recipe.Create(ItemType<BloodstoneLampItem>());
                 recipe.AddIngredient(ItemType<ChiseledBloodstone>(), 3);
                 recipe.AddIngredient(blorb, 1);
-                recipe.AddTile(TileID.LunarCraftingStation);
+                recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
             {
                 Recipe recipe = Recipe.Create(ItemType<BloodstoneLanternItem>());
                 recipe.AddIngredient(ItemType<ChiseledBloodstone>(), 6);
                 recipe.AddIngredient(blorb, 1);
-                recipe.AddTile(TileID.LunarCraftingStation);
+                recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
             {
@@ -1983,7 +1990,7 @@ namespace CalValEX
                 recipe.AddIngredient(ItemType<ChiseledBloodstone>(), 15);
                 recipe.AddIngredient(ItemID.Bone, 4);
                 recipe.AddIngredient(ItemID.Book, 1);
-                recipe.AddTile(TileID.LunarCraftingStation);
+                recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
             {
@@ -1991,13 +1998,13 @@ namespace CalValEX
                 recipe.AddIngredient(ItemType<ChiseledBloodstone>(), 6);
                 recipe.AddIngredient(blorb, 1);
                 recipe.AddIngredient(ItemID.EmptyBucket, 1);
-                recipe.AddTile(TileID.LunarCraftingStation);
+                recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
             {
                 Recipe recipe = Recipe.Create(ItemType<BloodstoneTableItem>());
                 recipe.AddIngredient(ItemType<ChiseledBloodstone>(), 8);
-                recipe.AddTile(TileID.LunarCraftingStation);
+                recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
             {

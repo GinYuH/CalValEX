@@ -100,12 +100,12 @@ namespace CalValEX.Items.Mounts.Minecart
             CalamityMod.Graphics.Primitives.PrimitiveRenderer.RenderTrail(oldposes, new(WidthFunction, ColorFunction), 40);
         }
 
-        internal Color ColorFunction(float completionRatio)
+        internal Color ColorFunction(float completionRatio, Vector2 v)
         {
             return Color.Lerp(Color.White, Main.DiscoColor, completionRatio);
         }
 
-        internal float WidthFunction(float completionRatio)
+        internal float WidthFunction(float completionRatio, Vector2 v)
         {
             return (1 - completionRatio) * 4;
         }

@@ -286,7 +286,7 @@ namespace CalValEX.Items.Plushies
             TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);
             TileObjectData.newTile.Width = Width;
             TileObjectData.newTile.Height = Height;
-            TileObjectData.newTile.AnchorBottom = new AnchorData(Terraria.Enums.AnchorType.SolidTile | Terraria.Enums.AnchorType.SolidWithTop | Terraria.Enums.AnchorType.AlternateTile, TileObjectData.newTile.Width, 0);
+            TileObjectData.newTile.AnchorBottom = new AnchorData(Terraria.Enums.AnchorType.Table | Terraria.Enums.AnchorType.SolidTile | Terraria.Enums.AnchorType.SolidWithTop | Terraria.Enums.AnchorType.AlternateTile, TileObjectData.newTile.Width, 0);
             List<int> heightArray = new List<int>(0);
             for (int i = 0; i < Height; i++)
             {

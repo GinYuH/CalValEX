@@ -144,7 +144,7 @@ namespace CalValEX.NPCs.Oracle
 
             if (CalValEX.CalamityActive)
             {
-                if (NPC.AnyNPCs(CalValEX.CalamityNPC("Bumblefuck")))
+                if (NPC.AnyNPCs(CalValEX.CalamityNPC("Dragonfolly")))
                 {
                     dialogue.Add(Language.GetTextValue("Mods.CalValEX.NPCs.OracleNPC.Chat.Bumblefuck"));
                 }

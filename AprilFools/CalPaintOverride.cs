@@ -409,8 +409,8 @@ namespace CalValEX.AprilFools
 
             ReplaceFrameCount(ModContent.NPCType<BrimstoneElemental>(), 10, isFirstLoad, revert);
 
-            ReplaceFrameCount(ModContent.NPCType<WildBumblefuck>(), 6, isFirstLoad, revert);
-            ReplaceFrameCount(ModContent.NPCType<Bumblefuck2>(), 6, isFirstLoad, revert);
+            ReplaceFrameCount(ModContent.NPCType<WildBumblebirb>(), 6, isFirstLoad, revert);
+            ReplaceFrameCount(ModContent.NPCType<DraconicSwarmer>(), 6, isFirstLoad, revert);
 
             ReplaceFrameCount(ModContent.NPCType<CalamitasClone>(), 10, isFirstLoad, revert);
             ReplaceFrameCount(ModContent.NPCType<Cataclysm>(), 1, isFirstLoad, revert);
@@ -483,10 +483,10 @@ namespace CalValEX.AprilFools
             ReplaceSprite("Br3mmy", ref TextureAssets.Npc[ModContent.NPCType<BrimstoneElemental>()], path + "BrimstoneElemental", isFirstLoad, revert);
 
 			// Bumblebirb
-			ReplaceSprite("Birb", ref TextureAssets.Npc[ModContent.NPCType<Bumblefuck>()], path + "Bumblebirb", isFirstLoad, revert);
-            ReplaceSprite("BirbGlow", ref Bumblefuck.GlowTexture, path + "BumblebirbGlow", isFirstLoad, revert);
-            ReplaceSprite("BirbBaby", ref TextureAssets.Npc[ModContent.NPCType<Bumblefuck2>()], path + "Bumblebirb", isFirstLoad, revert);
-            ReplaceSprite("BirbBaby2", ref TextureAssets.Npc[ModContent.NPCType<WildBumblefuck>()], path + "Bumblebirb", isFirstLoad, revert);
+			ReplaceSprite("Birb", ref TextureAssets.Npc[ModContent.NPCType<Dragonfolly>()], path + "Bumblebirb", isFirstLoad, revert);
+            ReplaceSprite("BirbGlow", ref Dragonfolly.GlowTexture, path + "BumblebirbGlow", isFirstLoad, revert);
+            ReplaceSprite("BirbBaby", ref TextureAssets.Npc[ModContent.NPCType<DraconicSwarmer>()], path + "Bumblebirb", isFirstLoad, revert);
+            ReplaceSprite("BirbBaby2", ref TextureAssets.Npc[ModContent.NPCType<WildBumblebirb>()], path + "Bumblebirb", isFirstLoad, revert);
 
             // Calamitas Clone
             ReplaceSprite("Calclone", ref TextureAssets.Npc[ModContent.NPCType<CalamitasClone>()], path + "CalamitasClone", isFirstLoad, revert);
@@ -770,21 +770,27 @@ namespace CalValEX.AprilFools
             ReplaceSprite("DoG", ref TextureAssets.Npc[ModContent.NPCType<DevourerofGodsHead>()], path + "DogHead", isFirstLoad, revert);
 			ReplaceSprite("DoG2", ref TextureAssets.Npc[ModContent.NPCType<DevourerofGodsBody>()],  path + "DogBody", isFirstLoad, revert);
 			ReplaceSprite("DoG3", ref TextureAssets.Npc[ModContent.NPCType<DevourerofGodsTail>()], path + "DogTail", isFirstLoad, revert);
-			ReplaceSprite("DoGG", ref DevourerofGodsHead.Texture_Glow, path + "DogHeadGlow", isFirstLoad, revert);
-			ReplaceSprite("DoGG2", ref DevourerofGodsHead.Texture_Glow2, nothing, isFirstLoad, revert);
+            ReplaceSprite("DoGDJ", ref DevourerofGodsHead.GodSlayerDashJawTexture, nothing, isFirstLoad, revert);
+            ReplaceSprite("DoGJ", ref DevourerofGodsHead.JawTexture, nothing, isFirstLoad, revert);
+            ReplaceSprite("DoGJG", ref DevourerofGodsHead.JawTexture_Glow, nothing, isFirstLoad, revert);
+            ReplaceSprite("DoGG", ref DevourerofGodsHead.Texture_Glow_Cyan, path + "DogHeadGlow", isFirstLoad, revert);
+			ReplaceSprite("DoGG2", ref DevourerofGodsHead.Texture_Glow_Purple, nothing, isFirstLoad, revert);
 			ReplaceSprite("DoG2G", ref DevourerofGodsBody.Texture_Glow, nothing, isFirstLoad, revert);
-			ReplaceSprite("DoG2G2", ref DevourerofGodsTail.Texture_Glow2, path + "DogTailGlow", isFirstLoad, revert);
-			ReplaceSprite("DoG3G", ref DevourerofGodsTail.Texture_Glow, nothing, isFirstLoad, revert);
+			ReplaceSprite("DoG2G2", ref DevourerofGodsTail.Texture_Glow_Cyan, path + "DogTailGlow", isFirstLoad, revert);
+			ReplaceSprite("DoG3G", ref DevourerofGodsTail.Texture_Glow_Purple, nothing, isFirstLoad, revert);
 			// P2
-			ReplaceSprite("DoGS", ref DevourerofGodsHead.Phase2Texture, path + "DogSHead", isFirstLoad, revert);
-			ReplaceSprite("DoGS2", ref DevourerofGodsBody.Phase2Texture, path + "DogSBody", isFirstLoad, revert);
-			ReplaceSprite("DoGS3", ref DevourerofGodsTail.Phase2Texture, path + "DogSTail", isFirstLoad, revert);
-			ReplaceSprite("DoGSG", ref DevourerofGodsHead.Phase2Texture_Glow, path + "DogSHeadGlow", isFirstLoad, revert);
-			ReplaceSprite("DoGSG2", ref DevourerofGodsHead.Phase2Texture_Glow2, nothing, isFirstLoad, revert);
-			ReplaceSprite("DoGS2G", ref DevourerofGodsBody.Phase2Texture_Glow, nothing, isFirstLoad, revert);
-			ReplaceSprite("DoGS2G2", ref DevourerofGodsBody.Phase2Texture_Glow2, nothing, isFirstLoad, revert);
-			ReplaceSprite("DoGS3G", ref DevourerofGodsTail.Phase2Texture_Glow2, path + "DogSTailGlow", isFirstLoad, revert);
-			ReplaceSprite("DoGS3G2", ref DevourerofGodsTail.Phase2Texture_Glow, nothing, isFirstLoad, revert);
+			ReplaceSprite("DoGST", ref DevourerofGodsHead.TextureP2_Full, path + "DogSHead", isFirstLoad, revert);
+            ReplaceSprite("DoGS", ref DevourerofGodsHead.TextureP2, path + "DogSHead", isFirstLoad, revert);
+            ReplaceSprite("DoGSJ", ref DevourerofGodsHead.JawTextureP2, nothing, isFirstLoad, revert);
+            ReplaceSprite("DoGSJG", ref DevourerofGodsHead.JawTextureP2_Glow, nothing, isFirstLoad, revert);
+            ReplaceSprite("DoGS2", ref DevourerofGodsBody.TextureP2, path + "DogSBody", isFirstLoad, revert);
+			ReplaceSprite("DoGS3", ref DevourerofGodsTail.TextureP2, path + "DogSTail", isFirstLoad, revert);
+			ReplaceSprite("DoGSG", ref DevourerofGodsHead.TextureP2_Glow_Cyan, path + "DogSHeadGlow", isFirstLoad, revert);
+			ReplaceSprite("DoGSG2", ref DevourerofGodsHead.TextureP2_Glow_Purple, nothing, isFirstLoad, revert);
+			ReplaceSprite("DoGS2G", ref DevourerofGodsBody.TextureP2_Glow_Cyan, nothing, isFirstLoad, revert);
+			ReplaceSprite("DoGS2G2", ref DevourerofGodsBody.TextureP2_Glow_Purple, nothing, isFirstLoad, revert);
+			ReplaceSprite("DoGS3G", ref DevourerofGodsTail.TextureP2_Glow_Cyan, path + "DogSTailGlow", isFirstLoad, revert);
+			ReplaceSprite("DoGS3G2", ref DevourerofGodsTail.TextureP2_Glow_Purple, nothing, isFirstLoad, revert);
 
 			// Yharon
 			ReplaceSprite("Yharon", ref TextureAssets.Npc[ModContent.NPCType<Yharon>()], path + "Yharon", isFirstLoad, revert);

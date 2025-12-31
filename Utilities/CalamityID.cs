@@ -178,7 +178,7 @@ namespace CalValEX.CalamityID
             GuardianCommander = CalamityID.NPCRelation("ProfanedGuardianCommander", NPCID.QueenSlimeBoss);
             GuardianHealer = CalamityID.NPCRelation("ProfanedGuardianHealer", NPCID.QueenSlimeBoss);
             GuardianDefender = CalamityID.NPCRelation("ProfanedGuardianDefender", NPCID.QueenSlimeBoss);
-            Bumblebirb = CalamityID.NPCRelation("Bumblefuck", NPCID.DD2Betsy);
+            Bumblebirb = CalamityID.NPCRelation("Dragonfolly", NPCID.DD2Betsy);
             Providence = CalamityID.NPCRelation("Providence", NPCID.HallowBoss);
             StormWeaver = CalamityID.NPCRelation("StormWeaverHead", NPCID.TheDestroyer);
             CeaselessVoid = CalamityID.NPCRelation("CeaselessVoid", NPCID.Spazmatism);
@@ -304,8 +304,8 @@ namespace CalValEX.CalamityID
         {
             Turquoise = CalamityID.RarityRelation("Turquoise", ModContent.RarityType<Turquoise>());
             PureGreen = CalamityID.RarityRelation("PureGreen", ModContent.RarityType<PureGreen>());
-            DarkBlue = CalamityID.RarityRelation("DarkBlue", ModContent.RarityType<DarkBlue>());
-            Violet = CalamityID.RarityRelation("Violet", ModContent.RarityType<Violet>());
+            DarkBlue = CalamityID.RarityRelation("CosmicPurple", ModContent.RarityType<DarkBlue>());
+            Violet = CalamityID.RarityRelation("BurnishedAuric", ModContent.RarityType<Violet>());
             HotPink = CalamityID.RarityRelation("HotPink", ModContent.RarityType<HotPink>());
             CalamityRed = CalamityID.RarityRelation("CalamityRed", ModContent.RarityType<CalamityRed>());
             DarkOrange = CalamityID.RarityRelation("DarkOrange", ModContent.RarityType<DarkOrange>());

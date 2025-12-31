@@ -24,7 +24,7 @@ namespace CalValEX
         {
             if (CalamityContent(name, out ModProjectile content))
                 return content.Type;
-            Main.NewText(name + " not found. Report this to the Calamity's Vanities developers if you see this.", Color.Red);
+            CalValEX.instance.Logger.Error(name + " not found. Report this to the Calamity's Vanities developers if you see this.");
             return -1;
         }
 
@@ -32,7 +32,7 @@ namespace CalValEX
         {
             if (CalamityContent(name, out ModItem content))
                 return content.Type;
-            Main.NewText(name + " not found. Report this to the Calamity's Vanities developers if you see this.", Color.Red);
+            CalValEX.instance.Logger.Error(name + " not found. Report this to the Calamity's Vanities developers if you see this.");
             return -1;
         }
 
@@ -40,7 +40,7 @@ namespace CalValEX
         {
             if (CalamityContent(name, out ModNPC content))
                 return content.Type;
-            Main.NewText(name + " not found. Report this to the Calamity's Vanities developers if you see this.", Color.Red);
+            CalValEX.instance.Logger.Error(name + " not found. Report this to the Calamity's Vanities developers if you see this.");
             return -1;
         }
 
@@ -48,7 +48,7 @@ namespace CalValEX
         {
             if (CalamityContent(name, out ModTile content))
                 return content.Type;
-            Main.NewText(name + " not found. Report this to the Calamity's Vanities developers if you see this.", Color.Red);
+            CalValEX.instance.Logger.Error(name + " not found. Report this to the Calamity's Vanities developers if you see this.");
             return -1;
         }
 
@@ -56,7 +56,7 @@ namespace CalValEX
         {
             if (CalamityContent(name, out ModWall content))
                 return content.Type;
-            Main.NewText(name + " not found. Report this to the Calamity's Vanities developers if you see this.", Color.Red);
+            CalValEX.instance.Logger.Error(name + " not found. Report this to the Calamity's Vanities developers if you see this.");
             return -1;
         }
 
@@ -64,7 +64,7 @@ namespace CalValEX
         {
             if (CalamityContent(name, out ModBuff content))
                 return content.Type;
-            Main.NewText(name + " not found. Report this to the Calamity's Vanities developers if you see this.", Color.Red);
+            CalValEX.instance.Logger.Error(name + " not found. Report this to the Calamity's Vanities developers if you see this.");
             return -1;
         }
 
@@ -72,7 +72,7 @@ namespace CalValEX
         {
             if (CalamityContent(name, out ModBiome content))
                 return content;
-            Main.NewText(name + " not found. Report this to the Calamity's Vanities developers if you see this.", Color.Red);
+            CalValEX.instance.Logger.Error(name + " not found. Report this to the Calamity's Vanities developers if you see this.");
             return null;
         }
 
@@ -87,7 +87,7 @@ namespace CalValEX
         {
             if (CalamityContent(name, out ModRarity content))
                 return content.Type;
-            Main.NewText(name + " not found. Report this to the Calamity's Vanities developers if you see this.", Color.Red);
+            CalValEX.instance.Logger.Error(name + " not found. Report this to the Calamity's Vanities developers if you see this.");
             return -1;
         }
     }
