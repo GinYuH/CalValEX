@@ -1,5 +1,6 @@
 ﻿using CalValEX.Items;
 using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace CalValEX.Projectiles
@@ -11,7 +12,7 @@ namespace CalValEX.Projectiles
             Projectile.netImportant = true;
             Projectile.width = 44;
             Projectile.height = 44;
-            Projectile.aiStyle = 32;
+            Projectile.aiStyle = ProjAIStyleID.BeachBall;
             Projectile.friendly = true;
         }
 

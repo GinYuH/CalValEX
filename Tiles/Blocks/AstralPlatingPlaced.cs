@@ -1,4 +1,5 @@
 ﻿using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace CalValEX.Tiles.Blocks
@@ -13,7 +14,7 @@ namespace CalValEX.Tiles.Blocks
             Main.tileLighted[Type] = true;
             //ItemDrop = ModContent.ItemType<AstralPlating>();
             AddMapEntry(new Color(101, 171, 167));
-            DustType = 173;
+            DustType = DustID.ShadowbeamStaff;
         }
     }
 }

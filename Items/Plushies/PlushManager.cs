@@ -296,7 +296,7 @@ namespace CalValEX.Items.Plushies
             TileObjectData.addTile(Type);
             LocalizedText name = CreateMapEntryName();
             AddMapEntry(new Color(144, 148, 144), name);
-            DustType = 11;
+            DustType = DustID.Silver;
         }
 
         public override void PostSetupTileMerge()
@@ -426,7 +426,7 @@ namespace CalValEX.Items.Plushies
             Projectile.netImportant = true;
             Projectile.width = 44;
             Projectile.height = 44;
-            Projectile.aiStyle = 32;
+            Projectile.aiStyle = ProjAIStyleID.BeachBall;
             Projectile.friendly = true;
         }
 

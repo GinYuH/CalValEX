@@ -1,3 +1,4 @@
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace CalValEX.Dusts
@@ -5,7 +6,7 @@ namespace CalValEX.Dusts
 	public class AstralSolutionDust : ModDust
 	{
 		public override void SetStaticDefaults() {
-			UpdateType = 110;
+			UpdateType = DustID.PureSpray;
 		}
 	}
 }

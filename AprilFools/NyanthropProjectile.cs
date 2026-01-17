@@ -18,7 +18,7 @@ namespace CalValEX.AprilFools
 			Projectile.extraUpdates = 0;
 			Projectile.width = 16;
 			Projectile.height = 16;
-			Projectile.aiStyle = 99;
+			Projectile.aiStyle = ProjAIStyleID.Yoyo;
 			Projectile.friendly = true;
 			Projectile.penetrate = -1;
 			Projectile.DamageType = DamageClass.Melee;

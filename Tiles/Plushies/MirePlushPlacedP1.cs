@@ -1,5 +1,6 @@
 ﻿using CalValEX.Items.Plushies;
 using Terraria;
+using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
@@ -22,7 +23,7 @@ namespace CalValEX.Tiles.Plushies
             TileObjectData.addTile(Type);
             LocalizedText name = CreateMapEntryName();
             AddMapEntry(new Color(144, 148, 144), name);
-            DustType = 11;
+            DustType = DustID.Silver;
 
         }
     }

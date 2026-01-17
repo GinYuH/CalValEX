@@ -15,7 +15,7 @@ namespace CalValEX.Tiles.Blocks
             Main.tileBlendAll[this.Type] = true;
             //ItemDrop = ModContent.ItemType<FrostflakeBrick>();
             AddMapEntry(new Color(66, 242, 245));
-            DustType = 92;
+            DustType = DustID.Frost;
             MinPick = 65;
             HitSound = SoundID.Tink;
         }

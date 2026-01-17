@@ -20,7 +20,7 @@ namespace CalValEX.Tiles.FurnitureSets.Wulfrum
             AnimationFrameHeight = 36;
             TileObjectData.addTile(Type);
 
-            DustType = 226;
+            DustType = DustID.Electric;
         }
 
         public override void AnimateTile(ref int frame, ref int frameCounter) {

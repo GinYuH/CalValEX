@@ -32,7 +32,7 @@ namespace CalValEX.Tiles.Statues
             AddMapEntry(new Color(206, 116, 59), name);
 
             AnimationFrameHeight = 126;
-            DustType = 8;
+            DustType = DustID.Iron;
         }
 
         public override void AnimateTile(ref int frame, ref int frameCounter) {

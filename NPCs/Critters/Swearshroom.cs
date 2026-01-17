@@ -20,7 +20,7 @@ namespace CalValEX.NPCs.Critters
         {
             NPC.width = 22;
             NPC.height = 22;
-            NPC.aiStyle = 7;
+            NPC.aiStyle = NPCAIStyleID.Passive;
             NPC.damage = 0;
             NPC.defense = 0;
             NPC.lifeMax = 100;

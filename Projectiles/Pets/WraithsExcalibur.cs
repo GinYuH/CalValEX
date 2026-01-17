@@ -1,4 +1,5 @@
 using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace CalValEX.Projectiles.Pets
@@ -14,7 +15,7 @@ namespace CalValEX.Projectiles.Pets
         public override void SetDefaults()
         {
             Projectile.CloneDefaults(197);
-            AIType = 197;
+            AIType = ProjectileID.BabySkeletronHead;
             DrawOriginOffsetY = -33;
             //?: lol (lol
             Projectile.GetGlobalProjectile<CalValEXGlobalProjectile>().isCalValPet = true;

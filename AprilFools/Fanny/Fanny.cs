@@ -646,7 +646,7 @@ namespace CalValEX.AprilFools.Fanny
                 "Awooga", (FannySceneMetrics scene) => Main.LocalPlayer.ZoneLihzhardTemple).SetHoverTextOverride("Me too Fanny!"));
 
             fannyMessages.Add(new FannyMessage("TempleWires", "Aw man, there's so many booby traps in here! Try using that fancy gadget of yours to disable them!",
-                "Awooga", (FannySceneMetrics scene) => Main.LocalPlayer.ZoneLihzhardTemple && (Main.LocalPlayer.HasItem(ItemID.WireCutter) || Main.LocalPlayer.HasItem(ItemID.MulticolorWrench) || Main.LocalPlayer.HasItem(3611))).AddItemDisplay(ItemID.WireCutter));
+                "Awooga", (FannySceneMetrics scene) => Main.LocalPlayer.ZoneLihzhardTemple && (Main.LocalPlayer.HasItem(ItemID.WireCutter) || Main.LocalPlayer.HasItem(ItemID.MulticolorWrench) || Main.LocalPlayer.HasItem(ItemID.WireKite))).AddItemDisplay(ItemID.WireCutter));
 
             fannyMessages.Add(new FannyMessage("Altars", "Smashing demon altars is no longer guaranteed to bless your world with ores. But it’s still worth a shot!",
                "Idle", (FannySceneMetrics scene) => (Main.LocalPlayer.ZoneCorrupt || Main.LocalPlayer.ZoneCrimson) && Main.hardMode && !Main.LocalPlayer.ZoneUnderworldHeight));

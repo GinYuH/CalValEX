@@ -1,4 +1,5 @@
 using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace CalValEX.Projectiles.Pets
@@ -15,7 +16,7 @@ namespace CalValEX.Projectiles.Pets
         public override void SetDefaults()
         {
             Projectile.CloneDefaults(334);
-            AIType = 334;
+            AIType = ProjectileID.Puppy;
             DrawOriginOffsetY = -14;
             DrawOffsetX = -10;
             Projectile.GetGlobalProjectile<CalValEXGlobalProjectile>().isCalValPet = true;

@@ -1,5 +1,6 @@
 ﻿using Terraria;
 using Terraria.GameContent.Metadata;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace CalValEX.Tiles.Blocks
@@ -14,7 +15,7 @@ namespace CalValEX.Tiles.Blocks
             Main.tileLighted[Type] = true;
             //ItemDrop = ModContent.ItemType<AzufreSludge>();
             AddMapEntry(new Color(242, 202, 39));
-            DustType = 75;
+            DustType = DustID.CursedTorch;
             TileMaterials.SetForTileId(Type, TileMaterials._materialsByName["Sticky"]);
         }
     }

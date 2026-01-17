@@ -36,7 +36,7 @@ namespace CalValEX.Projectiles.Pets
                 RelativeIdealPosition = Vector2.Zero;
                 TimeTillReset = 0;
             }
-            Dust.NewDustPerfect(RelativeIdealPosition, 267);
+            Dust.NewDustPerfect(RelativeIdealPosition, DustID.RainbowMk2);
             //Reset the ideal position if the ideal position was reached
             if (Projectile.Distance(IdealPosition) < GetSpeed)
                 RelativeIdealPosition = Vector2.Zero;

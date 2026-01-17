@@ -18,7 +18,7 @@ namespace CalValEX.Tiles.Blocks
 			Main.tileLighted[Type] = true;
 			
 			HitSound = SoundID.Tink;
-			DustType = 226;
+			DustType = DustID.Electric;
 			//ItemDrop = ItemType<ThanatosPlating>();
 			
 			AddMapEntry(new Color(51, 56, 63));
@@ -40,7 +40,7 @@ namespace CalValEX.Tiles.Blocks
 			Main.tileLighted[Type] = true;
 			
 			HitSound = SoundID.Tink;
-			DustType = 226;
+			DustType = DustID.Electric;
 			//ItemDrop = ItemType<ThanatosPlatingVent>();
 			
 			AddMapEntry(new Color(51, 56, 63));

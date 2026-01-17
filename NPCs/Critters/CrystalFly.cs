@@ -20,7 +20,7 @@ namespace CalValEX.NPCs.Critters
         {
             NPC.width = 48;
             NPC.height = 40;
-            NPC.aiStyle = 65;
+            NPC.aiStyle = NPCAIStyleID.Butterfly;
             NPC.damage = 0;
             NPC.defense = 0;
             NPC.lifeMax = 5;

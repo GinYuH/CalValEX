@@ -65,7 +65,7 @@ namespace CalValEX.NPCs.JellyPriest
             NPC.friendly = true;
             NPC.width = 18;
             NPC.height = 40;
-            NPC.aiStyle = 7;
+            NPC.aiStyle = NPCAIStyleID.Passive;
             NPC.damage = 15;
             NPC.defense = 15;
             NPC.lifeMax = 250;
@@ -508,7 +508,7 @@ namespace CalValEX.NPCs.JellyPriest
                 {
                     position.Y = Math.Sign(position.Y) * 20;
                 }
-                Dust.NewDustPerfect(NPC.Center + position, 50, Vector2.Zero).noGravity = true;
+                Dust.NewDustPerfect(NPC.Center + position, DustID.Adamantite, Vector2.Zero).noGravity = true;
             }
         }
 

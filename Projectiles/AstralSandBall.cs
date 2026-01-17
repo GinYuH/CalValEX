@@ -80,13 +80,13 @@ namespace CalValEX.Projectiles
 				if (tile.IsHalfBlock && Projectile.velocity.Y > 0f && System.Math.Abs(Projectile.velocity.Y) > System.Math.Abs(Projectile.velocity.X))
 					tileY--;
 
-				if (tile.TileType == 0) {
-					bool onMinecartTrack = tileY < Main.maxTilesY - 2 && tileBelow != null && tileBelow.TileType != 0 && tileBelow.TileType == TileID.MinecartTrack;
+				if (tile.TileType == TileID.Dirt) {
+					bool onMinecartTrack = tileY < Main.maxTilesY - 2 && tileBelow != null && tileBelow.TileType != TileID.Dirt && tileBelow.TileType == TileID.MinecartTrack;
 
 					if (!onMinecartTrack)
 						WorldGen.PlaceTile(tileX, tileY, tileType, false, true);
 
-					if (!onMinecartTrack && tile.TileType != 0 && tile.TileType == tileType) {
+					if (!onMinecartTrack && tile.TileType != TileID.Dirt && tile.TileType == tileType) {
 						if (tileBelow.IsHalfBlock || tileBelow.Slope != 0) {
 							WorldGen.SlopeTile(tileX, tileY + 1, 0);
 

@@ -1,4 +1,5 @@
 using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace CalValEX.Tiles.Blocks
@@ -13,7 +14,7 @@ namespace CalValEX.Tiles.Blocks
             Main.tileLighted[Type] = true;
             //ItemDrop = ModContent.ItemType<ShadowBrick>();
             AddMapEntry(new Color(47, 1, 51));
-            DustType = 187;
+            DustType = DustID.BlueFlare;
         }
     }
 }

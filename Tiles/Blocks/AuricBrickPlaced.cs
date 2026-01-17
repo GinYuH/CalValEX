@@ -15,7 +15,7 @@ namespace CalValEX.Tiles.Blocks
             //ItemDrop = ModContent.ItemType<AuricBrick>();
             HitSound = SoundID.Tink;
             AddMapEntry(new Color(242, 202, 39));
-            DustType = 159;
+            DustType = DustID.Teleporter;
             //minPick = 249;
         }
     }

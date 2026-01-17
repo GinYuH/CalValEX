@@ -13,7 +13,7 @@ namespace CalValEX.Tiles.Blocks
             Main.tileBlockLight[Type] = true;
             Main.tileLighted[Type] = true;
             //ItemDrop = ModContent.ItemType<AstralPearlBlock>();
-            DustType = 173;
+            DustType = DustID.ShadowbeamStaff;
             AddMapEntry(new Color(183, 69, 60));
             Main.tileBlendAll[this.Type] = true;
             HitSound = SoundID.Item50;

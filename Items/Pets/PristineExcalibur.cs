@@ -1,4 +1,5 @@
 using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace CalValEX.Items.Pets
@@ -16,7 +17,7 @@ namespace CalValEX.Items.Pets
         public override void SetDefaults()
         {
             Item.value = Item.sellPrice(0, 50, 0, 0);
-            Item.rare = -1;
+            Item.rare = ItemRarityID.Gray;
         }
     }
 }

@@ -13,7 +13,7 @@ namespace CalValEX.AprilFools
         {
             Item.width = 30;
             Item.height = 20;
-            Item.useStyle = 4;
+            Item.useStyle = ItemUseStyleID.HoldUp;
             Item.useTime = 45;
             Item.useAnimation = 45;
             Item.consumable = false;

@@ -58,7 +58,7 @@ namespace CalValEX.Tiles.AstralBlocks
                     pos = 1;
                 }
 
-                if (Main.tile[i, j - 1].TileType == 0 && Main.tile[i, j].Slope == 0 && !Main.tile[i, j].IsHalfBlock)
+                if (Main.tile[i, j - 1].TileType == TileID.Dirt && Main.tile[i, j].Slope == 0 && !Main.tile[i, j].IsHalfBlock)
                 {
                     WorldGen.PlaceTile(i, j - pos, grassspawned, true, false, -1, Main.rand.Next(18));
                 }
@@ -73,7 +73,7 @@ namespace CalValEX.Tiles.AstralBlocks
                         {
                             if (Main.tile[x, y].TileType == ModContent.TileType<AstralDirtPlaced>())
                             {
-                                if (Main.tile[x + 1, y].TileType != 0 && Main.tile[x, y - 1].TileType != 0 && Main.tile[x - 1, y].TileType != 0 && Main.tile[x, y + 1].TileType != 0 && Main.tile[x + 1, y + 1].TileType != 0 && Main.tile[x - 1, y - 1].TileType != 0 && Main.tile[x - 1, y + 1].TileType != 0 && Main.tile[x + 1, y - 1].TileType != 0)
+                                if (Main.tile[x + 1, y].TileType != TileID.Dirt && Main.tile[x, y - 1].TileType != TileID.Dirt && Main.tile[x - 1, y].TileType != TileID.Dirt && Main.tile[x, y + 1].TileType != TileID.Dirt && Main.tile[x + 1, y + 1].TileType != TileID.Dirt && Main.tile[x - 1, y - 1].TileType != TileID.Dirt && Main.tile[x - 1, y + 1].TileType != TileID.Dirt && Main.tile[x + 1, y - 1].TileType != TileID.Dirt)
                                 {
                                 }
                                 else

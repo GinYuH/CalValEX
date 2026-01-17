@@ -41,7 +41,7 @@ namespace CalValEX.Tiles.FurnitureSets.Auric
 			AddMapEntry(new Color(100, 100, 100), name);
 			AdjTiles = new int[] { TileID.Dressers };
 			//ItemDrop = ModContent.ItemType<AuricDresserItem>();
-			DustType = 227;
+			DustType = DustID.MartianHit;
 		}
 		public override bool HasSmartInteract(int i, int j, Terraria.GameContent.ObjectInteractions.SmartInteractScanSettings settings) => true;
 
@@ -174,7 +174,7 @@ namespace CalValEX.Tiles.FurnitureSets.Auric
 			if (player.cursorItemIconText == "")
 			{
 				player.cursorItemIconEnabled = false;
-				player.cursorItemIconID = 0;
+				player.cursorItemIconID = ItemID.None;
 			}
 		}
 

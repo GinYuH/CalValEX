@@ -1,5 +1,6 @@
 ﻿using CalValEX.Items.Plushies;
 using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace CalValEX.Projectiles.Plushies
@@ -13,7 +14,7 @@ namespace CalValEX.Projectiles.Plushies
             Projectile.netImportant = true;
             Projectile.width = 84;
             Projectile.height = 154;
-            Projectile.aiStyle = 32;
+            Projectile.aiStyle = ProjAIStyleID.BeachBall;
             Projectile.friendly = true;
             Projectile.tileCollide = false;
         }

@@ -51,7 +51,7 @@ namespace CalValEX.Items
                 if (blacklistedPaintings.Contains(i.Key))
                     continue;
                 int id = i.Value;
-                if (ContentSamples.ItemsByType[id].rare == -1)
+                if (ContentSamples.ItemsByType[id].rare == ItemRarityID.Gray)
                     continue;
                 paintings.Add(id);
             }

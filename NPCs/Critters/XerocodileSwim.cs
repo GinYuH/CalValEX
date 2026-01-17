@@ -26,7 +26,7 @@ namespace CalValEX.NPCs.Critters
             NPC.noGravity = true;
             NPC.width = 20;
             NPC.height = 24;
-            NPC.aiStyle = 16;
+            NPC.aiStyle = NPCAIStyleID.Piranha;
             NPC.damage = 0;
             NPC.defense = 0;
             NPC.lifeMax = 666;

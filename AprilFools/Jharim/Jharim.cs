@@ -84,7 +84,7 @@ namespace CalValEX.AprilFools.Jharim
             NPC.friendly = true;
             NPC.width = 18;
             NPC.height = 40;
-            NPC.aiStyle = 7;
+            NPC.aiStyle = NPCAIStyleID.Passive;
             NPC.damage = 1;
             NPC.defense = 150;
             NPC.lifeMax = 250000;
@@ -552,7 +552,7 @@ namespace CalValEX.AprilFools.Jharim
                 {
                     position.Y = Math.Sign(position.Y) * 20;
                 }
-                Dust.NewDustPerfect(NPC.Center + position, 50, Vector2.Zero).noGravity = true;
+                Dust.NewDustPerfect(NPC.Center + position, DustID.Adamantite, Vector2.Zero).noGravity = true;
             }
         }
 

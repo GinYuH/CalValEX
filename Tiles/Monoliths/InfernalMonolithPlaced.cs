@@ -19,7 +19,7 @@ namespace CalValEX.Tiles.Monoliths
             TileObjectData.newTile.CoordinateHeights = new[] { 16, 16, 16 };
             TileObjectData.addTile(Type);
             AddMapEntry(new Color(75, 139, 166));
-            DustType = 1;
+            DustType = DustID.Stone;
             AnimationFrameHeight = 54;
             
             AdjTiles = new int[] { TileID.LunarMonolith };

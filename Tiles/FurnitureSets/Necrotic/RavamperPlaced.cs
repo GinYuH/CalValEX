@@ -37,7 +37,7 @@ namespace CalValEX.Tiles.FurnitureSets.Necrotic
             {
                 if (Main.tile[i, j].TileFrameY >= 36)
                 {
-                    Main.LocalPlayer.AddBuff(87, 20);
+                    Main.LocalPlayer.AddBuff(BuffID.Campfire, 20);
                 }
             }
         }

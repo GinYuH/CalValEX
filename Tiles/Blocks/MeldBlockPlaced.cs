@@ -12,7 +12,7 @@ namespace CalValEX.Tiles.Blocks
             Main.tileBlockLight[Type] = true;
             Main.tileLighted[Type] = true;
             //ItemDrop = ModContent.ItemType<MeldBlock>();
-            DustType = 173;
+            DustType = DustID.ShadowbeamStaff;
             AddMapEntry(new Color(19, 24, 27));
             Main.tileBlendAll[this.Type] = true;
             HitSound = SoundID.Item154;

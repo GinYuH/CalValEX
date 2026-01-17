@@ -197,7 +197,7 @@ namespace CalValEX.Tiles.FurnitureSets.Bloodstone
             if (player.cursorItemIconText == "")
             {
                 player.cursorItemIconEnabled= false;
-                player.cursorItemIconID = 0;
+                player.cursorItemIconID = ItemID.None;
             }
         }
     }

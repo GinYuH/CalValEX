@@ -84,7 +84,7 @@ namespace CalValEX.Tiles.MiscFurniture
             }
             else
             {
-                Main.LocalPlayer.AddBuff(146, 20);
+                Main.LocalPlayer.AddBuff(BuffID.Sunflower, 20);
             }
         }
         int choketimer = 0;
@@ -146,7 +146,7 @@ namespace CalValEX.Tiles.MiscFurniture
                     }
                     else
                     {
-                        Main.LocalPlayer.AddBuff(146, 10);
+                        Main.LocalPlayer.AddBuff(BuffID.Sunflower, 10);
                     }
                 }
             }

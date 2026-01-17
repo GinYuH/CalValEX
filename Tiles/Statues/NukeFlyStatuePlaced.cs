@@ -4,6 +4,7 @@ using Terraria.ModLoader;
 using Terraria.ObjectData;
 using static Terraria.ModLoader.ModContent;
 using CalValEX.NPCs.Critters;
+using Terraria.ID;
 
 namespace CalValEX.Tiles.Statues
 {
@@ -22,7 +23,7 @@ namespace CalValEX.Tiles.Statues
             LocalizedText name = CreateMapEntryName();
             // name.SetDefault("Vaporofly Statue");
             AddMapEntry(new Color(144, 148, 144), name);
-            DustType = 11;
+            DustType = DustID.Silver;
             
         }
 

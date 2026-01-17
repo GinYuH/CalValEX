@@ -21,7 +21,7 @@ namespace CalValEX.Projectiles.NPCs
             Projectile.friendly = true;
             Projectile.penetrate = 3;
             Projectile.knockBack = 2f;
-            Projectile.aiStyle = 14;
+            Projectile.aiStyle = ProjAIStyleID.GroundProjectile;
             Projectile.timeLeft = 300;
         }
 

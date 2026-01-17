@@ -23,7 +23,7 @@ namespace CalValEX.NPCs.JellyPriest
             NPC.npcSlots = 5f;
             NPC.width = 18;
             NPC.height = 34;
-            NPC.aiStyle = 0;
+            NPC.aiStyle = NPCAIStyleID.FaceClosestPlayer;
             NPC.damage = 10;
             NPC.defense = 15;
             NPC.lifeMax = 250;

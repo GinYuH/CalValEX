@@ -57,7 +57,7 @@ namespace CalValEX.AprilFools
                 int twidir4 = Main.rand.Next(-36, 36);
                 Projectile.NewProjectile(player.GetSource_ItemUse(Item), player.position.X, player.position.Y, twidir3, twidir4, ProjectileID.CursedFlameFriendly, 201, 0.1f);
             }
-            Projectile.NewProjectile(player.GetSource_ItemUse(Item), player.position.X, player.position.Y, twidir, twidir2, 661, 401, 0.1f);
+            Projectile.NewProjectile(player.GetSource_ItemUse(Item), player.position.X, player.position.Y, twidir, twidir2, ProjectileID.BlackBolt, 401, 0.1f);
             return true;
             }
         }
