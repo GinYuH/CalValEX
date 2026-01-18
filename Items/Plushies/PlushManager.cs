@@ -28,7 +28,7 @@ namespace CalValEX.Items.Plushies
             LoadPlush("MireP2", 13, false, sound: SoundID.NPCHit1); // Has an unorthodox old name, so it must be done separately
             LoadPlush("NuclearTerror", 13, sound: GetCalamitySound("Custom/NuclearTerrorSpawn", SoundID.NPCDeath10));
             LoadPlush("Mauler", 13, sound: GetCalamitySound("Custom/MaulerRoar", SoundID.Zombie7));
-            LoadPlush("DesertScourge", ItemUtils.BossRarity("DesertScourge"), sound: GetCalamitySound("Custom/DesertScourgeRoar", SoundID.Zombie92));
+            LoadPlush("DesertScourge", ItemUtils.BossRarity("DesertScourge"), sound: GetCalamitySound("Custom/DesertScourge/DesertScourgeRoar", SoundID.Zombie92));
             LoadPlush("Crabulon", ItemUtils.BossRarity("Crabulon"), sound: SoundID.NPCHit45);
             LoadPlush("Perforator", ItemUtils.BossRarity("Perforator"), sound: GetCalamitySound("Custom/Perforator/PerfHiveWormSpawn", SoundID.NPCDeath23));
             LoadPlush("HiveMind", ItemUtils.BossRarity("HiveMind"), sound: GetCalamitySound("Custom/HiveMindRoar", SoundID.NPCHit9));
@@ -36,10 +36,10 @@ namespace CalValEX.Items.Plushies
             LoadPlush("Cryogen", ItemUtils.BossRarity("Cryogen"), sound: GetCalamitySound("NPCHit/CryogenHit1", SoundID.NPCHit5));
             LoadPlush("AquaticScourge", ItemUtils.BossRarity("AS"), sound: SoundID.NPCDeath13);
             LoadPlush("BrimstoneElemental", ItemUtils.BossRarity("Brimmy"), sound: SoundID.NPCHit23);
-            LoadPlush("Clone", ItemUtils.BossRarity("Cal"), sound: GetCalamitySound("Custom/SCalSounds/BrimstoneShoot", SoundID.NPCHit4));
+            LoadPlush("Clone", ItemUtils.BossRarity("Cal"), sound: GetCalamitySound("Custom/CalamitasClone/CalClone_BigFireballBit1", SoundID.NPCHit4));
             LoadPlush("Shadow", ItemUtils.BossRarity("Cal"), false, sound: GetCalamitySound("Custom/SupremeCalamitasSpawn", SoundID.Zombie109)); 
             LoadPlush("Leviathan", ItemUtils.BossRarity("Leviathan"), sound: GetCalamitySound("Custom/LeviathanRoarMeteor", SoundID.Zombie39));
-            LoadPlush("Anahita", ItemUtils.BossRarity("Leviathan"), sound: SoundID.Item26);
+            LoadPlush("Anahita", ItemUtils.BossRarity("Leviathan"), sound: GetCalamitySound("NPCKilled/AnahitaDeath", SoundID.Item26));
             LoadPlush("AstrumAureus", ItemUtils.BossRarity("Aureus"), sound: GetCalamitySound("NPCHit/AureusHit1", SoundID.Item109));
             LoadPlush("Exotrexia", ItemUtils.BossRarity("Aureus"), false, sound: SoundID.NPCHit1);
             LoadPlush("Astigmageddon", ItemUtils.BossRarity("Aureus"), false, sound: SoundID.NPCHit1);
@@ -57,7 +57,7 @@ namespace CalValEX.Items.Plushies
             LoadPlush("Signus", 12, sound: GetCalamitySound("Item/SignusSpawn", SoundID.NPCHit54));
             LoadPlush("CeaselessVoid", 12, sound: GetCalamitySound("Item/CeaselessVoidSpawn", SoundID.NPCHit4));
             LoadPlush("OldDuke", 13, sound: GetCalamitySound("Custom/OldDukeRoar", SoundID.NPCHit14));
-            LoadPlush("Polterghast", 13, sound: GetCalamitySound("Custom/Polterghast/PolterSpook1", SoundID.NPCHit36));
+            LoadPlush("Polterghast", 13, sound: GetCalamitySound("Custom/Polterghast/PolterghastSpawn", SoundID.NPCHit36));
             LoadPlush("DevourerofGods", 14, sound: GetCalamitySound("Custom/DevourerAttack", SoundID.Item27));
             LoadPlush("Yharon", 15, sound: GetCalamitySound("Custom/Yharon/YharonRoarShort", SoundID.Zombie92));
             LoadPlush("Apollo", 15, sound: GetCalamitySound("Custom/ExoMechs/ArtemisApolloDash", SoundID.Item34));
@@ -332,15 +332,21 @@ namespace CalValEX.Items.Plushies
                 {
                     List<string> dialogue =
                     [
-                        Language.GetTextValue("Mods.CalamityMod.Status.Boss.EdgyBossText"),
-                        Language.GetTextValue("Mods.CalamityMod.Status.Boss.EdgyBossText2"),
-                        Language.GetTextValue("Mods.CalamityMod.Status.Boss.EdgyBossText3"),
-                        Language.GetTextValue("Mods.CalamityMod.Status.Boss.EdgyBossText4"),
-                        Language.GetTextValue("Mods.CalamityMod.Status.Boss.EdgyBossText5"),
-                        Language.GetTextValue("Mods.CalamityMod.Status.Boss.EdgyBossText6"),
-                        Language.GetTextValue("Mods.CalamityMod.Status.Boss.EdgyBossText7"),
-                        Language.GetTextValue("Mods.CalamityMod.Status.Boss.EdgyBossText8"),
+                        Language.GetTextValue("Mods.CalamityMod.Status.Boss.DoGSpawn"),
+                        Language.GetTextValue("Mods.CalamityMod.Status.Boss.DoGSubphase1"),
+                        Language.GetTextValue("Mods.CalamityMod.Status.Boss.DoGPhase2"),
+                        Language.GetTextValue("Mods.CalamityMod.Status.Boss.DoGPhase3"),
+                        Language.GetTextValue("Mods.CalamityMod.Status.Boss.DoGHeadRunning"),
+                        Language.GetTextValue("Mods.CalamityMod.Status.Boss.DoGHeadRunning2"),
                     ];
+                    for (int l = 1; l <= 13; l++)
+                    {
+                        dialogue.Add(Language.GetTextValue("Mods.CalamityMod.Status.Boss.DoGHead" + l));
+                    }
+                    for (int l = 1; l <= 5; l++)
+                    {
+                        dialogue.Add(Language.GetTextValue("Mods.CalamityMod.Status.Boss.DoGHeadDeath" + l));
+                    }
                     CombatText.NewText(new Rectangle(i * 16, j * 16, 16 * Width, 16 * Height), Color.LightBlue, dialogue[Main.rand.Next(0, dialogue.Count - 1)]);
                 }
             }
