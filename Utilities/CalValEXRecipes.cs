@@ -161,7 +161,8 @@ namespace CalValEX
 
             #region Register Furniture
             AstralFurniture();
-            AuricFurniture();
+            if (CalValEX.CalamityActive)
+                AuricFurniture();
             BloodstoneFurniture();
             PhantowaxFurniture();
             #endregion
