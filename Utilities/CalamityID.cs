@@ -286,7 +286,7 @@ namespace CalValEX.CalamityID
             MeldConstruct = CalamityID.ItemRelation("MeldConstruct", ItemID.FragmentNebula);
             CeremonialUrn = CalamityID.ItemRelation("CeremonialUrn", ItemID.NebulaPickaxe);
             DormantBrimseeker = CalamityID.ItemRelation("DormantBrimseeker", ItemID.Milkshake);
-            CrabulonBag = CalamityID.ItemRelation("WulfrumMetalScrap", "DullPlatingItem", ItemID.TungstenBrick);
+            DullPlating = CalamityID.ItemRelation("WulfrumMetalScrap", "DullPlatingItem", ItemID.TungstenBrick);
         }
     }
 

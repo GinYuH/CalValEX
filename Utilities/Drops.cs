@@ -41,8 +41,6 @@ using ReLogic.Content;
 using CalValEX.Items.Plushies;
 using CalValEX.Items.Equips;
 using CalValEX.Tiles.Paintings;
-using CalValEX.Tiles.Plants;
-using CalamityFables.Core;
 
 namespace CalValEX
 {

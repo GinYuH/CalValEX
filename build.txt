@@ -1,6 +1,6 @@
 displayName = Calamity's Vanities
 author = YuH, originally owned by Hypera
-version = 11.3.0
+version = 11.3.1
 loadAfter = CalamityMod
 weakReferences = CalamityMod
 homepage = https://forums.terraria.org/index.php?threads/calamitys-vanities.97575/
