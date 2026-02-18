@@ -72,6 +72,7 @@ Conditions: {
 	BanditReal: If the Bandit is present
 	ArchmageReal: If the Archmage is present
 	SulphurousSeaBiome: In the Sulphurous Sea
+	DesertScourgeDeath: Drops at 3+ deaths to Desert Scourge within a single day.
 }
 
 Emotes.JharimEmote.Command: Jharim

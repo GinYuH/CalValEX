@@ -1,3 +1,4 @@
+using CalValEX.CalamityID;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -50,7 +51,7 @@ namespace CalValEX.Items.Equips.Hats.Draedon
         {
             Item.width = 18;
             Item.height = 18;
-            Item.rare = ItemRarityID.Blue;
+            Item.rare = CalRarityID.DarkOrange;
             Item.vanity = true;
         }
 

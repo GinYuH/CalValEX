@@ -42,6 +42,7 @@ namespace CalValEX
         public static bool masorev;
         public static int fannyOverride; // 0 = auto enabled. 1 = disabled. 2 = manually enabled
         public static int paintEnabled; // 0 = auto enabled. 1 = disabled. 2 = manually enabled
+        public static int desertScourgeDeaths;
 
         // Chickens
         public static bool nugget;
@@ -55,6 +56,17 @@ namespace CalValEX
         public static bool ninja;
         public static bool astro;
         public static bool tar;
+
+        public override void Load()
+        {
+            Terraria.On_Main.UpdateTime_StartDay += ResetDSDeaths;
+        }
+
+        public static void ResetDSDeaths(On_Main.orig_UpdateTime_StartDay orig, ref bool stopEvents)
+        {
+            desertScourgeDeaths = 0;
+            CalValEXWorld.UpdateWorldBool();
+        }
 
         public override void OnWorldLoad()
         { 
@@ -73,6 +85,7 @@ namespace CalValEX
             astro = false;
             tar = false;
             fannyOverride = 0;
+            desertScourgeDeaths = 0;
             PolterCableTE.UpdateHooks();
         }
 
@@ -92,6 +105,7 @@ namespace CalValEX
             tar = false;
             FannyManager.fannyEnabled = false;
             fannyOverride = 0;
+            desertScourgeDeaths = 0;
 
             nugget = draco = folly = godnug = mammoth = shadow = isThereAHouse = false;
         }

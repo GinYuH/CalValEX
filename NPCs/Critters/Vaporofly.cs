@@ -51,7 +51,7 @@ namespace CalValEX.NPCs.Critters
             {
                 if (CalValEX.InCalamityBiome(spawnInfo.Player, "SulphurousSeaBiome") && !CalValEXConfig.Instance.CritterSpawns)
                 {
-                    if (spawnInfo.Player.ZoneOverworldHeight)
+                    if (spawnInfo.Player.ZoneOverworldHeight && !Main.bloodMoon)
                     {
                         return Terraria.ModLoader.Utilities.SpawnCondition.OverworldNight.Chance * 0.5f;
                     }

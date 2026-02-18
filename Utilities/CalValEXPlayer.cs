@@ -1168,6 +1168,18 @@ namespace CalValEX
             hasOhiod = tag.GetBool("Ohio");
         }
 
+        public override void Kill(double damage, int hitDirection, bool pvp, PlayerDeathReason damageSource)
+        {
+            if (CalValEX.CalamityActive)
+            {
+                if (NPC.AnyNPCs(CalamityID.CalNPCID.DesertScourge))
+                {
+                    CalValEXWorld.desertScourgeDeaths++;
+                    CalValEXWorld.UpdateWorldBool();
+                }
+            }
+        }
+
         /*public static readonly PlayerLayer Mimigun = new PlayerLayer("CalValEX", "Mimigun", PlayerLayer.Head, delegate (PlayerDrawInfo drawInfo)
         {
             if (drawInfo.shadow != 0f)

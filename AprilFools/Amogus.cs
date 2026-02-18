@@ -231,7 +231,7 @@ namespace CalValEX.AprilFools
                                 Projectile.NewProjectile(Projectile.GetSource_FromThis(), playerpos.X, playerpos.Y, Main.rand.Next(-5, 5), Main.rand.Next(-5, -3), CalValEX.CalamityProjectile("ShadeNimbusHostile"), 80, 0f, Main.myPlayer, 0f, 0f);
                                 if (deathcounter >= 2700)
                                 {
-                                    Projectile.NewProjectile(Projectile.GetSource_FromThis(), playerpos.X, playerpos.Y, Main.rand.Next(-5, 5), Main.rand.Next(-5, -3), CalValEX.CalamityProjectile("ScavengerLaser"), 80, 0f, Main.myPlayer, 0f, 0f);
+                                    Projectile.NewProjectile(Projectile.GetSource_FromThis(), playerpos.X, playerpos.Y, Main.rand.Next(-5, 5), Main.rand.Next(-5, -3), CalValEX.CalamityProjectile("RavagerFlame"), 80, 0f, Main.myPlayer, 0f, 0f);
                                     Projectile.NewProjectile(Projectile.GetSource_FromThis(), playerpos.X, playerpos.Y, Main.rand.Next(-5, 5), Main.rand.Next(-5, -3), CalValEX.CalamityProjectile("PlagueStingerGoliathV2"), 80, 0f, Main.myPlayer, 0f, 0f);
                                 }
                                 for (int x = 0; x < 20; x++)

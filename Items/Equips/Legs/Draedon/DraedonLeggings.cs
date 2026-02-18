@@ -1,4 +1,5 @@
-﻿using Terraria.ID;
+﻿using CalValEX.CalamityID;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace CalValEX.Items.Equips.Legs.Draedon
@@ -12,7 +13,7 @@ namespace CalValEX.Items.Equips.Legs.Draedon
         {
             Item.width = 36;
             Item.height = 24;
-            Item.rare = ItemRarityID.Blue;
+            Item.rare = CalRarityID.DarkOrange;
             Item.vanity = true;
         }
     }

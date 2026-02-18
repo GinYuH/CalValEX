@@ -1,5 +1,6 @@
 using Terraria;
 using Terraria.GameContent.ItemDropRules;
+using Terraria.Localization;
 
 
 namespace CalValEX
@@ -692,6 +693,25 @@ namespace CalValEX
         public string GetConditionDescription()
         {
             return null;
+        }
+    }
+    public class DSDeaths : IItemDropRuleCondition
+    {
+        public bool CanDrop(DropAttemptInfo info)
+        {
+            if (!CalValEX.CalamityActive)
+                return false;
+            return CalValEXWorld.desertScourgeDeaths >= 3;
+        }
+
+        public bool CanShowItemDropInUI()
+        {
+            return CalValEX.CalamityActive;
+        }
+
+        public string GetConditionDescription()
+        {
+            return Language.GetTextValue("Mods.CalValEX.Conditions.DesertScourgeDeath");
         }
     }
 }

@@ -1632,7 +1632,7 @@ BrimberryItem: {
 	Tooltip:
 		'''
 		Summons an ancient fruit
-		'Often used as offering to the Brimstone Goddess'
+		'Often used as offering to the Brimstone Elemental'
 		'''
 }
 
@@ -4723,5 +4723,41 @@ MoldyHoody: {
 		'''
 		Transforms the wearer into a fungus-infested guardian monster
 		'You will take up mush more room'
+		'''
+}
+
+AldebaranCloak: {
+	DisplayName: MinMacDon's Cloak
+	Tooltip:
+		'''
+		Victory earned through repetition
+		[c/#6BF0FF:- Donor Item -]
+		'''
+}
+
+AldebaranHelmet: {
+	DisplayName: MinMacDon's Helm
+	Tooltip:
+		'''
+		Victory earned through repetition
+		[c/#6BF0FF:- Donor Item -]
+		'''
+}
+
+AldebaranLeggings: {
+	DisplayName: MinMacDon's Pants
+	Tooltip:
+		'''
+		Victory earned through repetition
+		[c/#6BF0FF:- Donor Item -]
+		'''
+}
+
+AldebaranVest: {
+	DisplayName: MinMacDon's Vest
+	Tooltip:
+		'''
+		Victory earned through repetition
+		[c/#6BF0FF:- Donor Item -]
 		'''
 }

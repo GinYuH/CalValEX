@@ -509,6 +509,10 @@ namespace CalValEX
                         npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotExpert(), ModContent.ItemType<DesertMedallion>(), 5));
                         npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotExpert(), ModContent.ItemType<SlightlyMoistbutalsoSlightlyDryLocket>(), 7));
                         npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotExpert(), ModContent.ItemType<DriedLocket>(), 3));
+                        npcLoot.Add(ItemDropRule.ByCondition(new DSDeaths(), ModContent.ItemType<AldebaranHelmet>(), 4))
+                            .OnSuccess(new CommonDrop(ModContent.ItemType<AldebaranVest>(), 1))
+                            .OnSuccess(new CommonDrop(ModContent.ItemType<AldebaranLeggings>(), 1))
+                            .OnSuccess(new CommonDrop(ModContent.ItemType<AldebaranCloak>(), 1));
                         AddPlushDrop(npcLoot, PlushManager.PlushItems["DesertScourge"]);
                     }
                     //Crabulon

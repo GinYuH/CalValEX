@@ -55,7 +55,11 @@ namespace CalValEX.NPCs.Critters
         {
             if (CalValEX.CalamityActive)
             {
-                if (CalValEX.InCalamityBiome(spawnInfo.Player, "SulphurousSeaBiome") && !CalValEXConfig.Instance.CritterSpawns)
+                if (CalValEX.InCalamityBiome(spawnInfo.Player, "SulphurousSeaBiome") && !CalValEXConfig.Instance.CritterSpawns &&
+                        !Main.eclipse &
+                        !Main.snowMoon &
+                        !Main.pumpkinMoon &
+                        Main.invasionType == InvasionID.None)
                 {
                     return 0.15f;
                 }

@@ -29,6 +29,7 @@ namespace CalValEX.Items.Tiles
             Item.width = 12;
             Item.height = 12;
             Item.rare = ItemRarityID.Lime;
+            Item.value = Item.sellPrice(0, 0, 40, 0);
         }
 
         public override void ModifyTooltips(List<TooltipLine> tooltips)

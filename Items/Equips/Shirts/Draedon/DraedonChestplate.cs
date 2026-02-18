@@ -1,4 +1,5 @@
-﻿using Terraria;
+﻿using CalValEX.CalamityID;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -12,6 +13,13 @@ namespace CalValEX.Items.Equips.Shirts.Draedon {
             {
                 SetupDrawing();
             }
+        }
+        public override void SetDefaults()
+        {
+            Item.width = 18;
+            Item.height = 18;
+            Item.rare = CalRarityID.DarkOrange;
+            Item.vanity = true;
         }
         public override void Load()
         {

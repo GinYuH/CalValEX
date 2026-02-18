@@ -57,7 +57,11 @@ namespace CalValEX.NPCs.Critters
         }
 
         public override float SpawnChance(NPCSpawnInfo spawnInfo) {
-            if (spawnInfo.Player.ZoneCrimson && !CalValEXConfig.Instance.CritterSpawns) {
+            if (spawnInfo.Player.ZoneCrimson && !CalValEXConfig.Instance.CritterSpawns &&
+                        !Main.eclipse &
+                        !Main.snowMoon &
+                        !Main.pumpkinMoon &
+                        Main.invasionType == InvasionID.None) {
                 return 0.35f;
             }
             return 0f;
