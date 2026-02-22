@@ -377,3 +377,6 @@ obj/Debug/net6.0/CalValEX.AssemblyInfo.cs
 CalValEX.csproj
 *.csproj
 *.dll
+.vscode/settings.json
+desktop.ini
+tmodproject.json
