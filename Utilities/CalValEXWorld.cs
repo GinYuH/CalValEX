@@ -66,6 +66,7 @@ namespace CalValEX
         {
             desertScourgeDeaths = 0;
             CalValEXWorld.UpdateWorldBool();
+            orig(stopEvents);
         }
 
         public override void OnWorldLoad()
