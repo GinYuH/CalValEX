@@ -1,0 +1,19 @@
+Generally crafted with Laboratory Panels @ Anvil.
+
+Air Con - 8 Laboratory Panels + 1 Mysterious Circuitry @ anvil (placed on walls)
+Bookcase - 10 Laboratory Panels + 2 Mysterious Circuitry + 10 Books @ Anvil 
+Chair - 4 Laboratory Panels @ Anvil
+Clock - 8 Laboratory Panels + 2 Mysterious Circuitry + 6 Glass @ Anvil
+Computer - 4 Laboratory Panels + 2 Mysterious Circuitry + 6 Glass @ Anvil
+Couch - 5 Laboratory Panels + 2 Silk @ Anvil
+Crate - 5 Laboratory Panels + 2 Iron @ Anvil (functions as chest)
+Desk - 5 Laboratory Panels @ Anvil
+Locker - 8 Laboratory Panels + 2 Iron @ Anvil (functions as chest)
+Long Table - 8 Laboratory Panels @ Anvil
+Printer - 8 Laboratory Panels + 1 Mysterious Circuitry @ Anvil (If possible it should do some fun paper related thing I can't think of rn)
+Sign - 5 Laboratory Panels + 2 Mysterious Circuitry + 6 Glass @ Anvil (Hangs on ceiling, functions as a sign)
+Wall Clock - 6 Laboratory Panels + 2 Mysterious Circuitry + 6 Glass @ Anvil (Functions as clock)
+Water Cooler - 8 Laboratory Panels + 1 Water Bucket @ Anvil (Functions as sink)
+Work Bench - 4 8 Laboratory Panels @ Anvil
+
+Feel free to change any of this, but I do like keeping some of the base schematic recipe included for the parts that have screens.

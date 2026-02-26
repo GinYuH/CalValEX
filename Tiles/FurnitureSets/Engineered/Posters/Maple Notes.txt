@@ -1,0 +1,17 @@
+Generally crafted with Laboratory Panels @ Anvil.
+
+Name: Back to Work
+Description: 'Remember! History won't write itself!' (No name credit)
+3 Laboratory Panels @ crafting table
+
+Name: Dreadon Labs
+Description: 'Hope For The Future: Dreadon Labs' (No name credit)
+4 Laboratory Panels @ crafting table
+
+Name: Keep Records!
+Description: 'If you didn't write it down, it never happened!' (No name credit)
+2 Laboratory Panels @ crafting table
+
+Name: No Running In The Hallways!
+Description: 'Be mindful of your neighbors.' (No name credit)
+2 Laboratory Panels @ crafting table
