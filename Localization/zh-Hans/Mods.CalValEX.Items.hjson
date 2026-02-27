@@ -4739,7 +4739,7 @@ MoldyHoody: {
 }
 
 AldebaranCloak: {
-	// DisplayName: MinMacDon's Cloak
+	// DisplayName: MiniMacDon's Cloak
 	/* Tooltip:
 		'''
 		Victory earned through repetition
@@ -4748,7 +4748,7 @@ AldebaranCloak: {
 }
 
 AldebaranHelmet: {
-	// DisplayName: MinMacDon's Helm
+	// DisplayName: MiniMacDon's Helm
 	/* Tooltip:
 		'''
 		Victory earned through repetition
@@ -4757,7 +4757,7 @@ AldebaranHelmet: {
 }
 
 AldebaranLeggings: {
-	// DisplayName: MinMacDon's Pants
+	// DisplayName: MiniMacDon's Pants
 	/* Tooltip:
 		'''
 		Victory earned through repetition
@@ -4766,10 +4766,95 @@ AldebaranLeggings: {
 }
 
 AldebaranVest: {
-	// DisplayName: MinMacDon's Vest
+	// DisplayName: MiniMacDon's Vest
 	/* Tooltip:
 		'''
 		Victory earned through repetition
 		[c/#6BF0FF:- Donor Item -]
 		''' */
+}
+
+EngineeredGirderItem: {
+	// DisplayName: Engineered Girder Item
+	// Tooltip: ""
+}
+
+EngineeredPlatingItem: {
+	// DisplayName: Engineered Plating Item
+	// Tooltip: ""
+}
+
+EngineeredVentPanelsItem: {
+	// DisplayName: Engineered Vent Panels Item
+	// Tooltip: ""
+}
+
+EngineeredChairItem: {
+	// DisplayName: Engineered Chair Item
+	// Tooltip: ""
+}
+
+EngineeredClockItem: {
+	// DisplayName: Engineered Clock Item
+	// Tooltip: ""
+}
+
+EngineeredComputerItem: {
+	// DisplayName: Engineered Computer Item
+	// Tooltip: ""
+}
+
+EngineeredCouchItem: {
+	// DisplayName: Engineered Couch Item
+	// Tooltip: ""
+}
+
+EngineeredCrateItem: {
+	// DisplayName: Engineered Crate Item
+	// Tooltip: ""
+}
+
+EngineeredDeskItem: {
+	// DisplayName: Engineered Desk Item
+	// Tooltip: ""
+}
+
+EngineeredLockerItem: {
+	// DisplayName: Engineered Locker Item
+	// Tooltip: ""
+}
+
+EngineeredLongTableItem: {
+	// DisplayName: Engineered Long Table Item
+	// Tooltip: ""
+}
+
+EngineeredPrinterItem: {
+	// DisplayName: Engineered Printer Item
+	// Tooltip: ""
+}
+
+EngineeredWallClockItem: {
+	// DisplayName: Engineered Wall Clock Item
+	// Tooltip: ""
+}
+
+EngineeredWaterCoolerItem: {
+	// DisplayName: Engineered Water Cooler Item
+	// Tooltip: ""
+}
+
+EngineeredWorkBenchItem: {
+	// DisplayName: Engineered Work Bench Item
+	// Tooltip: ""
+}
+
+EngineeredPlatingWallItem: {
+	// DisplayName: Engineered Plating Wall Item
+	// Tooltip: ""
+}
+
+HolographicGlassItem: {
+	// DisplayName: Holographic Glass Item
+	// Tooltip: ""
 }

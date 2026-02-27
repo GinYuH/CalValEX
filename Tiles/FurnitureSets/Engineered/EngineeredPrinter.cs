@@ -1,3 +1,4 @@
+using System;
 using CalValEX.Items.Tiles.FurnitureSets.Engineered;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -41,9 +42,14 @@ namespace CalValEX.Tiles.FurnitureSets.Engineered
 
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {
-            r = 3f / 255f;
-            g = 67f / 255f;
-            b = 146f / 255f;
+            float pulse = 0.75f + (float)Math.Sin(Main.GlobalTimeWrappedHourly * 0.5f) * 0.25f;
+            pulse = MathHelper.Clamp(pulse, 0.8f, 1f);
+
+            float noise = Main.rand.NextFloat(0.85f, 1f);
+
+            r = ((3f / 155f) * pulse) * (noise * 0.5f);
+            g = ((67f / 155f) * pulse) * (noise * 0.5f);
+            b = ((146f / 155f) * pulse) * (noise * 0.5f);
         }
 
         /*public override bool RightClick(int i, int j)

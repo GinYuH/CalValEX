@@ -4,6 +4,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 using Microsoft.Xna.Framework.Graphics;
+using System;
 
 namespace CalValEX.Tiles.FurnitureSets.Engineered
 {
@@ -13,6 +14,7 @@ namespace CalValEX.Tiles.FurnitureSets.Engineered
         {
             Main.tileFrameImportant[Type] = true;
             Main.tileNoAttach[Type] = true;
+			Main.tileLighted[Type] = true;
             TileID.Sets.DisableSmartCursor[Type] = true;
 			TileID.Sets.HasOutlines[Type] = true;
 			TileID.Sets.Clock[Type] = true;
@@ -117,6 +119,17 @@ namespace CalValEX.Tiles.FurnitureSets.Engineered
                     frame = 0;
                 }
             }
+        }
+		public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
+        {
+            float pulse = 0.75f + (float)Math.Sin(Main.GlobalTimeWrappedHourly * 0.5f) * 0.25f;
+            pulse = MathHelper.Clamp(pulse, 0.8f, 1f);
+
+            float noise = Main.rand.NextFloat(0.85f, 1f);
+
+            r = ((3f / 155f) * pulse) * (noise * 0.5f);
+            g = ((67f / 155f) * pulse) * (noise * 0.5f);
+            b = ((146f / 155f) * pulse) * (noise * 0.5f);
         }
     }
 }
