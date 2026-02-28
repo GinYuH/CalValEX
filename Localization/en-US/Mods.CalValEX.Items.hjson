@@ -4846,3 +4846,8 @@ HolographicGlassItem: {
 	DisplayName: Holographic Glass Item
 	Tooltip: ""
 }
+
+EngineeredPanelWallItem: {
+	DisplayName: Engineered Panel Wall Item
+	Tooltip: ""
+}
