@@ -1,5 +1,6 @@
 using System;
 using CalValEX.Items.Tiles.FurnitureSets.Engineered;
+using CalValEX.Items.Tiles.FurnitureSets.Engineered.Posters;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.DataStructures;
@@ -52,13 +53,25 @@ namespace CalValEX.Tiles.FurnitureSets.Engineered
             b = ((146f / 155f) * pulse) * (noise * 0.5f);
         }
 
-        /*public override bool RightClick(int i, int j)
+        public override bool RightClick(int i, int j)
         {
-            CalValEXPlayer modPlayer = Main.LocalPlayer.GetModPlayer<CalValEXPlayer>();
-            Terraria.Audio.SoundEngine.PlaySound(SoundID.Mech, new Vector2( i * 16, j * 16));
-            HitWire(i, j);
+            int[] itemPool =
+            { 
+            ModContent.ItemType<BackToWorkItem>(),
+            ModContent.ItemType<DreadonLabsItem>(),
+            ModContent.ItemType<KeepRecordsItem>(),
+            ModContent.ItemType<NoRunningInTheHallwaysItem>()
+            };
+            
+            //I love gambling
+            int randomIndex = Main.rand.Next(itemPool.Length);
+            int selectedItem = itemPool[randomIndex];
+
+            Item.NewItem(new EntitySource_TileInteraction(Main.LocalPlayer, i, j), i * 16, j * 16, 16, 16, selectedItem, 1);
+            Terraria.Audio.SoundEngine.PlaySound(SoundID.Camera, new Vector2( i * 16, j * 16));
+
             return true;
-        }*/
+        }
 
         public override void MouseOver(int i, int j)
         {

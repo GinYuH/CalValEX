@@ -24,8 +24,8 @@ namespace CalValEX.Items.Tiles.FurnitureSets.Engineered
             Item.maxStack = 9999;
             Item.consumable = true;
             Item.createTile = ModContent.TileType<EngineeredCouch>();
-            Item.width = 26;
-            Item.height = 30;
+            Item.width = 38;
+            Item.height = 24;
             Item.rare = ItemRarityID.White;
         }
 

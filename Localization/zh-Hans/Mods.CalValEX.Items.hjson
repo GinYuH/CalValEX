@@ -4873,3 +4873,28 @@ EngineeredBeamItem: {
 	// DisplayName: Engineered Beam Item
 	// Tooltip: ""
 }
+
+EngineeredBookcaseItem: {
+	// DisplayName: Engineered Bookcase Item
+	// Tooltip: ""
+}
+
+BackToWorkItem: {
+	// DisplayName: Back To Work Item
+	// Tooltip: ""
+}
+
+DreadonLabsItem: {
+	// DisplayName: Dreadon Labs Item
+	// Tooltip: ""
+}
+
+KeepRecordsItem: {
+	// DisplayName: Keep Records Item
+	// Tooltip: ""
+}
+
+NoRunningInTheHallwaysItem: {
+	// DisplayName: No Running In The Hallways Item
+	// Tooltip: ""
+}

@@ -8,8 +8,7 @@ namespace CalValEX.Walls
         public override void SetStaticDefaults()
         {
             Main.wallHouse[Type] = true;
-            //ItemDrop = ModContent.ItemType<WulfrumPanelWall>();
-            AddMapEntry(new Color(50, 92, 61));
+            AddMapEntry(new Color(72, 26, 26));
         }
     }
 }

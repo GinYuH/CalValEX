@@ -26,8 +26,8 @@ namespace CalValEX.Items.Tiles.FurnitureSets.Engineered
             Item.maxStack = 9999;
             Item.consumable = true;
             Item.createTile = ModContent.TileType<EngineeredAirCon>();
-            Item.width = 26;
-            Item.height = 30;
+            Item.width = 30;
+            Item.height = 22;
             Item.rare = ItemRarityID.White;
         }
 

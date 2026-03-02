@@ -8,7 +8,7 @@ namespace CalValEX.Walls
         public override void SetStaticDefaults()
         {
             Main.wallHouse[Type] = true;
-            AddMapEntry(new Color(86, 34, 34));
+            AddMapEntry(new Color(107, 43, 43));
         }
     }
 }
