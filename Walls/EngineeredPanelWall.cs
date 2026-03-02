@@ -9,7 +9,7 @@ namespace CalValEX.Walls
         {
             Main.wallHouse[Type] = true;
             //ItemDrop = ModContent.ItemType<WulfrumPanelWall>();
-            AddMapEntry(new Color(86, 34, 34));
+            AddMapEntry(new Color(50, 92, 61));
         }
     }
 }

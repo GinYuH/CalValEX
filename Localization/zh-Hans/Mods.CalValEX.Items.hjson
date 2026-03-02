@@ -4863,3 +4863,13 @@ EngineeredPanelWallItem: {
 	// DisplayName: Engineered Panel Wall Item
 	// Tooltip: ""
 }
+
+EngineeredAirConItem: {
+	// DisplayName: Engineered Air Con Item
+	// Tooltip: ""
+}
+
+EngineeredBeamItem: {
+	// DisplayName: Engineered Beam Item
+	// Tooltip: ""
+}

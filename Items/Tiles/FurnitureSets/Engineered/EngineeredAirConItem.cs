@@ -3,11 +3,13 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using CalValEX.Tiles.FurnitureSets.Engineered;
 using CalamityMod.Items.Placeables.DraedonStructures;
+using CalamityMod.Items.Materials;
 using CalValEX.Items.Tiles.Blocks;
+using CalamityMod.Items.DraedonMisc;
 
 namespace CalValEX.Items.Tiles.FurnitureSets.Engineered
 {
-    public class EngineeredWorkBenchItem : ModItem
+    public class EngineeredAirConItem : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -23,16 +25,18 @@ namespace CalValEX.Items.Tiles.FurnitureSets.Engineered
             Item.autoReuse = true;
             Item.maxStack = 9999;
             Item.consumable = true;
-            Item.createTile = ModContent.TileType<EngineeredWorkBench>();
-            Item.width = 32;
-            Item.height = 16;
+            Item.createTile = ModContent.TileType<EngineeredAirCon>();
+            Item.width = 26;
+            Item.height = 30;
             Item.rare = ItemRarityID.White;
         }
 
         public override void AddRecipes()
         {
-            Recipe recipe = Recipe.Create(ModContent.ItemType<EngineeredWorkBenchItem>());
-            recipe.AddIngredient(ModContent.ItemType<EngineeredPlatingItem>(), 10);
+            Recipe recipe = Recipe.Create(ModContent.ItemType<EngineeredAirConItem>());
+            recipe.AddIngredient(ModContent.ItemType<EngineeredPlatingItem>(), 8);
+            recipe.AddIngredient(ModContent.ItemType<MysteriousCircuitry>(), 1);
+            recipe.AddIngredient(ModContent.ItemType<DraedonPowerCell>(), 8);
             recipe.AddTile(TileID.Anvils);
             recipe.Register();
         }

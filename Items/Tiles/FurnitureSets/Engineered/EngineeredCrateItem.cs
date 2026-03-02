@@ -3,6 +3,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using CalValEX.Tiles.FurnitureSets.Engineered;
 using CalamityMod.Items.Placeables.DraedonStructures;
+using CalValEX.Items.Tiles.Blocks;
 
 namespace CalValEX.Items.Tiles.FurnitureSets.Engineered
 {
@@ -31,7 +32,7 @@ namespace CalValEX.Items.Tiles.FurnitureSets.Engineered
         public override void AddRecipes()
         {
             Recipe recipe = Recipe.Create(ModContent.ItemType<EngineeredCrateItem>());
-            recipe.AddIngredient(ModContent.ItemType<LaboratoryPanels>(), 5);
+            recipe.AddIngredient(ModContent.ItemType<EngineeredPlatingItem>(), 8);
             recipe.AddIngredient(ItemID.IronBar, 2);
             recipe.AddTile(TileID.Anvils);
             recipe.Register();

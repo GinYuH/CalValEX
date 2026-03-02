@@ -4,6 +4,9 @@ using Terraria.ModLoader;
 using CalValEX.Tiles.FurnitureSets.Engineered;
 using CalamityMod.Items.Placeables.DraedonStructures;
 using CalamityMod.Items.Materials;
+using CalValEX.Items.Tiles.Blocks;
+using CalamityMod.Items.DraedonMisc;
+using CalValEX.Tiles.Blocks;
 
 namespace CalValEX.Items.Tiles.FurnitureSets.Engineered
 {
@@ -32,9 +35,10 @@ namespace CalValEX.Items.Tiles.FurnitureSets.Engineered
         public override void AddRecipes()
         {
             Recipe recipe = Recipe.Create(ModContent.ItemType<EngineeredComputerItem>());
-            recipe.AddIngredient(ModContent.ItemType<LaboratoryPanels>(), 4);
-            recipe.AddIngredient(ModContent.ItemType<MysteriousCircuitry>(), 2);
-            recipe.AddIngredient(ItemID.Glass, 6);  
+            recipe.AddIngredient(ModContent.ItemType<EngineeredPlatingItem>(), 5);
+            recipe.AddIngredient(ModContent.ItemType<HolographicGlassItem>(), 5);
+            recipe.AddIngredient(ModContent.ItemType<MysteriousCircuitry>(), 1);
+            recipe.AddIngredient(ModContent.ItemType<DraedonPowerCell>(), 8);
             recipe.AddTile(TileID.Anvils);
             recipe.Register();
         }

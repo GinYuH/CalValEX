@@ -1,6 +1,8 @@
 ﻿using Terraria.ID;
 using Terraria.ModLoader;
 using CalValEX.Tiles.Blocks;
+using Terraria;
+using CalamityMod.Items.Materials;
 
 namespace CalValEX.Items.Tiles.Blocks
 {
@@ -23,6 +25,14 @@ namespace CalValEX.Items.Tiles.Blocks
             Item.useStyle = ItemUseStyleID.Swing;
             Item.consumable = true;
             Item.createTile = ModContent.TileType<EngineeredVentPanels>();
+        }
+        public override void AddRecipes()
+        {
+            Recipe recipe = Recipe.Create(ModContent.ItemType<EngineeredPlatingItem>(), 25);
+            recipe.AddIngredient(ItemID.IronBar, 1);
+            recipe.AddIngredient(ItemID.ClayBlock, 25);
+            recipe.AddTile(TileID.HeavyWorkBench);
+            recipe.Register();
         }
     }
 }

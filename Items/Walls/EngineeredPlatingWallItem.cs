@@ -1,6 +1,8 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 using CalValEX.Walls;
+using Terraria;
+using CalValEX.Items.Tiles.Blocks;
 
 namespace CalValEX.Items.Walls
 {
@@ -26,14 +28,11 @@ namespace CalValEX.Items.Walls
             Item.consumable = true;
             Item.createWall = ModContent.WallType<EngineeredPlatingWall>();
         }
-
-        /*public override void AddRecipes()
+        public override void AddRecipes()
         {
-            ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ModContent.ItemType<WulfrumPlating>());
-            recipe.AddTile(TileID.WorkBenches);
-            recipe.SetResult(this, 4);
-            recipe.AddRecipe();
-        }*/
+            Recipe recipe = Recipe.Create(ModContent.ItemType<EngineeredPlatingWallItem>(), 1);
+            recipe.AddIngredient(ModContent.ItemType<EngineeredPlatingItem>(), 1);
+            recipe.Register();
+        }
     }
 }
