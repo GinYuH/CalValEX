@@ -26,7 +26,7 @@ namespace CalValEX.Tiles.FurnitureSets.Engineered
 			
             LocalizedText name = CreateMapEntryName();
 			AddMapEntry(new Color(110, 52, 52), name);
-			DustType = DustID.Clay;
+			DustType = DustID.Meteorite;
             AdjTiles = new int[] { TileID.GrandfatherClocks };
         }
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)

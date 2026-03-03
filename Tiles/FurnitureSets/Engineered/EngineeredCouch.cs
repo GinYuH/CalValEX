@@ -34,6 +34,7 @@ namespace CalValEX.Tiles.FurnitureSets.Engineered
             AddMapEntry(new Color(110, 52, 52), name);
             DustType = DustID.Clay;
             AdjTiles = new int[] { TileID.Chairs };
+            DustType = DustID.Meteorite;
         }
         public override void ModifySittingTargetInfo(int i, int j, ref TileRestingInfo info)
         {

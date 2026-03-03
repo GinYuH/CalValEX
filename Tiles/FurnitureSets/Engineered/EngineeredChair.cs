@@ -48,7 +48,7 @@ namespace CalValEX.Tiles.FurnitureSets.Engineered
             AddToArray(ref TileID.Sets.RoomNeeds.CountsAsChair);
             LocalizedText name = CreateMapEntryName();
             AddMapEntry(new Color(110, 52, 52), Language.GetText("MapObject.Chair"));
-            DustType = DustID.Clay;
+            DustType = DustID.Meteorite;
             AdjTiles = new int[] { TileID.Chairs };
         }
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)

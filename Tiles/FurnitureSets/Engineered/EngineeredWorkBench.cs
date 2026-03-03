@@ -23,6 +23,7 @@ namespace CalValEX.Tiles.FurnitureSets.Engineered
             AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTable);
             TileObjectData.newTile.CoordinatePadding = 2;
             TileObjectData.addTile(Type);
+            DustType = DustID.Meteorite;
             
             LocalizedText name = CreateMapEntryName();
             AddMapEntry(new Color(110, 52, 52), name);

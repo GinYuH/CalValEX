@@ -33,7 +33,7 @@ namespace CalValEX.Tiles.FurnitureSets.Engineered
             TileObjectData.addTile(Type);
 
             AddMapEntry(new Color(110, 52, 52));
-            DustType = DustID.Clay;
+            DustType = DustID.Meteorite;
             
             RegisterItemDrop(ModContent.ItemType<EngineeredPrinterItem>());
         }

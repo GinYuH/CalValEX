@@ -4819,10 +4819,7 @@ EngineeredLongTableItem: {
 
 EngineeredPrinterItem: {
 	DisplayName: Engineered Printer
-	Tooltip:
-		'''
-		Prints Posters.
-		'''
+	Tooltip: Prints Posters.
 }
 
 EngineeredWallClockItem: {
@@ -4867,32 +4864,35 @@ EngineeredBookcaseItem: {
 
 BackToWorkItem: {
 	DisplayName: Back To Work
-	Tooltip:
-		'''
-		'Remember! History won't write itself!'
-		'''
+	Tooltip: "'Remember! History won't write itself!'"
 }
 
 DreadonLabsItem: {
 	DisplayName: Dreadon Labs
-	Tooltip:
-		'''
-		'Hope For The Future: Dreadon Labs'
-		'''
+	Tooltip: "'Hope For The Future: Dreadon Labs'"
 }
 
 KeepRecordsItem: {
 	DisplayName: Keep Records
-	Tooltip:
-		'''
-		'If you didn't write it down, it never happened!'
-		'''
+	Tooltip: "'If you didn't write it down, it never happened!'"
 }
 
 NoRunningInTheHallwaysItem: {
 	DisplayName: No Running In The Hallways
-	Tooltip:
-		'''
-		'Be mindful of your neighbors.'
-		'''
+	Tooltip: "'Be mindful of your neighbors.'"
+}
+
+EngineeredPlatformItem: {
+	DisplayName: Engineered Platform Item
+	Tooltip: ""
+}
+
+EngineeredPaddingItem: {
+	DisplayName: Engineered Padding Item
+	Tooltip: ""
+}
+
+EngineeredContructPanelsItem: {
+	DisplayName: Engineered Contruct Panels Item
+	Tooltip: ""
 }

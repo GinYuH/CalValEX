@@ -40,7 +40,7 @@ namespace CalValEX.Tiles.FurnitureSets.Engineered
 
             LocalizedText name = CreateMapEntryName();
             AddMapEntry(new Color(110, 52, 52), name, MapChestName);
-            DustType = DustID.Clay;
+            DustType = DustID.Meteorite;
             AdjTiles = new int[] { TileID.Containers };
         }
 

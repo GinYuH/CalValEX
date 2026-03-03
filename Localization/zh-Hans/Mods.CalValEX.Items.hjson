@@ -4775,126 +4775,136 @@ AldebaranVest: {
 }
 
 EngineeredGirderItem: {
-	// DisplayName: Engineered Girder Item
+	// DisplayName: Engineered Girder
 	// Tooltip: ""
 }
 
 EngineeredPlatingItem: {
-	// DisplayName: Engineered Plating Item
+	// DisplayName: Engineered Plating
 	// Tooltip: ""
 }
 
 EngineeredVentPanelsItem: {
-	// DisplayName: Engineered Vent Panels Item
+	// DisplayName: Engineered Vent Panels
 	// Tooltip: ""
 }
 
 EngineeredChairItem: {
-	// DisplayName: Engineered Chair Item
+	// DisplayName: Engineered Chair
 	// Tooltip: ""
 }
 
 EngineeredClockItem: {
-	// DisplayName: Engineered Clock Item
+	// DisplayName: Engineered Clock
 	// Tooltip: ""
 }
 
 EngineeredComputerItem: {
-	// DisplayName: Engineered Computer Item
+	// DisplayName: Engineered Computer
 	// Tooltip: ""
 }
 
 EngineeredCouchItem: {
-	// DisplayName: Engineered Couch Item
+	// DisplayName: Engineered Couch
 	// Tooltip: ""
 }
 
 EngineeredCrateItem: {
-	// DisplayName: Engineered Crate Item
+	// DisplayName: Engineered Crate
 	// Tooltip: ""
 }
 
 EngineeredDeskItem: {
-	// DisplayName: Engineered Desk Item
+	// DisplayName: Engineered Desk
 	// Tooltip: ""
 }
 
 EngineeredLockerItem: {
-	// DisplayName: Engineered Locker Item
+	// DisplayName: Engineered Locker
 	// Tooltip: ""
 }
 
 EngineeredLongTableItem: {
-	// DisplayName: Engineered Long Table Item
+	// DisplayName: Engineered Long Table
 	// Tooltip: ""
 }
 
 EngineeredPrinterItem: {
-	// DisplayName: Engineered Printer Item
-	// Tooltip: ""
+	// DisplayName: Engineered Printer
+	// Tooltip: Prints Posters.
 }
 
 EngineeredWallClockItem: {
-	// DisplayName: Engineered Wall Clock Item
-	// Tooltip: ""
-}
-
-EngineeredWaterCoolerItem: {
-	// DisplayName: Engineered Water Cooler Item
+	// DisplayName: Engineered Wall Clock
 	// Tooltip: ""
 }
 
 EngineeredWorkBenchItem: {
-	// DisplayName: Engineered Work Bench Item
+	// DisplayName: Engineered Work Bench
 	// Tooltip: ""
 }
 
 EngineeredPlatingWallItem: {
-	// DisplayName: Engineered Plating Wall Item
+	// DisplayName: Engineered Plating Wall
 	// Tooltip: ""
 }
 
 HolographicGlassItem: {
-	// DisplayName: Holographic Glass Item
+	// DisplayName: Holographic Glass
 	// Tooltip: ""
 }
 
 EngineeredPanelWallItem: {
-	// DisplayName: Engineered Panel Wall Item
+	// DisplayName: Engineered Panel Wall
 	// Tooltip: ""
 }
 
 EngineeredAirConItem: {
-	// DisplayName: Engineered Air Con Item
+	// DisplayName: Engineered Air Con
 	// Tooltip: ""
 }
 
 EngineeredBeamItem: {
-	// DisplayName: Engineered Beam Item
+	// DisplayName: Engineered Beam
 	// Tooltip: ""
 }
 
 EngineeredBookcaseItem: {
-	// DisplayName: Engineered Bookcase Item
+	// DisplayName: Engineered Bookcase
 	// Tooltip: ""
 }
 
 BackToWorkItem: {
-	// DisplayName: Back To Work Item
-	// Tooltip: ""
+	// DisplayName: Back To Work
+	// Tooltip: "'Remember! History won't write itself!'"
 }
 
 DreadonLabsItem: {
-	// DisplayName: Dreadon Labs Item
-	// Tooltip: ""
+	// DisplayName: Dreadon Labs
+	// Tooltip: "'Hope For The Future: Dreadon Labs'"
 }
 
 KeepRecordsItem: {
-	// DisplayName: Keep Records Item
-	// Tooltip: ""
+	// DisplayName: Keep Records
+	// Tooltip: "'If you didn't write it down, it never happened!'"
 }
 
 NoRunningInTheHallwaysItem: {
-	// DisplayName: No Running In The Hallways Item
+	// DisplayName: No Running In The Hallways
+	// Tooltip: "'Be mindful of your neighbors.'"
+}
+
+EngineeredPlatformItem: {
+	// DisplayName: Engineered Platform Item
+	// Tooltip: ""
+}
+
+EngineeredPaddingItem: {
+	// DisplayName: Engineered Padding Item
+	// Tooltip: ""
+}
+
+EngineeredContructPanelsItem: {
+	// DisplayName: Engineered Contruct Panels Item
 	// Tooltip: ""
 }

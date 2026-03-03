@@ -24,6 +24,7 @@ namespace CalValEX.Tiles.FurnitureSets.Engineered
             TileObjectData.addTile(Type);
             LocalizedText name = CreateMapEntryName();
             AddMapEntry(new Color(110, 52, 52), name);
+            DustType = DustID.Meteorite;
         }
 
         public override void AnimateTile(ref int frame, ref int frameCounter)
