@@ -48,9 +48,9 @@ namespace CalValEX.Tiles.FurnitureSets.Engineered
 
             float noise = Main.rand.NextFloat(0.85f, 1f);
 
-            r = ((3f / 155f) * pulse) * (noise * 0.5f);
-            g = ((67f / 155f) * pulse) * (noise * 0.5f);
-            b = ((146f / 155f) * pulse) * (noise * 0.5f);
+            r = ((3f / 175f) * pulse) * (noise * 0.4f);
+            g = ((67f / 175f) * pulse) * (noise * 0.4f);
+            b = ((146f / 175f) * pulse) * (noise * 0.4f);
         }
 
         public override bool RightClick(int i, int j)

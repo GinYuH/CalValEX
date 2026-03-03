@@ -13,7 +13,9 @@ namespace CalValEX.Tiles.Blocks
         {
             Main.tileSolid[Type] = true;
             Main.tileBlockLight[Type] = true;
+            Main.tileMergeDirt[Type] = false;
             Main.tileBrick[Type] = true;
+            Main.tileShine2[Type] = true;
             AddMapEntry(new Color(115, 123, 138));
             TileID.Sets.GemsparkFramingTypes[Type] = Type;
             HitSound = SoundID.Tink;

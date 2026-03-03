@@ -4896,3 +4896,18 @@ EngineeredContructPanelsItem: {
 	DisplayName: Engineered Contruct Panels Item
 	Tooltip: ""
 }
+
+EngineeredSignItem: {
+	DisplayName: Engineered Sign Item
+	Tooltip: ""
+}
+
+HololightItem: {
+	DisplayName: Hololight Item
+	Tooltip: ""
+}
+
+MiniHololightItem: {
+	DisplayName: Mini Hololight Item
+	Tooltip: ""
+}

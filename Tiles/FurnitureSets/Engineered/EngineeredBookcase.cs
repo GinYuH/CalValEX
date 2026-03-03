@@ -5,6 +5,7 @@ using Terraria.ModLoader;
 using Terraria.ObjectData;
 using static Terraria.ModLoader.ModContent;
 using Microsoft.Xna.Framework.Graphics;
+using System;
 
 namespace CalValEX.Tiles.FurnitureSets.Engineered
 {
@@ -15,7 +16,6 @@ namespace CalValEX.Tiles.FurnitureSets.Engineered
             Main.tileSolidTop[Type] = true;
             Main.tileFrameImportant[Type] = true;
             Main.tileLighted[Type] = true;
-            Main.tileTable[Type] = true;
             TileID.Sets.DisableSmartCursor[Type] = true;
             TileID.Sets.FramesOnKillWall[Type] = true; // Necessary since Style3x3Wall uses AnchorWall
             TileObjectData.newTile.CopyFrom(TileObjectData.Style3x3);
@@ -45,6 +45,17 @@ namespace CalValEX.Tiles.FurnitureSets.Engineered
                 spriteBatch.Draw(glowmask, drawPosition, new Rectangle(xFrameOffset, yFrameOffset, 18, 18), drawColour, 0.0f, Vector2.Zero, 1f, SpriteEffects.None, 0.0f);
             else if (trackTile.IsHalfBlock)
                 spriteBatch.Draw(glowmask, drawPosition + new Vector2(0f, 8f), new Rectangle(xFrameOffset, yFrameOffset, 18, 8), drawColour, 0.0f, Vector2.Zero, 1f, SpriteEffects.None, 0.0f);
+        }
+        public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
+        {
+            float pulse = 0.75f + (float)Math.Sin(Main.GlobalTimeWrappedHourly * 0.5f) * 0.25f;
+            pulse = MathHelper.Clamp(pulse, 0.8f, 1f);
+
+            float noise = Main.rand.NextFloat(0.85f, 1f);
+
+            r = ((3f / 175f) * pulse) * (noise * 0.4f);
+            g = ((67f / 175f) * pulse) * (noise * 0.4f);
+            b = ((146f / 175f) * pulse) * (noise * 0.4f);
         }
     }
 }

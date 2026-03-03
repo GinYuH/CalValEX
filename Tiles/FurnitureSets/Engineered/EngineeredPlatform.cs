@@ -3,6 +3,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria.ObjectData;
+using System;
 
 namespace CalValEX.Tiles.FurnitureSets.Engineered
 {

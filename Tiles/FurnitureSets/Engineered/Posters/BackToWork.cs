@@ -20,7 +20,6 @@ namespace CalValEX.Tiles.FurnitureSets.Engineered.Posters
             TileObjectData.newTile.Height = 3;
             TileObjectData.newTile.CoordinateHeights = new int[] { 16, 16, 16 };
 
-            AnimationFrameHeight = 36;
             TileObjectData.addTile(Type);
             LocalizedText name = CreateMapEntryName();
             AddMapEntry(new Color(110, 52, 52), name);

@@ -10,8 +10,10 @@ namespace CalValEX.Tiles.Blocks
         public override void SetStaticDefaults()
         {
             Main.tileSolid[Type] = true;
+            Main.tileBlockLight[Type] = true;
             Main.tileMergeDirt[Type] = false;
             Main.tileBrick[Type] = true;
+            Main.tileShine2[Type] = true;
             AddMapEntry(new Color(80, 88, 102));
             TileID.Sets.GemsparkFramingTypes[Type] = Type;
             HitSound = SoundID.Tink;
