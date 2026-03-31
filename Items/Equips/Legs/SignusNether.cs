@@ -15,7 +15,7 @@ namespace CalValEX.Items.Equips.Legs
             Item.height = 28;
             Item.value = Item.sellPrice(0, 2, 0, 0);
             Item.rare = CalamityID.CalRarityID.Turquoise;
-            Item.accessory = true;
+            //Item.accessory = true;
             Item.vanity = true;
             ArmorIDs.Legs.Sets.OverridesLegs[Item.legSlot] = true;
         }

@@ -45,7 +45,7 @@ namespace CalValEX
         [DefaultValue(false)]
         public bool Pitbul { get; set; }
 
-        [Header("$Mods.CalValEx.Configs.Gameplay")]
+        [Header("$Mods.CalValEX.Configs.Gameplay")]
 
         [BackgroundColor(192, 54, 64, 192)]
         [DefaultValue(false)]
@@ -68,7 +68,7 @@ namespace CalValEX
         [ReloadRequired()]
         public bool UseFables { get; set; }
 
-        [Header("$Mods.CalValEx.Configs.OtherHeader")]
+        [Header("$Mods.CalValEX.Configs.OtherHeader")]
 
         [BackgroundColor(192, 54, 64, 192)]
         [DefaultValue(true)]

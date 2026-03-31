@@ -20,6 +20,7 @@ namespace CalValEX.Tiles.FurnitureSets.Bloodstone
             TileObjectData.newTile.CoordinateHeights = new[] { 16, 18 };
             TileID.Sets.CanBeSleptIn[Type] = true; // Facilitates calling ModifySleepingTargetInfo
             TileID.Sets.InteractibleByNPCs[Type] = true; // Town NPCs will palm their hand at this tile
+            TileID.Sets.IsValidSpawnPoint[Type] = true;
             TileObjectData.addTile(Type);
             LocalizedText name = CreateMapEntryName();
             // name.SetDefault("Bloodstone Bed");

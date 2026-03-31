@@ -1,5 +1,6 @@
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
+using Terraria.GameContent.Drawing;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
@@ -17,6 +18,7 @@ namespace CalValEX.Tiles.FurnitureSets.Phantowax
             Main.tileLighted[Type] = true;
             Main.tileFrameImportant[Type] = true;
             Main.tileNoAttach[Type] = true;
+            TileID.Sets.MultiTileSway[Type] = true;
             TileID.Sets.DisableSmartCursor[Type] = true;
             AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTorch);
             TileObjectData.newTile.CopyFrom(TileObjectData.Style1x2Top);
@@ -26,7 +28,9 @@ namespace CalValEX.Tiles.FurnitureSets.Phantowax
             TileObjectData.newTile.CoordinatePadding = 0;
             TileObjectData.addTile(Type);
             AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTorch);
-            
+
+            AdjTiles = new int[] { TileID.HangingLanterns };
+
             LocalizedText name = CreateMapEntryName();
             // name.SetDefault("Phantowax Lantern");
             AddMapEntry(new Color(94, 39, 93), name);
@@ -74,6 +78,13 @@ namespace CalValEX.Tiles.FurnitureSets.Phantowax
                 short frameX = tile.TileFrameX;
                 short frameY = tile.TileFrameY;
             }
+        }
+        public override bool PreDraw(int i, int j, SpriteBatch spriteBatch)
+        {
+            Tile tile = Main.tile[i, j];
+            if (TileObjectData.IsTopLeft(tile))
+                Main.instance.TilesRenderer.AddSpecialPoint(i, j, TileDrawing.TileCounterType.MultiTileVine);
+            return false;
         }
     }
 }

@@ -1,5 +1,6 @@
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
+using Terraria.GameContent.Drawing;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
@@ -16,6 +17,7 @@ namespace CalValEX.Tiles.FurnitureSets.Bloodstone
             // Main.tileFlame[Type] = true; This breaks it.
             Main.tileLighted[Type] = true;
             TileID.Sets.DisableSmartCursor[Type] = true;
+            TileID.Sets.MultiTileSway[Type] = true;
             Main.tileFrameImportant[Type] = true;
             Main.tileNoAttach[Type] = true;
             AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTorch);
@@ -25,7 +27,9 @@ namespace CalValEX.Tiles.FurnitureSets.Bloodstone
             TileObjectData.newTile.CoordinateHeights = new int[] { 16, 18 }; //
             TileObjectData.addTile(Type);
             AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTorch);
-            
+
+            AdjTiles = new int[] { TileID.HangingLanterns };
+
             LocalizedText name = CreateMapEntryName();
             // name.SetDefault("Bloodstone Lantern");
             AddMapEntry(new Color(139, 0, 0), name);
@@ -73,6 +77,13 @@ namespace CalValEX.Tiles.FurnitureSets.Bloodstone
                 short frameX = tile.TileFrameX;
                 short frameY = tile.TileFrameY;
             }
+        }
+        public override bool PreDraw(int i, int j, SpriteBatch spriteBatch)
+        {
+            Tile tile = Main.tile[i, j];
+            if (TileObjectData.IsTopLeft(tile))
+                Main.instance.TilesRenderer.AddSpecialPoint(i, j, TileDrawing.TileCounterType.MultiTileVine);
+            return false;
         }
     }
 }

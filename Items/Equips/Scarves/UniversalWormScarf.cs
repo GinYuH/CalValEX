@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace CalValEX.Items.Equips.Scarves
 {
-    [AutoloadEquip(EquipType.Neck)]
+    [AutoloadEquip(EquipType.Neck, EquipType.Back)]
     public class UniversalWormScarf : ModItem {
         public override void SetStaticDefaults() => Item.ResearchUnlockCount = 1;
 

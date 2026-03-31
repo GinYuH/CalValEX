@@ -92,7 +92,7 @@ namespace CalValEX.Projectiles.Pets
         {
             int time1 = 23600;
             int time2 = 24260;
-            if (CalValEX.CalamityActive && player.HasBuff(CalValEX.CalamityBuff("BrutalCarnage")))
+            if (CalValEX.CalamityActive && player.HasBuff(CalValEX.CalamityBuff("AuricRebuke")))
             {
                 time1 = 600;
                 time2 = 1260;

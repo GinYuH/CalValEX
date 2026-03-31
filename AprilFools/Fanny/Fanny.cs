@@ -985,38 +985,6 @@ namespace CalValEX.AprilFools.Fanny
                     LoadCalamityDependantMessages();
                 }
 
-                try
-                {
-                    if (Directory.Exists("C:\\Program Files (x86)\\Steam\\steamapps\\common\\"))
-                    {
-                        List<string> games = Directory.GetDirectories("C:\\Program Files (x86)\\Steam\\steamapps\\common\\").ToList();
-                        if (games.Count > 0)
-                        {
-                            List<string> noTerraria = new List<string>();
-                            if (games != null && games.Count > 0)
-                            {
-                                for (int i = 0; i < games.Count; i++)
-                                {
-                                    string b = games[i].Remove(0, 46);
-                                    if (!(b.Contains("Terraria") || b.Contains("tModLoader") || b.Contains("Steamworks")))
-                                    {
-                                        noTerraria.Add(b);
-                                    }
-                                }
-                            }
-                            if (noTerraria.Count > 0)
-                            {
-                                fannyMessages.Add(new FannyMessage("StraightUpEvil", "By the way, $0, I see everything. Like how you have played " + noTerraria[Main.rand.Next(0, noTerraria.Count - 1)],
-                               "Cryptid", (FannySceneMetrics m) => NPC.downedMoonlord).AddDynamicText(SteamFriends.GetPersonaName).SetHoverTextOverride("Oh golly gee Fanny!"));
-                            }
-                        }
-                    }
-                }
-                catch
-                {
-
-                }
-
                 discord1 = new FannyMessage("DiscordianHash", "Oh you're on Discord? What are they talking about in $0? I wanna see!",
                 "Idle", (FannySceneMetrics m) => DiscordChat != "" && DiscordChat.Contains('#') && NPC.downedBoss1 && !discord2.alreadySeen).AddDynamicText(()=> DiscordChat).SetHoverTextOverride("Nothing much Fanny!");
 

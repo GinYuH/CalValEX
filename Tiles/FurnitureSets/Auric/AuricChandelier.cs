@@ -1,10 +1,12 @@
+using Microsoft.Xna.Framework.Graphics;
 using Terraria;
+using Terraria.DataStructures;
+using Terraria.Enums;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 using static Terraria.ModLoader.ModContent;
-using Microsoft.Xna.Framework.Graphics;
 
 namespace CalValEX.Tiles.FurnitureSets.Auric
 {
@@ -15,15 +17,22 @@ namespace CalValEX.Tiles.FurnitureSets.Auric
             Main.tileFrameImportant[Type] = true;
             Main.tileLighted[Type] = true;
             Main.tileLavaDeath[Type] = true;
+            TileID.Sets.MultiTileSway[Type] = true;
+            TileID.Sets.IsAMechanism[Type] = true;
             TileID.Sets.DisableSmartCursor[Type] = true;
             TileID.Sets.FramesOnKillWall[Type] = true; // Necessary since Style3x3Wall uses AnchorWall
             TileObjectData.newTile.CopyFrom(TileObjectData.Style1x2Top);
             TileObjectData.newTile.Width = 3;
             TileObjectData.newTile.Height = 3;
+            TileObjectData.newTile.Origin = new Point16(1, 0);
+            TileObjectData.newTile.UsesCustomCanPlace = true;
+            TileObjectData.newTile.AnchorTop = new AnchorData(AnchorType.SolidTile, 1, 1);
             TileObjectData.newTile.CoordinateHeights = new int[] { 16, 16, 18 }; //
             TileObjectData.addTile(Type);
             AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTorch);
-            
+
+            AdjTiles = new int[] { TileID.HangingLanterns };
+
             LocalizedText name = CreateMapEntryName();
             // name.SetDefault("Auric Chandelier");
             AddMapEntry(new Color(139, 0, 0), name);

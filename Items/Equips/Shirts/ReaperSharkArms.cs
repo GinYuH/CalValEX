@@ -13,7 +13,7 @@ namespace CalValEX.Items.Equips.Shirts
             Item.height = 28;
             Item.value = Item.sellPrice(0, 3, 0, 0);
             Item.rare = CalamityID.CalRarityID.PureGreen;
-            Item.accessory = true;
+            //Item.accessory = true;
             Item.vanity = true;
         }
     }

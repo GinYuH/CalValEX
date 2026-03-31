@@ -19,8 +19,9 @@ namespace CalValEX.Tiles.FurnitureSets.Auric
             TileObjectData.newTile.CopyFrom(TileObjectData.Style4x2);
             TileID.Sets.DisableSmartCursor[Type] = true;
             TileObjectData.newTile.CoordinateHeights = new[] { 16, 18 };
-            TileID.Sets.CanBeSleptIn[Type] = true; // Facilitates calling ModifySleepingTargetInfo
-            TileID.Sets.InteractibleByNPCs[Type] = true; // Town NPCs will palm their hand at this tile
+            TileID.Sets.CanBeSleptIn[Type] = true;
+            TileID.Sets.InteractibleByNPCs[Type] = true;
+            TileID.Sets.IsValidSpawnPoint[Type] = true;
             TileObjectData.addTile(Type);
             LocalizedText name = CreateMapEntryName();
             // name.SetDefault("Auric Bed");

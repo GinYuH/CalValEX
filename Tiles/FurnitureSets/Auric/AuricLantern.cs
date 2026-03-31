@@ -13,6 +13,7 @@ namespace CalValEX.Tiles.FurnitureSets.Auric
             Main.tileLighted[Type] = true;
             Main.tileFrameImportant[Type] = true;
             TileID.Sets.DisableSmartCursor[Type] = true;
+            TileID.Sets.MultiTileSway[Type] = true;
             Main.tileNoAttach[Type] = true;
             AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTorch);
             TileObjectData.newTile.CopyFrom(TileObjectData.Style1x2Top);
