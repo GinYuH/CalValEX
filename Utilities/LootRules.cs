@@ -714,4 +714,21 @@ namespace CalValEX
             return Language.GetTextValue("Mods.CalValEX.Conditions.DesertScourgeDeath");
         }
     }
+    public class AprilFoolsDay : IItemDropRuleCondition
+    {
+        public bool CanDrop(DropAttemptInfo info)
+        {
+            return CalValEX.AprilFoolDay;
+        }
+
+        public bool CanShowItemDropInUI()
+        {
+            return false;
+        }
+
+        public string GetConditionDescription()
+        {
+            return null;
+        }
+    }
 }

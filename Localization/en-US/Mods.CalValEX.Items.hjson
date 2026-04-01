@@ -4761,3 +4761,13 @@ AldebaranVest: {
 		[c/#6BF0FF:- Donor Item -]
 		'''
 }
+
+Brainstorm: {
+	DisplayName: Brainstorm
+	Tooltip: Shoots green needles which gradually turn hit enemies green
+}
+
+GreenNeedle: {
+	DisplayName: Green Needle
+	Tooltip: Full of keratin
+}

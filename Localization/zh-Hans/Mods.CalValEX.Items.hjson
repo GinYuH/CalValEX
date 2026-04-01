@@ -4739,7 +4739,7 @@ MoldyHoody: {
 }
 
 AldebaranCloak: {
-	// DisplayName: MinMacDon's Cloak
+	// DisplayName: MiniMacDon's Cloak
 	/* Tooltip:
 		'''
 		Victory earned through repetition
@@ -4748,7 +4748,7 @@ AldebaranCloak: {
 }
 
 AldebaranHelmet: {
-	// DisplayName: MinMacDon's Helm
+	// DisplayName: MiniMacDon's Helm
 	/* Tooltip:
 		'''
 		Victory earned through repetition
@@ -4757,7 +4757,7 @@ AldebaranHelmet: {
 }
 
 AldebaranLeggings: {
-	// DisplayName: MinMacDon's Pants
+	// DisplayName: MiniMacDon's Pants
 	/* Tooltip:
 		'''
 		Victory earned through repetition
@@ -4766,10 +4766,20 @@ AldebaranLeggings: {
 }
 
 AldebaranVest: {
-	// DisplayName: MinMacDon's Vest
+	// DisplayName: MiniMacDon's Vest
 	/* Tooltip:
 		'''
 		Victory earned through repetition
 		[c/#6BF0FF:- Donor Item -]
 		''' */
+}
+
+Brainstorm: {
+	// DisplayName: Brainstorm
+	// Tooltip: Shoots green needles which gradually turn hit enemies green
+}
+
+GreenNeedle: {
+	// DisplayName: Green Needle
+	// Tooltip: Full of keratin
 }

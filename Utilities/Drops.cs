@@ -41,6 +41,7 @@ using ReLogic.Content;
 using CalValEX.Items.Plushies;
 using CalValEX.Items.Equips;
 using CalValEX.Tiles.Paintings;
+using CalValEX.AprilFools.Brainstorm;
 
 namespace CalValEX
 {
@@ -63,6 +64,9 @@ namespace CalValEX
         public static Texture2D DeusBlightBodyAltGlow;
         public static Texture2D DeusBlightTailGlow;
         public static Texture2D PoGod;
+        public static Asset<Texture2D>[] needles = new Asset<Texture2D>[4];
+        public int needleAmt = 0;
+        public List<Vector2> needlePositions = new();
 
         public override void SetStaticDefaults()
         {
@@ -76,6 +80,11 @@ namespace CalValEX
                 DeusBlightBodyAltGlow = ModContent.Request<Texture2D>("CalValEX/NPCs/AstrumDeus/DeusBodyAltOld_Glow", AssetRequestMode.ImmediateLoad).Value;
                 DeusBlightTailGlow = ModContent.Request<Texture2D>("CalValEX/NPCs/AstrumDeus/DeusTailOld_Glow", AssetRequestMode.ImmediateLoad).Value;
                 PoGod = ModContent.Request<Texture2D>("CalValEX/ExtraTextures/SlimeGod", AssetRequestMode.ImmediateLoad).Value;
+                for (int i = 0; i < needles.Length; i++)
+                {
+                    needles[i] = ModContent.Request<Texture2D>("CalValEX/AprilFools/Brainstorm/GreenNeedleProj" + (i + 1), AssetRequestMode.ImmediateLoad);
+                }
+
             }
         }
 
@@ -176,6 +185,13 @@ namespace CalValEX
             }
             if (!CalValEXConfig.Instance.DisableVanityDrops)
             {
+                if (CalValEXConfig.Instance.AprilFoolsContent)
+                {
+                    if (npc.type == NPCID.BrainofCthulhu)
+                    {
+                        npcLoot.Add(ItemDropRule.ByCondition(new AprilFoolsDay(), ModContent.ItemType<GreenNeedle>(), 1, 5, 12));
+                    }
+                }
                 if (CalValEX.CalamityActive)
                 {
                     if (npc.type == CalNPCID.DILF)
@@ -1477,13 +1493,48 @@ namespace CalValEX
 
         public override void PostDraw(NPC npc, SpriteBatch spriteBatch, Vector2 screenpos, Color drawColor)
         {
-            if (CalValEX.CalamityActive)
+            if (CalValEX.AprilFoolDay && CalValEXConfig.Instance.AprilFoolsContent)
             {
-                if (CalValEX.AprilFoolDay)
+                if (CalValEX.CalamityActive)
                 {
                     BasicDrawNPC(ref spriteBatch, PoGod, npc, CalNPCID.SlimeGod, npc.GetAlpha(drawColor));
+                    if (npc.type == NPCID.BrainofCthulhu)
+                    {
+                        if (NPC.AnyNPCs(CalValEX.CalamityNPC("FalseBrain")))
+                        {
+                            return;
+                        }
+                    }
+                }
+                if (npc.type == NPCID.BrainofCthulhu || npc.type == NPCID.Creeper)
+                {
+                    if (needlePositions.Count <= 0)
+                    {
+                        bool boc = npc.type == NPCID.BrainofCthulhu;
+                        int needleAmt = boc ? Main.rand.Next(10, 23) : 1;
+                        int widthMin = boc ? 40 : 20;
+                        int widthMax = boc ? 100 : 30;
+                        for (int i = 0; i < needleAmt; i++)
+                            needlePositions.Add(npc.scale * Main.rand.NextVector2CircularEdge(10, 10).SafeNormalize(Vector2.UnitY) * Main.rand.Next(widthMin, widthMax));
+                    }
+                    else
+                    {
+                        for (int i = 0; i < needlePositions.Count; i++)
+                        {
+                            spriteBatch.Draw(needles[(i + npc.whoAmI) % 4].Value, npc.Center - needlePositions[i] * npc.scale - screenpos, null, npc.GetAlpha(drawColor) * npc.Opacity, (npc.Center - needlePositions[i]).DirectionTo(npc.Center).ToRotation(), new Vector2(0, needles[(i + npc.whoAmI) % 4].Value.Height), npc.scale, 0, 0);
+                        }
+                    }
                 }
             }
+        }
+
+        public override Color? GetAlpha(NPC npc, Color drawColor)
+        {
+            if (needleAmt > 0)
+            {
+                return Color.Lerp(drawColor, Lighting.GetColor(npc.Center.ToTileCoordinates()).MultiplyRGB(Color.Green), needleAmt / 22f);
+            }
+            return null;
         }
 
         public static void BasicDrawNPC(ref SpriteBatch spriteBatch, Texture2D texture, NPC npc, int type, Color color)
