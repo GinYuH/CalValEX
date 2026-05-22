@@ -1,3 +1,4 @@
+using System;
 using Terraria;
 using Terraria.ModLoader;
 
@@ -29,15 +30,23 @@ namespace CalValEX.Projectiles.Pets
 
         public override void Animation(int state)
         {
-            Mod armasortof;
             Mod infernum;
+            Mod armasortof;
             Mod cplus;
-            ModLoader.TryGetMod("EfficientNohits", out armasortof);
             ModLoader.TryGetMod("InfernumMode", out infernum);
+            ModLoader.TryGetMod("EfficientNohits", out armasortof);
+            bool ida = false;
             ModLoader.TryGetMod("CalValPlus", out cplus);
 
+            if( armasortof != null )
+            {
+                Type playerType = armasortof.Code.GetType("EfficientNohits.EffPlayer");
+                var field = playerType.GetField("InstantDeathAlways");
+                ida = (bool)field.GetValue(null);
+            }
+
             //MAID mode
-            if (CalValEX.CalamityActive && !CalValEXConfig.Instance.Polterskin && ((Main.masterMode && (bool)CalValEX.Calamity.Call("GetDifficultyActive", "death") && (infernum != null && (bool)infernum.Call("GetInfernumActive")) && (armasortof != null && (bool)armasortof.Call("GetModifier", "instantdeathalways"))) || cplus != null))
+            if (CalValEX.CalamityActive && !CalValEXConfig.Instance.Polterskin && ((Main.masterMode && (bool)CalValEX.Calamity.Call("GetDifficultyActive", "death") && (infernum != null && (bool)infernum.Call("GetInfernumActive")) && (armasortof != null && ida )) || cplus != null))
             {
                 if (Projectile.frameCounter++ > 8)
                 {
