@@ -1,3 +1,5 @@
+using System;
+using System.Reflection;
 using Terraria;
 using Terraria.ModLoader;
 
@@ -10,6 +12,18 @@ namespace CalValEX.Projectiles.Pets
         public override float TeleportThreshold => 1440f;
 
         public override Vector2 FlyingOffset => new(68f * -Main.player[Projectile.owner].direction, -50f);
+
+        private static Type _effPlayerType;
+        private static FieldInfo _instantDeathAlwaysField;
+
+        static PolterChan()
+        {
+            if (ModLoader.TryGetMod("EfficientNohits", out Mod armasortof))
+            {
+                _effPlayerType = armasortof.Code.GetType("EfficientNohits.EffPlayer");
+                _instantDeathAlwaysField = _effPlayerType?.GetField("InstantDeathAlways");
+            }
+        }
 
         public override void SetStaticDefaults()
         {
@@ -29,15 +43,19 @@ namespace CalValEX.Projectiles.Pets
 
         public override void Animation(int state)
         {
-            Mod armasortof;
             Mod infernum;
             Mod cplus;
-            ModLoader.TryGetMod("EfficientNohits", out armasortof);
             ModLoader.TryGetMod("InfernumMode", out infernum);
             ModLoader.TryGetMod("CalValPlus", out cplus);
 
+            bool ida = false;
+            if (_instantDeathAlwaysField != null)
+            {
+                ida = (bool)_instantDeathAlwaysField.GetValue(null);
+            }
+
             //MAID mode
-            if (CalValEX.CalamityActive && !CalValEXConfig.Instance.Polterskin && ((Main.masterMode && (bool)CalValEX.Calamity.Call("GetDifficultyActive", "death") && (infernum != null && (bool)infernum.Call("GetInfernumActive")) && (armasortof != null && (bool)armasortof.Call("GetModifier", "instantdeathalways"))) || cplus != null))
+            if (CalValEX.CalamityActive && !CalValEXConfig.Instance.Polterskin && ((Main.masterMode && (bool)CalValEX.Calamity.Call("GetDifficultyActive", "death") && (infernum != null && (bool)infernum.Call("GetInfernumActive")) && ida) || cplus != null))
             {
                 if (Projectile.frameCounter++ > 8)
                 {
