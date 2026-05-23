@@ -1,4 +1,5 @@
 using System;
+using System.Reflection;
 using Terraria;
 using Terraria.ModLoader;
 
@@ -11,6 +12,18 @@ namespace CalValEX.Projectiles.Pets
         public override float TeleportThreshold => 1440f;
 
         public override Vector2 FlyingOffset => new(68f * -Main.player[Projectile.owner].direction, -50f);
+
+        private static Type _effPlayerType;
+        private static FieldInfo _instantDeathAlwaysField;
+
+        static PolterChan()
+        {
+            if (ModLoader.TryGetMod("EfficientNohits", out Mod armasortof))
+            {
+                _effPlayerType = armasortof.Code.GetType("EfficientNohits.EffPlayer");
+                _instantDeathAlwaysField = _effPlayerType?.GetField("InstantDeathAlways");
+            }
+        }
 
         public override void SetStaticDefaults()
         {
@@ -31,22 +44,18 @@ namespace CalValEX.Projectiles.Pets
         public override void Animation(int state)
         {
             Mod infernum;
-            Mod armasortof;
             Mod cplus;
             ModLoader.TryGetMod("InfernumMode", out infernum);
-            ModLoader.TryGetMod("EfficientNohits", out armasortof);
-            bool ida = false;
             ModLoader.TryGetMod("CalValPlus", out cplus);
 
-            if( armasortof != null )
+            bool ida = false;
+            if (_instantDeathAlwaysField != null)
             {
-                Type playerType = armasortof.Code.GetType("EfficientNohits.EffPlayer");
-                var field = playerType.GetField("InstantDeathAlways");
-                ida = (bool)field.GetValue(null);
+                ida = (bool)_instantDeathAlwaysField.GetValue(null);
             }
 
             //MAID mode
-            if (CalValEX.CalamityActive && !CalValEXConfig.Instance.Polterskin && ((Main.masterMode && (bool)CalValEX.Calamity.Call("GetDifficultyActive", "death") && (infernum != null && (bool)infernum.Call("GetInfernumActive")) && (armasortof != null && ida )) || cplus != null))
+            if (CalValEX.CalamityActive && !CalValEXConfig.Instance.Polterskin && ((Main.masterMode && (bool)CalValEX.Calamity.Call("GetDifficultyActive", "death") && (infernum != null && (bool)infernum.Call("GetInfernumActive")) && ida) || cplus != null))
             {
                 if (Projectile.frameCounter++ > 8)
                 {
