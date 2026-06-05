@@ -597,6 +597,7 @@ namespace CalValEX
                     if (npc.type == CalNPCID.Leviathan)
                     {
                         npcLoot.Add(ItemDropRule.ByCondition(new Levihita(), ModContent.ItemType<FoilAtlantis>(), 3));
+                        npcLoot.Add(ItemDropRule.ByCondition(new Levihita(), ModContent.ItemType<LeviathanEgg>(), 3));
                         npcLoot.Add(ItemDropRule.ByCondition(new Levihita(), ModContent.ItemType<StrangeMusicNote>(), 40));
                         AddPlushDrop(npcLoot, PlushManager.PlushItems["LeviathanEX"]);
                         npcLoot.Add(ItemDropRule.ByCondition(new LevihitaPlushies(), PlushManager.PlushItems["Anahita"], 20));
@@ -604,6 +605,7 @@ namespace CalValEX
                     if (npc.type == CalNPCID.Anahita)
                     {
                         npcLoot.Add(ItemDropRule.ByCondition(new Levihita(), ModContent.ItemType<FoilAtlantis>(), 3));
+                        npcLoot.Add(ItemDropRule.ByCondition(new Levihita(), ModContent.ItemType<LeviathanEgg>(), 3));
                         npcLoot.Add(ItemDropRule.ByCondition(new Levihita(), ModContent.ItemType<StrangeMusicNote>(), 40));
                         AddPlushDrop(npcLoot, PlushManager.PlushItems["Anahita"]);
                         npcLoot.Add(ItemDropRule.ByCondition(new LevihitaPlushies(), PlushManager.PlushItems["LeviathanEX"], 20));
@@ -724,6 +726,7 @@ namespace CalValEX
                         LeadingConditionRule notExpertRule = new(new Conditions.NotExpert());
                         notExpertRule.OnSuccess(ItemDropRule.ByCondition(new BlockDrops(), CalValEX.CalamityItem("StratusBricks"), 2, 155, 265));
                         notExpertRule.OnSuccess(ItemDropRule.ByCondition(new BlockDrops(), ModContent.ItemType<PhantowaxBlock>(), 2, 155, 265));
+                        npcLoot.Add(notExpertRule);
                         npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotExpert(), ModContent.ItemType<Polterhook>(), 20));
                         npcLoot.Add(ItemDropRule.ByCondition(new MasterRevCondition(), ModContent.ItemType<ToyScythe>(), 3));
                         AddPlushDrop(npcLoot, PlushManager.PlushItems["Polterghast"]);

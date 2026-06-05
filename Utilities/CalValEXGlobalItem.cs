@@ -28,6 +28,7 @@ using System.Linq;
 using CalValEX.CalamityID;
 using CalValEX.Tiles.Paintings;
 using CalValEX.Items.Equips.Transformations;
+using CalValEX.Items.Critters;
 
 namespace CalValEX
 {
@@ -40,7 +41,6 @@ namespace CalValEX
                 return;
 
             MakePlaceable(item, CalItemID.Bloodstone, ModContent.TileType<BloodstonePlaced>());
-            MakePlaceable(item, CalItemID.MeldConstruct, ModContent.TileType<MeldConstructPlaced>());
             MakePlaceable(item, CalItemID.CeremonialUrn, ModContent.TileType<CeremonialUrnPlaced>());
             MakePlaceable(item, CalItemID.SupremeCalamitasCoffer, ModContent.TileType<CalamitasCofferPlaced>());
             MakePlaceable(item, CalItemID.DraedonBox, ModContent.TileType<DraedonQuoteonQuoteBagPlaced>());
@@ -73,7 +73,6 @@ namespace CalValEX
 		{
             LeadingConditionRule rule = new(new DropsEnabled());
             LeadingConditionRule rule2 = new(new BlockDrops());
-            LeadingConditionRule rule6 = new(new CalamityDay());
             LeadingConditionRule rule7 = new(new ThanatosDowned());
             LeadingConditionRule rule8 = new(new TwinsDowned());
             LeadingConditionRule rule9 = new(new AresDowned());
@@ -81,6 +80,8 @@ namespace CalValEX
             LeadingConditionRule rule11 = new(new PolterDowned());
             LeadingConditionRule rule12 = new(new AquaDowned());
 
+            if (CalValEXConfig.Instance.DisableVanityDrops)
+                return;
             #region bags
             if (item.type == CalItemID.StarterBag)
 			{
@@ -95,7 +96,8 @@ namespace CalValEX
 			}
 			else if (item.type == CalItemID.CrabulonBag)
             {
-                itemLoot.Add(rule2.OnSuccess(new CommonDrop(ModContent.ItemType<MushroomCap>(), 1, 205, 335)));
+                rule2.OnSuccess(new CommonDrop(ModContent.ItemType<MushroomCap>(), 1, 205, 335));
+                itemLoot.Add(rule2);
                 itemLoot.Add(rule.OnSuccess(new CommonDrop(ModContent.ItemType<ClawShroom>(), 10, chanceNumerator: 3)));
                 itemLoot.Add(rule.OnSuccess(new CommonDrop(ModContent.ItemType<MoldyHoody>(), 5)));
             }
@@ -159,7 +161,8 @@ namespace CalValEX
 			}
 			else if (item.type == CalItemID.RavagerBag)
 			{
-				itemLoot.Add(rule2.OnSuccess(ItemDropRule.Common(ModContent.ItemType<Necrostone>(), 1, 205, 335)));
+                rule2.OnSuccess(ItemDropRule.Common(ModContent.ItemType<Necrostone>(), 1, 205, 335));
+                itemLoot.Add(rule2);
 				itemLoot.Add(rule.OnSuccess(new CommonDrop(ModContent.ItemType<SkullCluster>(), 10, chanceNumerator: 3)));
 				itemLoot.Add(rule.OnSuccess(new CommonDrop(ModContent.ItemType<ScavaHook>(), 100, chanceNumerator: 7)));
 				itemLoot.Add(rule.OnSuccess(new CommonDrop(ModContent.ItemType<RavaHook>(), 10, chanceNumerator: 3)));
@@ -210,7 +213,8 @@ namespace CalValEX
 			else if (item.type == CalItemID.PolterghastBag)
             {
                 AddBlockDrop(ref itemLoot, "StratusBricks");
-                itemLoot.Add(rule2.OnSuccess(new CommonDrop(ModContent.ItemType<PhantowaxBlock>(), 2, 205, 335)));
+                rule2.OnSuccess(new CommonDrop(ModContent.ItemType<PhantowaxBlock>(), 2, 205, 335));
+                itemLoot.Add(rule2);
 
                 itemLoot.Add(rule.OnSuccess(ItemDropRule.NotScalingWithLuck(ModContent.ItemType<Polterhook>(), 10)));
                 itemLoot.Add(rule.OnSuccess(new CommonDrop(ModContent.ItemType<ZygoteinaBucket>(), 10, chanceNumerator: 3)));
@@ -235,7 +239,7 @@ namespace CalValEX
 				demonshade.OnSuccess(ItemDropRule.Common(ModContent.ItemType<DemonshadePants>()));
 
 				itemLoot.Add(rule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<Termipebbles>(), 1, 5, 8)));
-				itemLoot.Add(rule6.OnSuccess(new CommonDrop(ModContent.ItemType<YharonsAnklet>(), 10, chanceNumerator: 3)));
+				itemLoot.Add(rule.OnSuccess(new CommonDrop(ModContent.ItemType<YharonsAnklet>(), 10, chanceNumerator: 3)));
 				itemLoot.Add(rule.OnSuccess(new CommonDrop(ModContent.ItemType<NuggetinaBiscuit>(), 10, chanceNumerator: 3)));
 				itemLoot.Add(rule.OnSuccess(new CommonDrop(ModContent.ItemType<YharonShackle>(), 10, chanceNumerator: 3)));
 				itemLoot.Add(rule.OnSuccess(ItemDropRule.NotScalingWithLuck(ModContent.ItemType<AncientAuricTeslaHelm>(), 20)));
@@ -249,14 +253,17 @@ namespace CalValEX
 				balloons.OnSuccess(ItemDropRule.Common(ModContent.ItemType<ArtemisBalloonSmall>()));
                 AddBlockDrop(ref itemLoot, "ExoPlating");
 
-                itemLoot.Add(rule7.OnSuccess(ItemDropRule.NotScalingWithLuck(ModContent.ItemType<XMLightningHook>(), 2)));
-				itemLoot.Add(rule7.OnSuccess(ItemDropRule.NotScalingWithLuck(ModContent.ItemType<Items.Pets.ExoMechs.GunmetalRemote>(), 2)));
+                rule7.OnSuccess(ItemDropRule.NotScalingWithLuck(ModContent.ItemType<XMLightningHook>(), 2));
+                rule7.OnSuccess(ItemDropRule.NotScalingWithLuck(ModContent.ItemType<Items.Pets.ExoMechs.GunmetalRemote>(), 2));
+                itemLoot.Add(rule7);
 
-				itemLoot.Add(rule8.OnSuccess(balloons));
-				itemLoot.Add(rule8.OnSuccess(ItemDropRule.NotScalingWithLuck(ModContent.ItemType<Items.Pets.ExoMechs.GeminiMarkImplants>(), 2)));
+                rule8.OnSuccess(ItemDropRule.NotScalingWithLuck(ModContent.ItemType<Items.Pets.ExoMechs.GeminiMarkImplants>(), 2));
+                itemLoot.Add(rule8.OnSuccess(balloons));
+				itemLoot.Add(rule8);
 
-				itemLoot.Add(rule9.OnSuccess(ItemDropRule.NotScalingWithLuck(ModContent.ItemType<Items.Equips.Shirts.AresChestplate.AresChestplate>(), 2)));
-				itemLoot.Add(rule9.OnSuccess(ItemDropRule.NotScalingWithLuck(ModContent.ItemType<Items.Pets.ExoMechs.OminousCore>(), 2)));
+                rule9.OnSuccess(ItemDropRule.NotScalingWithLuck(ModContent.ItemType<Items.Equips.Shirts.AresChestplate.AresChestplate>(), 2));
+                rule9.OnSuccess(ItemDropRule.NotScalingWithLuck(ModContent.ItemType<Items.Pets.ExoMechs.OminousCore>(), 2));
+				itemLoot.Add(rule9);
 
 				itemLoot.Add(rule.OnSuccess(ItemDropRule.NotScalingWithLuck(ModContent.ItemType<AncientAuricTeslaHelm>(), 10)));
 				itemLoot.Add(rule.OnSuccess(draedon));
@@ -293,14 +300,20 @@ namespace CalValEX
                 itemLoot.Add(rule.OnSuccess(ItemDropRule.NotScalingWithLuck(ModContent.ItemType<SulphurGeyser>(), 20, 2, 3)));
                 itemLoot.Add(rule.OnSuccess(ItemDropRule.NotScalingWithLuck(ModContent.ItemType<SulphurousCactus>(), 20, 1, 3)));
                 itemLoot.Add(rule.OnSuccess(ItemDropRule.NotScalingWithLuck(ModContent.ItemType<SulphurousPlanter>(), 25)));
-                itemLoot.Add(rule10.OnSuccess(ItemDropRule.NotScalingWithLuck(ModContent.ItemType<InkyPollution>(), 50)));
-                itemLoot.Add(rule11.OnSuccess(ItemDropRule.NotScalingWithLuck(ModContent.ItemType<EidolonTree>(), 40)));
-                itemLoot.Add(rule12.OnSuccess(ItemDropRule.NotScalingWithLuck(ModContent.ItemType<BelchingCoral>(), 20)));
+
+                rule10.OnSuccess(ItemDropRule.NotScalingWithLuck(ModContent.ItemType<InkyPollution>(), 50));
+                rule11.OnSuccess(ItemDropRule.NotScalingWithLuck(ModContent.ItemType<EidolonTree>(), 40));
+                rule12.OnSuccess(ItemDropRule.NotScalingWithLuck(ModContent.ItemType<BelchingCoral>(), 20));
+
+                itemLoot.Add(rule10);
+                itemLoot.Add(rule11);
+                itemLoot.Add(rule12);
             }
             else if (item.type == CalItemID.AstralCrate || item.type == CalItemID.MonolithCrate)
             {
                 itemLoot.Add(rule.OnSuccess(new CommonDrop(ModContent.ItemType<MonolithPot>(), 100, 1, 1, 3)));
-                itemLoot.Add(rule11.OnSuccess(ItemDropRule.NotScalingWithLuck(ModContent.ItemType<NetherTree>(), 20)));
+                rule11.OnSuccess(ItemDropRule.NotScalingWithLuck(ModContent.ItemType<NetherTree>(), 20));
+                itemLoot.Add(rule11);
             }
             else if (item.type == CalItemID.SunkenCrate || item.type == CalItemID.PrismCrate)
             {
@@ -315,106 +328,55 @@ namespace CalValEX
             #endregion
 
             #region spaghetti starter
-            /*if (item.type != ModContent.ItemType<StarterBag>())
-                return;
-
-            LeadingConditionRule[] names = new LeadingConditionRule[]
+            if (item.type == CalItemID.StarterBag)
             {
-                new(new Combine(true, null, new rule, new PlayerNameRule("Jared"))),
-                new(new Combine(true, null, new VanityDropsEnabled(), new PlayerNameRule("RamG", "Ramgear"))),
-                new(new Combine(true, null, new VanityDropsEnabled(), new PlayerNameRule("Bumbledoge", "BumbleDoge", "Bojangles", "Bojeangles"))),
-                new(new Combine(true, null, new VanityDropsEnabled(), new PlayerNameRule("William"))),
-                new(new Combine(true, null, new VanityDropsEnabled(), new PlayerNameRule("Kiwabug"))),
-                new(new Combine(true, null, new VanityDropsEnabled(), new PlayerNameRule("YuH", "Yuh", "yuh", "Lilsigtum", "GinYuH", "Lil Sigtum"))),
-                new(new Combine(true, null, new VanityDropsEnabled(), new PlayerNameRule("Hypera"))),
-                new(new Combine(true, null, new VanityDropsEnabled(), new PlayerNameRule("Drakudragonx"))),
-                new(new Combine(true, null, new VanityDropsEnabled(), new PlayerNameRule("Spider", "spider", "Spooktacular", "spooktacular"))),
-                new(new Combine(true, null, new VanityDropsEnabled(), new PlayerNameRule("Lucca"))),
-                new(new Combine(true, null, new VanityDropsEnabled(), new PlayerNameRule("Junko"))),
-                new(new Combine(true, null, new VanityDropsEnabled(), new PlayerNameRule("Lil Junko"))),
-                new(new Combine(true, null, new VanityDropsEnabled(), new PlayerNameRule("Cooper"))),
-                new(new Combine(true, null, new VanityDropsEnabled(), new PlayerNameRule("Tess"))),
-                new(new Combine(true, null, new VanityDropsEnabled(), new PlayerNameRule("Enreden"))),
-                new(new Combine(true, null, new VanityDropsEnabled(), new PlayerNameRule("Iban", "IbanPlay", "IBlockaroz"))),
-                new(new Combine(true, null, new VanityDropsEnabled(), new PlayerNameRule("Maple", "Maple", "Maple"))),
-                new(new Combine(true, null, new VanityDropsEnabled(), new PlayerNameRule("Emerald", "EmeraldXLapis"))),
-                new(new Combine(true, null, new VanityDropsEnabled(), new PlayerNameRule("Yharex87", "Yharex"))),
-                new(new Combine(true, null, new VanityDropsEnabled(), new PlayerNameRule("Scarfy", "ScarfyScout", "Krysmun", "DodoNation", "Dodo"))),
-                new(new Combine(true, null, new VanityDropsEnabled(), new PlayerNameRule("caligulasAquarium", "caligulas"))),
-                new(new Combine(true, null, new VanityDropsEnabled(), new PlayerNameRule("Willow", "willowmaine", "bean long"))),
-                new(new Combine(true, null, new VanityDropsEnabled(), new PlayerNameRule("Potato Person"))),
-                new(new Combine(true, null, new VanityDropsEnabled(), new PlayerNameRule("Dorira", "Marco"))),
-                new(new Combine(true, null, new VanityDropsEnabled(), new PlayerNameRule("Hat Enthusiast"))),
-                new(new Combine(true, null, new VanityDropsEnabled(), new PlayerNameRule("Triangle"))),
-                new(new Combine(true, null, new VanityDropsEnabled(), new PlayerNameRule("Brimmy"))),
-            };
+                AddStarterName(ref itemLoot, ModContent.ItemType<CanofWyrms>(), "Jared");
+                AddStarterName(ref itemLoot, ModContent.ItemType<SoulShard>(), "Jared");
+                AddStarterName(ref itemLoot, ModContent.ItemType<AerialiteBubble>(), "Bumbledoge", "BumbleDoge", "Bojangles", "Bojeangles");
+                AddStarterName(ref itemLoot, ModContent.ItemType<ExtraFluffyFeatherClump>(), "Bumbledoge", "BumbleDoge", "Bojangles", "Bojeangles");
+                AddStarterName(ref itemLoot, ModContent.ItemType<FlareRune>(), "YuH", "Yuh", "yuh", "Lilsigtum", "GinYuH", "Lil Sigtum");
+                AddStarterName(ref itemLoot, ModContent.ItemType<SmolEldritchHoodie>(), "YuH", "Yuh", "yuh", "Lilsigtum", "GinYuH", "Lil Sigtum");
+                AddStarterName(ref itemLoot, ModContent.ItemType<SuspiciousLookingChineseCrown>(), "Lucca");
+                AddStarterName(ref itemLoot, ModContent.ItemType<ToyScythe>(), "Lucca");
+                AddStarterName(ref itemLoot, ModContent.ItemType<SuspiciousLookingChineseCrown>(), "Junko");
+                AddStarterName(ref itemLoot, ModContent.ItemType<ToyScythe>(), "Junko");
+                AddStarterName(ref itemLoot, ModContent.ItemType<ProfanedBalloon>(), "Junko");
+                AddStarterName(ref itemLoot, ModContent.ItemType<DeepseaLantern>(), "Maple", "Maple", "Maple");
+                AddStarterName(ref itemLoot, PaintingLoader.paintingItems["SwearingShroom"], "Maple", "Maple", "Maple");
+                AddStarterName(ref itemLoot, ModContent.ItemType<FleshThing>(), "Maple", "Maple", "Maple");
+                AddStarterName(ref itemLoot, ModContent.ItemType<SpaceJunk>(), "Yharex87", "Yharex");
+                AddStarterName(ref itemLoot, ModContent.ItemType<AstraEGGeldon>(), "Yharex87", "Yharex");
+                AddStarterName(ref itemLoot, ModContent.ItemType<OldMirage>(), "Willow", "willowmaine", "bean long");
+                AddStarterName(ref itemLoot, ModContent.ItemType<PerennialFlower>(), "Willow", "willowmaine", "bean long");
+                AddStarterName(ref itemLoot, PaintingLoader.paintingItems["VVanities"], "Willow", "willowmaine", "bean long");
+                AddStarterName(ref itemLoot, ModContent.ItemType<BubbledFin>(), "Triangle");
+                AddStarterName(ref itemLoot, ModContent.ItemType<IonizedJellyCrystal>(), "Triangle");
+                AddStarterName(ref itemLoot, ModContent.ItemType<BurningEye>(), "Brimmy");
+                AddStarterName(ref itemLoot, ModContent.ItemType<FoilSpoon>(), "Brimmy");
+                AddStarterName(ref itemLoot, ModContent.ItemType<RareBrimtulip>(), "Brimmy");
+                AddStarterName(ref itemLoot, ModContent.ItemType<ToyScythe>(), "RamG", "Ramgear");
+                AddStarterName(ref itemLoot, ModContent.ItemType<RuinedBandage>(), "William");
+                AddStarterName(ref itemLoot, ModContent.ItemType<UglyTentacle>(), "Kiwabug");
+                AddStarterName(ref itemLoot, ModContent.ItemType<SunBun>(), "Hypera");
+                AddStarterName(ref itemLoot, ModContent.ItemType<BambooStick>(), "Drakudragonx");
+                AddStarterName(ref itemLoot, ModContent.ItemType<IsopodItem>(), "Spider", "spider", "Spooktacular", "spooktacular");
+                AddStarterName(ref itemLoot, ModContent.ItemType<CosmicBubble>(), "Enreden");
+                AddStarterName(ref itemLoot, ModContent.ItemType<SuspiciousLookingChineseCrown>(), "Lil Junko");
+                AddStarterName(ref itemLoot, ModContent.ItemType<CooperShortsword>(), "Cooper");
+                AddStarterName(ref itemLoot, ModContent.ItemType<Geminga>(), "Tess");
+                AddStarterName(ref itemLoot, ModContent.ItemType<ProtoRing>(), "Iban", "IbanPlay", "IBlockaroz");
+                AddStarterName(ref itemLoot, ModContent.ItemType<PurifiedFog>(), "Emerald", "EmeraldXLapis");
+                AddStarterName(ref itemLoot, ModContent.ItemType<ExtraFluffyFeather>(), "Scarfy", "ScarfyScout", "Krysmun", "DodoNation", "Dodo");
+                AddStarterName(ref itemLoot, ModContent.ItemType<BleuBlob>(), "caligulasAquarium", "caligulas");
+                AddStarterName(ref itemLoot, ModContent.ItemType<InkyArtifact>(), "Hat Enthusiast");
+            }
+        }
 
-            IItemDropRule jaredPack = ItemDropRule.Common(ModContent.ItemType<CanofWyrms>());
-            jaredPack.OnSuccess(ItemDropRule.Common(ModContent.ItemType<SoulShard>()));
-
-            IItemDropRule bumbledoge = ItemDropRule.Common(ModContent.ItemType<AerialiteBubble>());
-            bumbledoge.OnSuccess(ItemDropRule.Common(ModContent.ItemType<ExtraFluffyFeatherClump>()));
-
-            IItemDropRule yuh = ItemDropRule.Common(ModContent.ItemType<FlareRune>());
-            yuh.OnSuccess(ItemDropRule.Common(ModContent.ItemType<SmolEldritchHoodie>()));
-
-            IItemDropRule lucca = ItemDropRule.Common(ModContent.ItemType<SuspiciousLookingChineseCrown>());
-            lucca.OnSuccess(ItemDropRule.Common(ModContent.ItemType<ToyScythe>()));
-
-            IItemDropRule junko = ItemDropRule.Common(ModContent.ItemType<SuspiciousLookingChineseCrown>());
-            junko.OnSuccess(ItemDropRule.Common(ModContent.ItemType<ToyScythe>()));
-            junko.OnSuccess(ItemDropRule.Common(ModContent.ItemType<ProfanedBalloon>()));
-
-            IItemDropRule maple = ItemDropRule.Common(ModContent.ItemType<DeepseaLantern>());
-            maple.OnSuccess(ItemDropRule.Common(ModContent.ItemType<SwearingShroom>()));
-            maple.OnSuccess(ItemDropRule.Common(ModContent.ItemType<FleshThing>()));
-
-            IItemDropRule yhar = ItemDropRule.Common(ModContent.ItemType<SpaceJunk>());
-            yhar.OnSuccess(ItemDropRule.Common(ModContent.ItemType<AstraEGGeldon>()));
-
-            IItemDropRule willow = ItemDropRule.Common(ModContent.ItemType<OldMirage>());
-            willow.OnSuccess(ItemDropRule.Common(ModContent.ItemType<PerennialFlower>()));
-            willow.OnSuccess(ItemDropRule.Common(ModContent.ItemType<VVanities>()));
-
-            IItemDropRule dorira = ItemDropRule.Common(ModContent.ItemType<CharredChopper>());
-            dorira.OnSuccess(ItemDropRule.Common(ModContent.ItemType<RapturedWormScarf>()));
-
-            IItemDropRule triangle = ItemDropRule.Common(ModContent.ItemType<BubbledFin>());
-            triangle.OnSuccess(ItemDropRule.Common(ModContent.ItemType<IonizedJellyCrystal>()));
-
-            IItemDropRule brimmy = ItemDropRule.Common(ModContent.ItemType<BurningEye>());
-            brimmy.OnSuccess(ItemDropRule.Common(ModContent.ItemType<FoilSpoon>()));
-            brimmy.OnSuccess(ItemDropRule.Common(ModContent.ItemType<RareBrimtulip>()));
-
-            names[0].OnSuccess(jaredPack);
-            names[1].OnSuccess(ItemDropRule.Common(ModContent.ItemType<ToyScythe>()));
-            names[2].OnSuccess(bumbledoge);
-            names[3].OnSuccess(ItemDropRule.Common(ModContent.ItemType<RuinedBandage>()));
-            names[4].OnSuccess(ItemDropRule.Common(ModContent.ItemType<UglyTentacle>()));
-            names[5].OnSuccess(yuh);
-            names[6].OnSuccess(ItemDropRule.Common(ModContent.ItemType<SunBun>()));
-            names[7].OnSuccess(ItemDropRule.Common(ModContent.ItemType<BambooStick>()));
-            names[8].OnSuccess(ItemDropRule.Common(ModContent.ItemType<IsopodItem>(), 1, 5, 5));
-            names[9].OnSuccess(ItemDropRule.Common(ModContent.ItemType<CosmicRapture>()));
-            names[10].OnSuccess(lucca);
-            names[11].OnSuccess(junko);
-            names[12].OnSuccess(ItemDropRule.Common(ModContent.ItemType<SuspiciousLookingChineseCrown>()));
-            names[13].OnSuccess(ItemDropRule.Common(ModContent.ItemType<CooperShortsword>()));
-            names[14].OnSuccess(ItemDropRule.Common(ModContent.ItemType<Geminga>()));
-            names[15].OnSuccess(ItemDropRule.Common(ModContent.ItemType<CosmicBubble>()));
-            names[16].OnSuccess(ItemDropRule.Common(ModContent.ItemType<ProtoRing>()));
-            names[17].OnSuccess(maple);
-            names[18].OnSuccess(ItemDropRule.Common(ModContent.ItemType<PurifiedFog>()));
-            names[19].OnSuccess(yhar);
-            names[20].OnSuccess(ItemDropRule.Common(ModContent.ItemType<ExtraFluffyFeather>()));
-            names[21].OnSuccess(ItemDropRule.Common(ModContent.ItemType<BleuBlob>()));
-            names[22].OnSuccess(willow);
-            names[23].OnSuccess(ItemDropRule.Common(ModContent.ItemType<RottenKey>()));
-            names[24].OnSuccess(dorira);
-            names[25].OnSuccess(ItemDropRule.Common(ModContent.ItemType<InkyArtifact>()));
-            names[26].OnSuccess(triangle);
-            names[27].OnSuccess(brimmy);*/
-            #endregion
+        public static void AddStarterName(ref ItemLoot itemLoot, int type, params string[] names)
+        {
+            LeadingConditionRule rule = new(new PlayerNameRule(names));
+            rule.OnSuccess(ItemDropRule.Common(type));
+            itemLoot.Add(rule);
         }
 
         public static void AddBlockDrop(ref ItemLoot itemloot, string type, bool silvaDrop = false, bool otherworldlyDrop = false)
@@ -430,11 +392,13 @@ namespace CalValEX
             {
                 blockGeneral = new LeadingConditionRule(new SilvaCrystal());
             }
-            itemloot.Add(blockGeneral.OnSuccess(ItemDropRule.Common(CalValEX.CalamityItem(type), 1, 205, 335)));
+            blockGeneral.OnSuccess(ItemDropRule.Common(CalValEX.CalamityItem(type), 1, 205, 335));
+            itemloot.Add(blockGeneral);
         }
+        #endregion
 
-		#region drop rules
-        private class PlayerNameRule : IItemDropRuleCondition
+        #region drop rules
+        public class PlayerNameRule : IItemDropRuleCondition
         {
             public readonly string[] names;
 
@@ -448,34 +412,10 @@ namespace CalValEX
 				return false;
 			}
 
-			public bool CanShowItemDropInUI() => true;
+			public bool CanShowItemDropInUI() => false;
 
             public string GetConditionDescription() => null;
         }
-		private class Combine : IItemDropRuleCondition
-        {
-            private readonly bool andConditions;
-            private readonly IItemDropRuleCondition[] conditions;
-            private readonly string description;
-
-            public Combine(bool andConditions = true, string? description = null,
-                   params IItemDropRuleCondition[] dropRuleConditions)
-            {
-                this.andConditions = andConditions;
-                this.description = description;
-                conditions = dropRuleConditions;
-            }
-
-            public bool CanDrop(DropAttemptInfo info) => andConditions
-                    ? conditions.All(val => val.CanDrop(info))
-                    : conditions.Any(val => val.CanDrop(info));
-
-			public bool CanShowItemDropInUI() => andConditions
-					? conditions.All(val => val.CanShowItemDropInUI())
-					: conditions.Any(val => val.CanShowItemDropInUI());
-
-			public string GetConditionDescription() => description;
-		}
         #endregion
         public override void RightClick(Item item, Player player)
         {

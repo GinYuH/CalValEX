@@ -243,7 +243,6 @@ namespace CalValEX.CalamityID
         public static int AquaticHeart;
         public static int Bloodstone;
         public static int CeremonialUrn;
-        public static int MeldConstruct;
         public static int DormantBrimseeker;
         public static int DullPlating;
 
@@ -283,7 +282,6 @@ namespace CalValEX.CalamityID
             MonolithCrate = CalamityID.ItemRelation("MonolithCrate", ItemID.FloatingIslandFishingCrateHard);
             AquaticHeart = CalamityID.ItemRelation("AquaticHeart", ItemID.NeptunesShell);
             Bloodstone = CalamityID.ItemRelation("Bloodstone", ItemID.FragmentNebula);
-            MeldConstruct = CalamityID.ItemRelation("MeldConstruct", ItemID.FragmentNebula);
             CeremonialUrn = CalamityID.ItemRelation("CeremonialUrn", ItemID.NebulaPickaxe);
             DormantBrimseeker = CalamityID.ItemRelation("DormantBrimseeker", ItemID.Milkshake);
             DullPlating = CalamityID.ItemRelation("WulfrumMetalScrap", "DullPlatingItem", ItemID.TungstenBrick);
