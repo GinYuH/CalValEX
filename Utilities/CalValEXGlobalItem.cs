@@ -216,7 +216,7 @@ namespace CalValEX
                 rule2.OnSuccess(new CommonDrop(ModContent.ItemType<PhantowaxBlock>(), 2, 205, 335));
                 itemLoot.Add(rule2);
 
-                itemLoot.Add(rule.OnSuccess(ItemDropRule.NotScalingWithLuck(ModContent.ItemType<Polterhook>(), 10)));
+                itemLoot.Add(rule.OnSuccess(ItemDropRule.NotScalingWithLuck(ModContent.ItemType<PolterHook>(), 10)));
                 itemLoot.Add(rule.OnSuccess(new CommonDrop(ModContent.ItemType<ZygoteinaBucket>(), 10, chanceNumerator: 3)));
             }
 			else if (item.type == CalItemID.OldDukeBag)

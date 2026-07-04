@@ -1552,11 +1552,6 @@ Permascarf: {
 	Tooltip: 戴着很冷
 }
 
-Polterhook: {
-	DisplayName: 惊魂链钩
-	Tooltip: ""
-}
-
 MysteryPainting: {
 	DisplayName: 神秘绘画
 	Tooltip: <right> 获得一幅随机画作

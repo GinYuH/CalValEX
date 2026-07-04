@@ -1539,11 +1539,6 @@ Permascarf: {
 	Tooltip: Stay Frosty
 }
 
-Polterhook: {
-	DisplayName: Polterhook
-	Tooltip: ""
-}
-
 MysteryPainting: {
 	DisplayName: Mystery Painting
 	Tooltip: <right> for a random painting
