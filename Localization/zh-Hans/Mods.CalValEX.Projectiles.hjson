@@ -13,7 +13,7 @@ LaserArm.DisplayName: 激光臂
 PlasmaArm.DisplayName: 等离子臂
 TeslaArm.DisplayName: 电磁臂
 MawTeeth.DisplayName: 呕牙
-Phantomhook.DisplayName: 惊魂爪
+PhantomHook.DisplayName: 惊魂爪
 ProfanedHook.DisplayName: 亵渎爪
 RavaClaw.DisplayName: 毁灭爪
 ScavaClaw.DisplayName: 腐食爪

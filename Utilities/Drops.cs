@@ -727,7 +727,7 @@ namespace CalValEX
                         notExpertRule.OnSuccess(ItemDropRule.ByCondition(new BlockDrops(), CalValEX.CalamityItem("StratusBricks"), 2, 155, 265));
                         notExpertRule.OnSuccess(ItemDropRule.ByCondition(new BlockDrops(), ModContent.ItemType<PhantowaxBlock>(), 2, 155, 265));
                         npcLoot.Add(notExpertRule);
-                        npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotExpert(), ModContent.ItemType<Polterhook>(), 20));
+                        npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotExpert(), ModContent.ItemType<PolterHook>(), 20));
                         npcLoot.Add(ItemDropRule.ByCondition(new MasterRevCondition(), ModContent.ItemType<ToyScythe>(), 3));
                         AddPlushDrop(npcLoot, PlushManager.PlushItems["Polterghast"]);
                         npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotExpert(), ModContent.ItemType<ZygoteinaBucket>(), 3));

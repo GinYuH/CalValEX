@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 
 namespace CalValEX.Items.Hooks
 {
-    public class Phantomhook : ModProjectile
+    public class PhantomHook : ModProjectile
     {
         public override void SetDefaults()
         {
@@ -55,7 +55,7 @@ namespace CalValEX.Items.Hooks
             Vector2 distToProj = Projectile.Center;
             float projRotation = Projectile.AngleTo(player.MountedCenter) - 1.57f;
             bool doIDraw = true;
-            Texture2D texture = ModContent.Request<Texture2D>("CalValEX/Items/Hooks/Polterchain").Value; //change this accordingly to your chain texture
+            Texture2D texture = ModContent.Request<Texture2D>("CalValEX/Items/Hooks/PolterChain").Value; //change this accordingly to your chain texture
 
             while (doIDraw)
             {
