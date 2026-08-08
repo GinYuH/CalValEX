@@ -19,4 +19,4 @@ Currently adds the following:
 
 Sprite Credits: Kawaggy, Poddy, Blockaroz, William, YuH, Yharex87, TimerFun, caligulasAquarium, Krysmun, IbanPlay, Willowmaine, Enreden, Gamagamer64, L0st, Cooper, RyanLolz1, VRZ, Mochi, Leon, NnickykunN, Dorira, VinniSauce, Tobias, Maple, Ramen Guy, Criss, Nitro, YeH, F-3R, Sok, Triangle, Drædon Gaming, Rocketlauncher269, PokerFace, ImitableBeetle6, Scorn, z_e_n_, chromaticalblight, habibi, pilchardheck, Dragoncraft9, z_e_n_., and MrPlague
 Music Credits: Heart Plus Up! and apotofkoolaid
-Code Credits: Kawaggy, Hypera, Phupperbat, Seraph, Tomat, Lucille Karma, IbanPlay, Willowmaine, Drædon Gaming, Jopojelly, and Zavarski
+Code Credits: Kawaggy, Hypera, Phupperbat, Seraph, Tomat, Lucille Karma, IbanPlay, Willowmaine, Drædon Gaming, Jopojelly, emyhrberg, Niratude, and Zavarski
