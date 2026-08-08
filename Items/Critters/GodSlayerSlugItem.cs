@@ -17,7 +17,7 @@ namespace CalValEX.Items.Critters
             Item.CloneDefaults(ItemID.GlowingSnail);
             Item.bait = 60;
             Item.makeNPC = (short)NPCType<GodSlayerSlug>();
-            Item.rare = CalamityID.CalRarityID.DarkBlue;
+            Item.rare = CalamityID.CalRarityID.Cosmic;
         }
     }
 }

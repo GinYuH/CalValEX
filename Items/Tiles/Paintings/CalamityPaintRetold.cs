@@ -26,7 +26,7 @@ namespace CalValEX.Items.Tiles.Paintings
             Item.createTile = ModContent.TileType<CalamityPaintRetoldRetoldPlaced>();
             Item.width = 12;
             Item.height = 12;
-            Item.rare = CalamityID.CalRarityID.Violet;
+            Item.rare = CalamityID.CalRarityID.Auric;
         }
     }
 }

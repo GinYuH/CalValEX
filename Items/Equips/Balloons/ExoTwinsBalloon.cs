@@ -14,7 +14,7 @@ namespace CalValEX.Items.Equips.Balloons
             Item.width = 24;
             Item.height = 42;
             Item.value = Item.sellPrice(0, 3, 0, 0);
-            Item.rare = CalamityID.CalRarityID.Violet;
+            Item.rare = CalamityID.CalRarityID.Exo;
             Item.accessory = true;
             Item.vanity = true;
         }

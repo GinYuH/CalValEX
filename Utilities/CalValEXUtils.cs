@@ -34,13 +34,16 @@ namespace CalValEX
                         ret = CalRarityID.PureGreen;
                         break;
                     case 14:
-                        ret = CalRarityID.DarkBlue;
+                        ret = CalRarityID.Cosmic;
                         break;
                     case 15:
-                        ret = CalRarityID.Violet;
+                        ret = CalRarityID.Auric;
                         break;
                     case 16:
                         ret = CalRarityID.HotPink;
+                        break;
+                    case 17:
+                        ret = CalRarityID.Exo;
                         break;
                 }
             }

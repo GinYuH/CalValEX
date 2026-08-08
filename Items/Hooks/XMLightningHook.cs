@@ -15,7 +15,7 @@ namespace CalValEX.Items.Hooks
             Item.CloneDefaults(ItemID.StaticHook);
             Item.shootSpeed = 62f;
             Item.shoot = ProjectileType<THanosHook>();
-            Item.rare = CalamityID.CalRarityID.Violet;
+            Item.rare = CalamityID.CalRarityID.Exo;
         }
 
         public override bool CanUseItem(Player player)

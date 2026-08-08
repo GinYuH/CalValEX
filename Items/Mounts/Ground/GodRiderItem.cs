@@ -15,7 +15,7 @@ namespace CalValEX.Items.Mounts.Ground
             Item.useAnimation = 20;
             Item.useStyle = ItemUseStyleID.Swing;
             Item.value = Item.sellPrice(0, 3, 0, 0);
-            Item.rare = CalamityID.CalRarityID.DarkBlue;
+            Item.rare = CalamityID.CalRarityID.Cosmic;
             Item.UseSound = SoundID.Item23;
             Item.noMelee = true;
             Item.mountType = ModContent.MountType<GoDrider>();

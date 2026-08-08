@@ -25,7 +25,7 @@ namespace CalValEX.Items.Tiles.Monoliths
             Item.useTime = 10;
             Item.useStyle = ItemUseStyleID.Swing;
             Item.consumable = true;
-            Item.rare = CalamityID.CalRarityID.Violet;
+            Item.rare = CalamityID.CalRarityID.Exo;
             Item.value = Item.buyPrice(0, 10, 0, 0);
             Item.createTile = ModContent.TileType<ExoMonolithPlaced>();
         }

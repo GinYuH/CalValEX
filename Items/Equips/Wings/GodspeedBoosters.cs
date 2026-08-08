@@ -18,7 +18,7 @@ namespace CalValEX.Items.Equips.Wings
         {
             Item.width = 42;
             Item.height = 30;
-            Item.rare = CalamityID.CalRarityID.DarkBlue;
+            Item.rare = CalamityID.CalRarityID.Cosmic;
             Item.accessory = true;
             Item.value = Item.sellPrice(0, 3, 0, 0);
            

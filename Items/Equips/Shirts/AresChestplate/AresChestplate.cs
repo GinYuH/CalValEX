@@ -12,7 +12,7 @@ namespace CalValEX.Items.Equips.Shirts.AresChestplate
         {
             Item.width = 18;
             Item.height = 14;
-            Item.rare = CalamityID.CalRarityID.Violet;
+            Item.rare = CalamityID.CalRarityID.Exo;
             Item.vanity = true;
             Item.value = Item.sellPrice(0, 3, 0, 0);
             ArmorIDs.Body.Sets.HidesArms[Item.bodySlot] = true;

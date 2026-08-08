@@ -31,7 +31,7 @@ namespace CalValEX.Items.Tiles.Paintings
             Item.createTile = ModContent.TileType<OhioPlaced>();
             Item.width = 12;
             Item.height = 12;
-            Item.rare = CalamityID.CalRarityID.Violet;
+            Item.rare = CalamityID.CalRarityID.Exo;
         }
 
         public override bool PreDrawInInventory(SpriteBatch spriteBatch, Vector2 position, Rectangle frameI, Color drawColor, Color itemColor, Vector2 origin, float scale)

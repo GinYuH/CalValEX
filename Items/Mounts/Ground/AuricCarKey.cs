@@ -15,7 +15,7 @@ namespace CalValEX.Items.Mounts.Ground
             Item.useAnimation = 20;
             Item.useStyle = ItemUseStyleID.Swing;
             Item.value = Item.sellPrice(0, 3, 0, 0);
-            Item.rare = CalamityID.CalRarityID.Violet;
+            Item.rare = CalamityID.CalRarityID.Auric;
             Item.UseSound = SoundID.Item23;
             Item.noMelee = true;
             Item.mountType = ModContent.MountType<YharimCar>();

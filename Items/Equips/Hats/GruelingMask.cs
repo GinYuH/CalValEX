@@ -13,7 +13,7 @@ namespace CalValEX.Items.Equips.Hats
         {
             Item.width = 28;
             Item.height = 20;
-            Item.rare = CalamityID.CalRarityID.Violet;
+            Item.rare = CalamityID.CalRarityID.CalamityRed;
             Item.vanity = true;
             Item.value = Item.sellPrice(0, 3, 0, 0);
             ArmorIDs.Head.Sets.DrawHead[Item.headSlot] = false;

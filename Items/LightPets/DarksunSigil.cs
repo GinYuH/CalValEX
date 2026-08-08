@@ -26,7 +26,7 @@ namespace CalValEX.Items.LightPets
             Item.useTime = 20;
             Item.shoot = ModContent.ProjectileType<DarksunSpirit_Fish>();
             Item.buffType = ModContent.BuffType<DarksunSpiritBuff>();
-            Item.rare = CalRarityID.Violet;
+            Item.rare = CalRarityID.Auric;
         }
 
         public override bool Shoot(Player player, Terraria.DataStructures.EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)

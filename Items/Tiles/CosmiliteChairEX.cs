@@ -24,7 +24,7 @@ namespace CalValEX.Items.Tiles
             Item.createTile = ModContent.TileType<CosmiliteChairEXPlaced>();
             Item.width = 12;
             Item.height = 12;
-            Item.rare = CalamityID.CalRarityID.DarkBlue;
+            Item.rare = CalamityID.CalRarityID.Cosmic;
         }
     }
 }

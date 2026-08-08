@@ -19,7 +19,7 @@ namespace CalValEX.AprilFools.Jharim
             Item.width = 12;
             Item.height = 12;
             Item.value = Item.buyPrice(gold: 22);
-            Item.rare = CalamityID.CalRarityID.Violet;
+            Item.rare = CalamityID.CalRarityID.Auric;
         }
     }
 }

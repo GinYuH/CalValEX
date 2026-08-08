@@ -17,7 +17,7 @@ namespace CalValEX.Items.Mounts.Minecart
             Item.useAnimation = 20;
             Item.useStyle = ItemUseStyleID.Swing;
             Item.value = Item.sellPrice(0, 3, 0, 0);
-            Item.rare = CalRarityID.Violet;
+            Item.rare = CalRarityID.Exo;
             Item.UseSound = SoundID.NPCHit4;
             Item.noMelee = true;
             Item.mountType = ModContent.MountType<DraedonCartMount>();

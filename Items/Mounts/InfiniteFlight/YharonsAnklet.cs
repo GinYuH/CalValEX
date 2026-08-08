@@ -15,7 +15,7 @@ namespace CalValEX.Items.Mounts.InfiniteFlight
             Item.useAnimation = 20;
             Item.useStyle = ItemUseStyleID.Swing;
             Item.value = Item.sellPrice(0, 3, 0, 0);
-            Item.rare = CalamityID.CalRarityID.Violet;
+            Item.rare = CalamityID.CalRarityID.Auric;
             Item.UseSound = SoundID.NPCHit56;
             Item.noMelee = true;
             Item.mountType = ModContent.MountType<YharonMount>();

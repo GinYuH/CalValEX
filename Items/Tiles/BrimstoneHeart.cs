@@ -25,7 +25,7 @@ namespace CalValEX.Items.Tiles
             Item.createTile = ModContent.TileType<BrimstoneHeartPlaced>();
             Item.width = 12;
             Item.height = 12;
-            Item.rare = CalamityID.CalRarityID.Violet;
+            Item.rare = CalamityID.CalRarityID.CalamityRed;
         }
     }
 }

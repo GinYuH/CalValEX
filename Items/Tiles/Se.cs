@@ -26,7 +26,7 @@ namespace CalValEX.Items.Tiles
             Item.consumable = true;
             Item.width = 16;
             Item.height = 28;
-            Item.rare = CalamityID.CalRarityID.Violet;
+            Item.rare = CalamityID.CalRarityID.CalamityRed;
             Item.createTile = ModContent.TileType<SePlaced>();
         }
     }

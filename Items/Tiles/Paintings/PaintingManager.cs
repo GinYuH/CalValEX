@@ -56,9 +56,9 @@ namespace CalValEX.Tiles.Paintings
             LoadPainting("CataclysmPortrait", 2, 3, 15);
             LoadPainting("CatastrophePortrait", 2, 3, 15);
             LoadPainting("Exhume", 3, 3, 15);
-            LoadPainting("Constructions", 6, 4, 15);
-            LoadPainting("TheMechsMK1", 6, 4, 15);
-            LoadPainting("TheMechanicalGamer", 4, 4, 15);
+            LoadPainting("Constructions", 6, 4, 17);
+            LoadPainting("TheMechsMK1", 6, 4, 17);
+            LoadPainting("TheMechanicalGamer", 4, 4, 17);
             LoadPainting("Goozling", 2, 2, 15);
             LoadPainting("CalamiteaTime", 6, 4, 16);
 

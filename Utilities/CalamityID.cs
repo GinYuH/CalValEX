@@ -292,20 +292,22 @@ namespace CalValEX.CalamityID
     {
         public static int Turquoise;
         public static int PureGreen;
-        public static int DarkBlue;
-        public static int Violet;
+        public static int Cosmic;
+        public static int Auric;
         public static int HotPink;
         public static int CalamityRed;
+        public static int Exo;
         public static int DarkOrange;
 
         public override void PostSetupContent()
         {
             Turquoise = CalamityID.RarityRelation("Turquoise", ModContent.RarityType<Turquoise>());
             PureGreen = CalamityID.RarityRelation("PureGreen", ModContent.RarityType<PureGreen>());
-            DarkBlue = CalamityID.RarityRelation("CosmicPurple", ModContent.RarityType<DarkBlue>());
-            Violet = CalamityID.RarityRelation("BurnishedAuric", ModContent.RarityType<Violet>());
+            Cosmic = CalamityID.RarityRelation("CosmicPurple", ModContent.RarityType<DarkBlue>());
+            Auric = CalamityID.RarityRelation("BurnishedAuric", ModContent.RarityType<Violet>());
             HotPink = CalamityID.RarityRelation("HotPink", ModContent.RarityType<HotPink>());
             CalamityRed = CalamityID.RarityRelation("CalamityRed", ModContent.RarityType<CalamityRed>());
+            Exo = CalamityID.RarityRelation("ExoticRainbow", ModContent.RarityType<CalamityRed>());
             DarkOrange = CalamityID.RarityRelation("DarkOrange", ModContent.RarityType<DarkOrange>());
         }
     }

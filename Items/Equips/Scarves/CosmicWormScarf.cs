@@ -12,7 +12,7 @@ namespace CalValEX.Items.Equips.Scarves
             Item.width = 36;
             Item.height = 38;
             Item.value = Item.sellPrice(0, 3, 0, 0);
-            Item.rare = CalamityID.CalRarityID.DarkBlue;
+            Item.rare = CalamityID.CalRarityID.Cosmic;
             Item.accessory = true;
             Item.vanity = true;
         }

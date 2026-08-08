@@ -14,7 +14,7 @@ namespace CalValEX.Items.Equips.Hats
             Item.width = 24;
             Item.height = 28;
             Item.value = Item.sellPrice(0, 3, 0, 0);
-            Item.rare = CalamityID.CalRarityID.DarkBlue;
+            Item.rare = CalamityID.CalRarityID.Cosmic;
             Item.vanity = true;
             ArmorIDs.Head.Sets.DrawHatHair[Item.headSlot] = true;
         }

@@ -13,7 +13,7 @@ namespace CalValEX.Items.Equips.Capes
             Item.width = 38;
             Item.height = 32;
             Item.value = Item.sellPrice(0, 3, 0, 0);
-            Item.rare = CalamityID.CalRarityID.Violet;
+            Item.rare = CalamityID.CalRarityID.Auric;
             Item.accessory = true;
             Item.vanity = true;
         }
