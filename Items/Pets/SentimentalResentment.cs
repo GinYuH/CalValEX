@@ -5,11 +5,12 @@ using Terraria.DataStructures;
 
 namespace CalValEX.Items.Pets
 {
-    public class CalamitousSoulArtifact : ModItem
+    [LegacyName("CalamitousSoulArtifact")]
+    public class SentimentalResentment : ModItem
     {
         public override void SetStaticDefaults()
         {
-            ItemID.Sets.ShimmerTransformToItem[Type] = ModContent.ItemType<RottingCalamitousArtifact>();
+            ItemID.Sets.ShimmerTransformToItem[Type] = ModContent.ItemType<RottingResentment>();
         }
 
         public override void SetDefaults()

@@ -69,16 +69,13 @@ namespace CalValEX.Tiles.Paintings
             LoadPainting("GallusYharus", 9, 8, 15);
             LoadPainting("WilliamPainting", 5, 5, 16);
             LoadPainting("VVanities", 5, 5, 16);
-            LoadPainting("ModIconPainting", 5, 5, 16);
             LoadPainting("OldModIconPainting", 5, 5, 16);
             LoadPainting("CalamityPaint", 5, 5, 16);
-            LoadPainting("CalamityPaintRetold", 5, 5, 16);
             LoadPainting("CalamityFriends", 5, 5, 16);
             LoadPainting("Yharlamitas", 4, 3, 16);
             LoadPainting("EyeofXeroc", 7, 5, 16);
             LoadPainting("TheYhar", 3, 3, 16);
             LoadPainting("OldUCMM", 5, 5, 16, noPad: true);
-            LoadPainting("UCMM", 5, 5, 16, noPad: true);
             LoadPainting("SundayAfternoonCal", 10, 6, 16, noPad: true);
 
             LoadPainting("CreationoftheShadow", 6, 4, ItemUtils.BossRarity("Cal"));

@@ -1645,17 +1645,6 @@ BubbleGum: {
 	Tooltip: Summons a divine entity
 }
 
-CalamitousSoulArtifact: {
-	DisplayName: Calamitous Soul Artifact
-	Tooltip:
-		'''
-		Entropy
-		Summons a benevolent necropede
-		[c/C61B40:After crawling for decades in everlasting agony]
-		[c/C61B40:the mobile graveyard finally finds a true friend.]
-		'''
-}
-
 CanofWyrms: {
 	DisplayName: Can of Wyrms
 	Tooltip:
@@ -2095,8 +2084,8 @@ RottenHotdog: {
 		'''
 }
 
-RottingCalamitousArtifact: {
-	DisplayName: Rotting Calamitous Artifact
+RottingResentment: {
+	DisplayName: Rotting Resentment
 	Tooltip:
 		'''
 		Summons a pet Sepulchling
@@ -2200,6 +2189,17 @@ TopazGeode: {
 		'''
 		Summons an Topaz Scuttler
 		'Potentially contains a scuttler'
+		'''
+}
+
+SentimentalResentment: {
+	DisplayName: SentimentalResentment
+	Tooltip:
+		'''
+		Entropy
+		Summons a benevolent necropede
+		[c/C61B40:After crawling for decades in everlasting agony]
+		[c/C61B40:the mobile graveyard finally finds a true friend.]
 		'''
 }
 

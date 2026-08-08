@@ -1658,17 +1658,6 @@ BubbleGum: {
 	Tooltip: 召唤青蛙乔治
 }
 
-CalamitousSoulArtifact: {
-	DisplayName: 灾魂神器
-	Tooltip:
-		'''
-		终结……
-		召唤善良的灾坟魔物
-		[c/C61B40:在无尽的痛苦中爬行了几十年之后]
-		[c/C61B40:灾坟魔物终于找到了真正的朋友。]
-		'''
-}
-
 CanofWyrms: {
 	DisplayName: 罐中妖虫
 	Tooltip:
@@ -2107,13 +2096,13 @@ RottenHotdog: {
 		'''
 }
 
-RottingCalamitousArtifact: {
-	DisplayName: 腐败的灾厄神器
-	Tooltip:
+RottingResentment: {
+	// DisplayName: Rotting Resentment
+	/* Tooltip:
 		'''
-		召唤宠物灾坟魔物
-		"坟墓升起"
-		'''
+		Summons a pet Sepulchling
+		'The grave rises'
+		''' */
 }
 
 RoverSpindle: {
@@ -2213,6 +2202,17 @@ TopazGeode: {
 		召唤黄玉爬虫
 		"大抵藏着爬虫"
 		'''
+}
+
+SentimentalResentment: {
+	// DisplayName: SentimentalResentment
+	/* Tooltip:
+		'''
+		Entropy
+		Summons a benevolent necropede
+		[c/C61B40:After crawling for decades in everlasting agony]
+		[c/C61B40:the mobile graveyard finally finds a true friend.]
+		''' */
 }
 
 ShadowCloth: {

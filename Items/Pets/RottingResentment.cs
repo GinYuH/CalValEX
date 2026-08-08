@@ -5,8 +5,8 @@ using Terraria.DataStructures;
 
 namespace CalValEX.Items.Pets
 {
-    [LegacyName("CalArtifact")]
-    public class RottingCalamitousArtifact : ModItem
+    [LegacyName("CalArtifact", "RottingSoulArtifact")]
+    public class RottingResentment : ModItem
     {
         public override void SetDefaults()
         {

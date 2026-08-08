@@ -162,7 +162,7 @@ namespace CalValEX
             if (CalamityActive)
             {
                 Mod cal = ModLoader.GetMod("CalamityMod");
-                cal.Call("MakeItemExhumable", ModContent.ItemType<RottingCalamitousArtifact>(), ModContent.ItemType<CalamitousSoulArtifact>());
+                cal.Call("MakeItemExhumable", ModContent.ItemType<RottingResentment>(), ModContent.ItemType<SentimentalResentment>());
                 cal.Call("MakeItemExhumable", ModContent.ItemType<HeartoftheCommunity>(), ModContent.ItemType<ShatteredHeartoftheCommunity>());
                 cal.Call("RegisterNPCShop", ModContent.NPCType<JellyPriestNPC>(), (Player player) => Main.LocalPlayer.GetModPlayer<CalValEXPlayer>().jellyInv, (Player player, bool enabled) => Main.LocalPlayer.GetModPlayer<CalValEXPlayer>().jellyInv = enabled);
                 cal.Call("RegisterNPCShop", ModContent.NPCType<OracleNPC>(), (Player player) => Main.LocalPlayer.GetModPlayer<CalValEXPlayer>().oracleInv, (Player player, bool enabled) => Main.LocalPlayer.GetModPlayer<CalValEXPlayer>().oracleInv = enabled);

@@ -55,6 +55,11 @@ namespace CalValEX.Items
                     continue;
                 paintings.Add(id);
             }
+            if (CalValEX.CalamityActive)
+                paintings.Add(ModContent.ItemType<CalamityPaintRetold>());
+            if (ModLoader.HasMod("UnCalamityModMusic"))
+                paintings.Add(ModContent.ItemType<UCMM>());
+            paintings.Add(ModContent.ItemType<ModIconPainting>());
 
             itemLoot.Add(ItemDropRule.OneFromOptionsNotScalingWithLuck(1, paintings.ToArray()));
 		}

@@ -22,6 +22,9 @@ Jharim: {
 		LikeNPC_Princess: Jharim deems {NPCName} as a worthy ally to the Jharim nation.
 		Princess_LovesNPC: "{NPCName} is such a goofy fella."
 		HateCrowded: I hate how crowded I am.
+		Monument: ARGHHH THAT MONUMENT IS UGLY! I DEMAND YOU TO DESTROY IT!
+		GiftPositive: A present!? For me!? Nobody ever gives me gifts! Thank you!!!
+		GiftNegative: This gift is not worthy of the great Jharim! I sentence you to The Pit.
 	}
 
 	Chat: {
@@ -150,6 +153,9 @@ JellyPriestNPC: {
 		Princess_LovesNPC: "{NPCName} seems to fill a similar role as me, selling pretty decorations. I hope she doesn't see any competition!"
 		LoveNPC: I love {NPCName}.
 		HateNPC: I hate {NPCName}.
+		Monument: That monument... I can't look at it, it's the worst statue I've ever seen.
+		GiftPositive: I was just looking for some new materials to work with, thank you for the gift!
+		GiftNegative: Are you trying to sabotage my work? Give your pipe bomb to someone else!
 	}
 
 	Chat: {
@@ -232,6 +238,9 @@ OracleNPC: {
 		LoveBiome: I love {BiomeName}.
 		LoveNPC: I love {NPCName}.
 		HateNPC: I hate {NPCName}.
+		Monument: Not a fan of that monument over there, it's scaring TUB.
+		GiftPositive: Some treats for my pets? Thank you, they will love it!
+		GiftNegative: Ohagi full of nails!? Shame on you for trying to hurt my pets!
 	}
 
 	Chat: {

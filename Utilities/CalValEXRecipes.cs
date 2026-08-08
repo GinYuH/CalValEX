@@ -364,7 +364,7 @@ namespace CalValEX
             }
             {
                 Recipe recipe = Recipe.Create(ItemType<BloodyMaryHat>());
-                recipe.AddIngredient(CalValEX.CalamityItem("BloodstoneCore"), 3);
+                recipe.AddIngredient(CalValEX.CalamityItem("Bloodstone"), 3);
                 recipe.AddIngredient((ItemID.TheBrideHat), 1);
                 recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
@@ -446,7 +446,7 @@ namespace CalValEX
             #region //Shirts
             {
                 Recipe recipe = Recipe.Create(ItemType<BloodyMaryDress>());
-                recipe.AddIngredient(CalValEX.CalamityItem("BloodstoneCore"), 8);
+                recipe.AddIngredient(CalValEX.CalamityItem("Bloodstone"), 8);
                 recipe.AddIngredient((ItemID.TheBrideDress), 1);
                 recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
@@ -583,7 +583,7 @@ namespace CalValEX
             {
                 Recipe recipe = Recipe.Create(ItemType<BloodstoneCarriageItem>());
                 recipe.AddIngredient(ItemType<ChiseledBloodstone>(), 50);
-                recipe.AddIngredient(CalValEX.CalamityItem("BloodstoneCore"), 10);
+                recipe.AddIngredient(CalValEX.CalamityItem("Bloodstone"), 10);
                 recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
@@ -684,7 +684,7 @@ namespace CalValEX
                 recipe.Register();
             }
             {
-                Recipe recipe = Recipe.Create(ItemType<RottingCalamitousArtifact>());
+                Recipe recipe = Recipe.Create(ItemType<RottingResentment>());
                 recipe.AddIngredient(CalValEX.CalamityItem("AshesofCalamity"), 15);
                 recipe.AddIngredient(CalValEX.CalamityItem("Cinderplate"), 20);
                 recipe.AddTile(TileID.MythrilAnvil);
@@ -997,14 +997,14 @@ namespace CalValEX
             }
             {
                 Recipe recipe = Recipe.Create(ItemType<BloodstoneBrick>(), 200);
-                recipe.AddIngredient(CalValEX.CalamityItem("BloodstoneCore"));
+                recipe.AddIngredient(CalValEX.CalamityItem("Bloodstone"));
                 recipe.AddIngredient(ItemID.StoneBlock, 200);
                 recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
             }
             {
                 Recipe recipe = Recipe.Create(ItemType<ChiseledBloodstone>(), 200);
-                recipe.AddIngredient(CalValEX.CalamityItem("BloodstoneCore"));
+                recipe.AddIngredient(CalValEX.CalamityItem("Bloodstone"));
                 recipe.AddIngredient(ItemID.StoneBlock, 200);
                 recipe.AddTile(TileID.MythrilAnvil);
                 recipe.Register();
@@ -1362,7 +1362,7 @@ namespace CalValEX
             blacklist.Add((ci("ExoPrismPanel"), ci("ExoPrism")));
             blacklist.Add((ItemType<Necrostone>(), ci("NecromanticGeode")));
             blacklist.Add((ItemType<Necrostone>(), ci("FleshyGeode")));
-            blacklist.Add((ItemType<ChiseledBloodstone>(), ci("BloodstoneCore")));
+            blacklist.Add((ItemType<ChiseledBloodstone>(), ci("Bloodstone")));
             blacklist.Add((ItemType<EidolicSlab>(), ci("Lumenyl")));
             blacklist.Add((ci("StratusBricks"), ci("Lumenyl")));
             blacklist.Add((ci("CosmiliteBrick"), ci("CosmiliteBar")));
