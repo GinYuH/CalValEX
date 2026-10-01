@@ -1,5 +1,7 @@
 ﻿using System;
 using Terraria;
+using Terraria.Audio;
+using Terraria.ID;
 
 namespace CalValEX.Projectiles.Pets
 {
@@ -19,7 +21,7 @@ namespace CalValEX.Projectiles.Pets
         {
             PetSetStaticDefaults(lightPet: false);
             // DisplayName.SetDefault("Unhappy Stone");
-            Main.projFrames[Projectile.type] = 1;
+            Main.projFrames[Projectile.type] = 2;
         }
 
         public override void SetDefaults()
@@ -42,11 +44,41 @@ namespace CalValEX.Projectiles.Pets
 
         public override void Animation(int state)
         {
+            if (Projectile.ai[1] == 1)
+            {
+                Projectile.frame = 1;
+            }
+            else
+            {
+                Projectile.frame = 0;
+            }
         }
 
         public override void CustomBehaviour(Player player, ref int state, float walkingSpeed, float walkingInertia, float flyingSpeed, float flyingInertia)
         {
             Projectile.rotation += Projectile.velocity.X * MathHelper.Lerp(0.1f, 0.5f, 1 - (player.statLife / (float)player.statLifeMax2));
+
+            if (Projectile.ai[0] <= 0 && player.statLife < player.statLifeMax2 / 2 && Projectile.ai[1] == 0)
+            {
+                SoundEngine.PlaySound(SoundID.Item89 with { Pitch = 2 }, Projectile.Center);
+                Projectile.ai[0] = 300;
+                Projectile.ai[1] = 1;
+                if (Projectile.velocity.Y == 0)
+                {
+                    Projectile.velocity.Y = -6f;
+                }
+            }
+            else if (player.statLife >= player.statLifeMax2 / 2 && Projectile.ai[0] <= 0&& Projectile.ai[1] == 1)
+            {
+                SoundEngine.PlaySound(SoundID.Item89 with { Pitch = 1 }, Projectile.Center);
+                Projectile.ai[0] = 300;
+                Projectile.ai[1] = 0;
+                if (Projectile.velocity.Y == 0)
+                {
+                    Projectile.velocity.Y = -6f;
+                }
+            }
+            Projectile.ai[0]--;
         }
 
         public override void PetFunctionality(Player player)

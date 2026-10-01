@@ -16,6 +16,7 @@ namespace CalValEX.Items.Equips.Legs
             Item.rare = ItemRarityID.Blue;
             Item.vanity = true;
             Item.value = Item.sellPrice(0, 3, 0, 0);
+            ArmorIDs.Legs.Sets.OverridesLegs[Item.legSlot] = true;
         }
     }
 }
